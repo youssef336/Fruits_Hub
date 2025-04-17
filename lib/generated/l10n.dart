@@ -1,5 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:intl/intl.dart';
 import 'intl/messages_all.dart';
 
@@ -95,6 +96,16 @@ class S {
     return Intl.message(
       'We offer you the finest handpicked fruits. Check details, photos, and reviews to ensure you select the perfect fruit.',
       name: 'on_boarding_subtitle2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start now`
+  String get on_boarding_buttom_text {
+    return Intl.message(
+      'Start now',
+      name: 'on_boarding_buttom_text',
       desc: '',
       args: [],
     );

@@ -10,7 +10,9 @@
 // ignore_for_file:unused_import, file_names, avoid_escaping_inner_quotes
 // ignore_for_file:unnecessary_string_interpolations, unnecessary_string_escapes
 
+// ignore: depend_on_referenced_packages
 import 'package:intl/intl.dart';
+// ignore: depend_on_referenced_packages
 import 'package:intl/message_lookup_by_library.dart';
 
 final messages = new MessageLookup();
@@ -22,6 +24,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "on_boarding_buttom_text": MessageLookupByLibrary.simpleMessage(
+      "Start now",
+    ),
     "on_boarding_skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "on_boarding_subtitle": MessageLookupByLibrary.simpleMessage(
       "Discover a unique shopping experience with FruitHUB. Explore our wide selection of premium fresh fruits and enjoy the best offers with top quality.",

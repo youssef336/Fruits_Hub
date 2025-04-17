@@ -5,12 +5,12 @@ import 'package:fruits_hub_app/generated/l10n.dart';
 class PageViewItem extends StatelessWidget {
   @override
   const PageViewItem({
-    Key? key,
+    super.key,
     required this.image,
     required this.backgroundimage,
     required this.subtitle,
     required this.title,
-  }) : super(key: key);
+  });
   final String image, backgroundimage;
   final String subtitle;
   final Widget title;

@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruits_hub_app/core/helper_functions/on_generate_routes.dart';
 import 'package:fruits_hub_app/features/splash/presentation/views/splash_view.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
+// ignore: depend_on_referenced_packages
 import 'package:intl/intl.dart';
 
 void main() {

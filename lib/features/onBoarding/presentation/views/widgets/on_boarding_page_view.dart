@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_hub_app/constant.dart';
 import 'package:fruits_hub_app/core/utils/app_images.dart';
 import 'package:fruits_hub_app/features/onBoarding/presentation/views/widgets/page_view_item.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
@@ -6,7 +7,7 @@ import 'package:fruits_hub_app/generated/l10n.dart';
 import 'package:fruits_hub_app/main.dart';
 
 class OnBoardingPageView extends StatelessWidget {
-  const OnBoardingPageView({Key? key}) : super(key: key);
+  const OnBoardingPageView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +39,7 @@ class OnBoardingPageView extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.w700,
                       fontSize: 23,
-                      color: const Color(0xff0E5E39),
+                      color: KprimaryColor,
                     ),
                   ),
               isArabic()
@@ -47,7 +48,7 @@ class OnBoardingPageView extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.w700,
                       fontSize: 23,
-                      color: const Color(0xff0E5E39),
+                      color: KprimaryColor,
                     ),
                   )
                   : Text(
