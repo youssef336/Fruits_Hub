@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_launcher_icons: ^0.14.3
   flutter_svg: ^2.0.17
+  dots_indicator: ^4.0.1
 
 dev_dependencies:
   flutter_test:

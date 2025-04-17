@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruits_hub_app/generated/l10n.dart';
 
 class PageViewItem extends StatelessWidget {
   @override
@@ -32,8 +33,22 @@ class PageViewItem extends StatelessWidget {
                 left: 0,
                 child: SvgPicture.asset(image),
               ),
-              Padding(padding: const EdgeInsets.all(16), child: Text("تخطي")),
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: Text(S.of(context).on_boarding_skip),
+              ),
             ],
+          ),
+        ),
+        SizedBox(height: 64),
+        title,
+        const SizedBox(height: 24),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: Text(
+            subtitle,
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
           ),
         ),
       ],

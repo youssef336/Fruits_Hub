@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruits_hub_app/core/utils/app_images.dart';
 import 'package:fruits_hub_app/features/onBoarding/presentation/views/on_boarding.dart';
+import 'package:fruits_hub_app/main.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -24,7 +25,8 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment:
+              isArabic() ? MainAxisAlignment.end : MainAxisAlignment.start,
           children: [SvgPicture.asset(Assets.imagesPlant)],
         ),
         SvgPicture.asset(Assets.imagesLogo),
