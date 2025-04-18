@@ -1,29 +1,33 @@
 import 'package:dots_indicator/dots_indicator.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
 import 'package:fruits_hub_app/constant.dart';
 import 'package:fruits_hub_app/core/widgets/custom_buttom.dart';
 import 'package:fruits_hub_app/features/onBoarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
 
-class OnBoardingBody extends StatefulWidget {
-  const OnBoardingBody({super.key});
+class OnBoardingViewBody extends StatefulWidget {
+  const OnBoardingViewBody({super.key});
 
   @override
-  State<OnBoardingBody> createState() => _OnBoardingBodyState();
+  State<OnBoardingViewBody> createState() => _OnBoardingViewBodyState();
 }
 
-class _OnBoardingBodyState extends State<OnBoardingBody> {
+class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
   late PageController pageController;
-  int currentPage = 0;
 
+  var currentPage = 0;
   @override
   void initState() {
     pageController = PageController();
+
     pageController.addListener(() {
       currentPage = pageController.page!.round();
+
       setState(() {});
     });
-
     super.initState();
   }
 
@@ -38,29 +42,32 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
     return Column(
       children: [
         Expanded(child: OnBoardingPageView(pageController: pageController)),
-
         DotsIndicator(
           dotsCount: 2,
-          position: 0,
           decorator: DotsDecorator(
             activeColor: KprimaryColor,
-
-            // ignore: deprecated_member_use
             color:
-                currentPage == 0
-                    ? KprimaryColor.withOpacity(0.5)
-                    : KprimaryColor,
+                currentPage == 1
+                    ? KprimaryColor
+                    : KprimaryColor.withOpacity(0.5),
           ),
         ),
-        SizedBox(height: 19),
+        const SizedBox(height: 25),
+
         Visibility(
           visible: currentPage == 1 ? true : false,
+          maintainSize: true,
+          maintainAnimation: true,
+          maintainState: true,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: KhorzontalPadding),
-            child: CustomButtom(text: S.of(context).on_boarding_buttom_text),
+            child: CustomButtom(
+              onPressed: () {},
+              text: S.of(context).on_boarding_buttom_text,
+            ),
           ),
         ),
-        SizedBox(height: 23),
+        const SizedBox(height: 43),
       ],
     );
   }

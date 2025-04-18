@@ -12,6 +12,7 @@ class OnBoardingPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageView(
+      controller: pageController,
       children: [
         PageViewItem(
           isVisible:
@@ -68,7 +69,7 @@ class OnBoardingPageView extends StatelessWidget {
         PageViewItem(
           isVisible:
               (pageController.hasClients ? pageController.page!.round() : 0) !=
-              0,
+              1,
 
           image: Assets.imagesPageViewItem2Image,
           backgroundimage: Assets.imagesPageViewItem2BackgroundImage,
