@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub_app/constant.dart';
 import 'package:fruits_hub_app/core/utils/app_images.dart';
+import 'package:fruits_hub_app/core/utils/text_styles.dart';
 import 'package:fruits_hub_app/features/onBoarding/presentation/views/widgets/page_view_item.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
 
@@ -26,40 +27,32 @@ class OnBoardingPageView extends StatelessWidget {
             children: [
               Text(
                 S.of(context).on_boarding_title,
-                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 23),
+                style: AppTextStyles.heading5Bold,
               ),
 
               isArabic()
                   ? Text(
                     "HUB",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 23,
+                    style: AppTextStyles.heading5Bold.copyWith(
                       color: Colors.orange,
                     ),
                   )
                   : Text(
                     "Fruit",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 23,
+                    style: AppTextStyles.heading5Bold.copyWith(
                       color: KprimaryColor,
                     ),
                   ),
               isArabic()
                   ? Text(
                     "Fruit",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 23,
+                    style: AppTextStyles.heading5Bold.copyWith(
                       color: KprimaryColor,
                     ),
                   )
                   : Text(
                     "HUB",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 23,
+                    style: AppTextStyles.heading5Bold.copyWith(
                       color: Colors.orange,
                     ),
                   ),
@@ -79,7 +72,7 @@ class OnBoardingPageView extends StatelessWidget {
             children: [
               Text(
                 S.of(context).on_boarding_title2,
-                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 23),
+                style: AppTextStyles.heading5Bold,
               ),
             ],
           ),

@@ -32,9 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "on_boarding_subtitle2": MessageLookupByLibrary.simpleMessage(
       "We offer you the finest handpicked fruits. Check details, photos, and reviews to ensure you select the perfect fruit.",
     ),
-    "on_boarding_title": MessageLookupByLibrary.simpleMessage(
-      "welcome to our app ",
-    ),
+    "on_boarding_title": MessageLookupByLibrary.simpleMessage("welcome to   "),
     "on_boarding_title2": MessageLookupByLibrary.simpleMessage(
       "Browse and Shop ",
     ),

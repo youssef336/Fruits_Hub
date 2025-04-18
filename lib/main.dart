@@ -25,7 +25,7 @@ class FruitsHubApp extends StatelessWidget {
       supportedLocales: S.delegate.supportedLocales,
       locale: const Locale('ar'),
       title: 'Fruits Hub',
-      theme: ThemeData(primarySwatch: Colors.green),
+      theme: ThemeData(fontFamily: 'Cairo'),
       onGenerateRoute: onGenerateRoute,
       initialRoute: SplashView.routeName,
       debugShowCheckedModeBanner: false,

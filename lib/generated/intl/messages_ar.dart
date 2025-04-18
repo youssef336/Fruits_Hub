@@ -32,9 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "on_boarding_subtitle2": MessageLookupByLibrary.simpleMessage(
       "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
     ),
-    "on_boarding_title": MessageLookupByLibrary.simpleMessage(
-      " مرحبًا بك في تطبيقنا",
-    ),
+    "on_boarding_title": MessageLookupByLibrary.simpleMessage(" مرحبًا بك في "),
     "on_boarding_title2": MessageLookupByLibrary.simpleMessage(" ابحث وتسوق"),
   };
 }

@@ -60,10 +60,10 @@ class S {
     return Intl.message('Skip', name: 'on_boarding_skip', desc: '', args: []);
   }
 
-  /// `welcome to our app `
+  /// `welcome to   `
   String get on_boarding_title {
     return Intl.message(
-      'welcome to our app ',
+      'welcome to   ',
       name: 'on_boarding_title',
       desc: '',
       args: [],
