@@ -13,12 +13,20 @@ abstract class AppTextStyles {
   );
 
   static const TextStyle bodySmallSemibold = TextStyle(
-    fontSize: 12,
+    fontSize: 13,
+    fontFamily: "Cairo",
     fontWeight: FontWeight.w600,
   );
 
+  static const TextStyle bodysmallBold = TextStyle(
+    fontSize: 13,
+    fontFamily: 'Cairo',
+    fontWeight: FontWeight.w700,
+  );
+
   static const TextStyle bodyBaseBold = TextStyle(
-    fontSize: 14,
+    fontSize: 16,
+    fontFamily: 'Cairo',
     fontWeight: FontWeight.w700,
   );
 

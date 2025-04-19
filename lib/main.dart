@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruits_hub_app/constant.dart';
@@ -27,7 +29,7 @@ class FruitsHubApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      locale: const Locale('ar'),
+      locale: const Locale("ar"),
       title: 'Fruits Hub',
       theme: ThemeData(
         fontFamily: 'Cairo',
