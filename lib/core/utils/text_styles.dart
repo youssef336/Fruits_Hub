@@ -28,7 +28,8 @@ abstract class AppTextStyles {
   );
 
   static const TextStyle bodyLargeBold = TextStyle(
-    fontSize: 16,
+    fontSize: 19,
+    fontFamily: 'Cairo',
     fontWeight: FontWeight.w700,
   );
 
