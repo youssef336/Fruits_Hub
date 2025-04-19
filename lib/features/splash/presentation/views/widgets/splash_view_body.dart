@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruits_hub_app/constant.dart';
+import 'package:fruits_hub_app/core/services/shared_preferences_singletone.dart';
 import 'package:fruits_hub_app/core/utils/app_images.dart';
+import 'package:fruits_hub_app/features/auth/presentation/views/Login_view.dart';
 import 'package:fruits_hub_app/features/onBoarding/presentation/views/on_boarding.dart';
 import 'package:fruits_hub_app/main.dart';
 
@@ -17,6 +20,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   late Animation<double> _opacityAnimation;
   late Animation<double> _scaleAnimation;
   bool _showLogo = false;
+  bool isBorderingViewSeen = Prefs.getBool(KisBoardingViewSeen) ?? false;
 
   @override
   void initState() {
@@ -40,7 +44,11 @@ class _SplashViewBodyState extends State<SplashViewBody>
       _animationController.forward().then((_) {
         // Navigate after animation completes
         Future.delayed(const Duration(seconds: 1), () {
-          Navigator.pushReplacementNamed(context, OnBoarding.routeName);
+          if (isBorderingViewSeen) {
+            Navigator.pushReplacementNamed(context, LoginView.routeName);
+          } else {
+            Navigator.pushReplacementNamed(context, OnBoarding.routeName);
+          }
         });
       });
     });
