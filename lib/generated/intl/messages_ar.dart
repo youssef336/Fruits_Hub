@@ -56,5 +56,23 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "on_boarding_title": MessageLookupByLibrary.simpleMessage(" مرحبًا بك في "),
     "on_boarding_title2": MessageLookupByLibrary.simpleMessage(" ابحث وتسوق"),
+    "on_signup_Signup": MessageLookupByLibrary.simpleMessage("  حساب جديد"),
+    "on_signup_TermsandConditions": MessageLookupByLibrary.simpleMessage(
+      " من خلال إنشاء حساب ، فإنك توافق على ",
+    ),
+    "on_signup_TermsandConditions_text": MessageLookupByLibrary.simpleMessage(
+      "الشروط والأحكام",
+    ),
+    "on_signup_TermsandConditions_text2": MessageLookupByLibrary.simpleMessage(
+      "الخاصة",
+    ),
+    "on_signup_TermsandConditions_text3": MessageLookupByLibrary.simpleMessage(
+      "بنا",
+    ),
+    "on_signup_email": MessageLookupByLibrary.simpleMessage(
+      "البريد الإلكتروني",
+    ),
+    "on_signup_name": MessageLookupByLibrary.simpleMessage("الاسم"),
+    "on_signup_password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
   };
 }

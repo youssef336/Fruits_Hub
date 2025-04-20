@@ -15,7 +15,18 @@
     "on_Login_login_or_divider": "او",
     "on_Login_login_with_google": "تسجيل الدخول باستخدام جوجل",
     "on_Login_login_with_facebook": "تسجيل الدخول باستخدام فيسبوك",
-    "on_Login_login_with_apple": "تسجيل الدخول باستخدام ابل"
+    "on_Login_login_with_apple": "تسجيل الدخول باستخدام ابل",
+
+
+    "on_signup_Signup": "  حساب جديد",
+    "on_signup_name": "الاسم",
+    "on_signup_email": "البريد الإلكتروني",
+    "on_signup_password": "كلمة المرور",
+    "on_signup_TermsandConditions": " من خلال إنشاء حساب ، فإنك توافق على ",
+    "on_signup_TermsandConditions_text": "الشروط والأحكام",
+    "on_signup_TermsandConditions_text2": "الخاصة",
+    "on_signup_TermsandConditions_text3": "بنا"
+
 
 
 

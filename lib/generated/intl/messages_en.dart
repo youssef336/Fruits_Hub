@@ -58,5 +58,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "on_boarding_title2": MessageLookupByLibrary.simpleMessage(
       "Browse and Shop ",
     ),
+    "on_signup_Signup": MessageLookupByLibrary.simpleMessage("Sign Up"),
+    "on_signup_TermsandConditions": MessageLookupByLibrary.simpleMessage(
+      "By creating an account, you agree to ",
+    ),
+    "on_signup_TermsandConditions_text": MessageLookupByLibrary.simpleMessage(
+      "Terms and Conditions",
+    ),
+    "on_signup_TermsandConditions_text2": MessageLookupByLibrary.simpleMessage(
+      "and",
+    ),
+    "on_signup_TermsandConditions_text3": MessageLookupByLibrary.simpleMessage(
+      "Privacy Policy",
+    ),
+    "on_signup_email": MessageLookupByLibrary.simpleMessage("Email"),
+    "on_signup_name": MessageLookupByLibrary.simpleMessage("Name"),
+    "on_signup_password": MessageLookupByLibrary.simpleMessage("Password"),
   };
 }

@@ -199,6 +199,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Sign Up`
+  String get on_signup_Signup {
+    return Intl.message(
+      'Sign Up',
+      name: 'on_signup_Signup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get on_signup_name {
+    return Intl.message('Name', name: 'on_signup_name', desc: '', args: []);
+  }
+
+  /// `Email`
+  String get on_signup_email {
+    return Intl.message('Email', name: 'on_signup_email', desc: '', args: []);
+  }
+
+  /// `Password`
+  String get on_signup_password {
+    return Intl.message(
+      'Password',
+      name: 'on_signup_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `By creating an account, you agree to `
+  String get on_signup_TermsandConditions {
+    return Intl.message(
+      'By creating an account, you agree to ',
+      name: 'on_signup_TermsandConditions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Terms and Conditions`
+  String get on_signup_TermsandConditions_text {
+    return Intl.message(
+      'Terms and Conditions',
+      name: 'on_signup_TermsandConditions_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `and`
+  String get on_signup_TermsandConditions_text2 {
+    return Intl.message(
+      'and',
+      name: 'on_signup_TermsandConditions_text2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Privacy Policy`
+  String get on_signup_TermsandConditions_text3 {
+    return Intl.message(
+      'Privacy Policy',
+      name: 'on_signup_TermsandConditions_text3',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

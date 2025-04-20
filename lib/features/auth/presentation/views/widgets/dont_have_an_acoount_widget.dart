@@ -1,6 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_hub_app/constant.dart';
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
+import 'package:fruits_hub_app/features/auth/presentation/views/sign_up_view.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
 
 Text DontHaveAnAcoountWidget(BuildContext context) {
@@ -21,6 +23,11 @@ Text DontHaveAnAcoountWidget(BuildContext context) {
         ),
 
         TextSpan(
+          recognizer:
+              TapGestureRecognizer()
+                ..onTap = () {
+                  Navigator.pushNamed(context, SignUpView.routeName);
+                },
           text: S.of(context).on_Login_create_account,
           style: AppTextStyles.bodyBaseSemibold.copyWith(
             color: KprimaryColor /* Grayscale-600 */,
