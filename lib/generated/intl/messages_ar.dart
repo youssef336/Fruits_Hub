@@ -33,6 +33,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "نسيت كلمة المرور؟",
     ),
     "on_Login_login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "on_Login_login_or_divider": MessageLookupByLibrary.simpleMessage("او"),
+    "on_Login_login_with_apple": MessageLookupByLibrary.simpleMessage(
+      "تسجيل الدخول باستخدام ابل",
+    ),
+    "on_Login_login_with_facebook": MessageLookupByLibrary.simpleMessage(
+      "تسجيل الدخول باستخدام فيسبوك",
+    ),
+    "on_Login_login_with_google": MessageLookupByLibrary.simpleMessage(
+      "تسجيل الدخول باستخدام جوجل",
+    ),
     "on_Login_password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "on_boarding_buttom_text": MessageLookupByLibrary.simpleMessage(
       "ابدأ الان",

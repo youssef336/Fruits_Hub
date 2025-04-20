@@ -57,7 +57,8 @@ abstract class AppTextStyles {
   );
 
   static const TextStyle bodyBaseSemibold = TextStyle(
-    fontSize: 14,
+    fontSize: 16,
+    fontFamily: 'Cairo',
     fontWeight: FontWeight.w600,
   );
 

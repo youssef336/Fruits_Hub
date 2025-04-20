@@ -11,7 +11,11 @@
     "on_Login_forgot_password": "نسيت كلمة المرور؟",
     "on_Login_login": "تسجيل الدخول",
     "on_Login_create_account": "قم بإنشاء حساب",
-    "on_Login_create_account_text": "لا تمتلك حسابًا؟"
+    "on_Login_create_account_text": "لا تمتلك حسابًا؟",
+    "on_Login_login_or_divider": "او",
+    "on_Login_login_with_google": "تسجيل الدخول باستخدام جوجل",
+    "on_Login_login_with_facebook": "تسجيل الدخول باستخدام فيسبوك",
+    "on_Login_login_with_apple": "تسجيل الدخول باستخدام ابل"
 
 
 

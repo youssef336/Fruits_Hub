@@ -1,8 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:fruits_hub_app/constant.dart';
+import 'package:fruits_hub_app/core/utils/app_images.dart';
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
 import 'package:fruits_hub_app/core/widgets/custom_buttom.dart';
 import 'package:fruits_hub_app/core/widgets/custom_text_feild.dart';
+import 'package:fruits_hub_app/features/auth/presentation/views/widgets/dont_have_an_acoount_widget.dart';
+import 'package:fruits_hub_app/features/auth/presentation/views/widgets/or_divider.dart';
+import 'package:fruits_hub_app/features/auth/presentation/views/widgets/social_text_buttom.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
 
 class LoginViewBody extends StatelessWidget {
@@ -44,31 +48,28 @@ class LoginViewBody extends StatelessWidget {
             SizedBox(height: 33),
             CustomButtom(text: S.of(context).on_Login_login, onPressed: () {}),
             const SizedBox(height: 33),
-            Text.rich(
-              TextSpan(
-                children: [
-                  TextSpan(
-                    text: S.of(context).on_Login_create_account_text,
-                    style: AppTextStyles.bodyBaseSemibold.copyWith(
-                      color: const Color(0xFF949D9E) /* Grayscale-600 */,
-                    ),
-                  ),
-                  TextSpan(
-                    text: ' ',
-                    style: AppTextStyles.bodyBaseSemibold.copyWith(
-                      color: const Color(0xFF616A6B),
-                    ),
-                  ),
+            DontHaveAnAcoountWidget(context),
+            const SizedBox(height: 33),
+            OrDivider(),
+            const SizedBox(height: 16),
 
-                  TextSpan(
-                    text: S.of(context).on_Login_create_account,
-                    style: AppTextStyles.bodyBaseSemibold.copyWith(
-                      color: KprimaryColor /* Grayscale-600 */,
-                    ),
-                  ),
-                ],
-              ),
-              textAlign: TextAlign.center,
+            SocialTextButtom(
+              image: Assets.imagesGoogleIcon,
+              text: S.of(context).on_Login_login_with_google,
+              onPressed: () {},
+            ),
+            const SizedBox(height: 16),
+            SocialTextButtom(
+              image: Assets.imagesApplIcon,
+              text: S.of(context).on_Login_login_with_apple,
+              onPressed: () {},
+            ),
+            const SizedBox(height: 16),
+
+            SocialTextButtom(
+              image: Assets.imagesFacebookIcon,
+              text: S.of(context).on_Login_login_with_facebook,
+              onPressed: () {},
             ),
           ],
         ),

@@ -33,6 +33,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Forgot Password?",
     ),
     "on_Login_login": MessageLookupByLibrary.simpleMessage("Login"),
+    "on_Login_login_or_divider": MessageLookupByLibrary.simpleMessage("or"),
+    "on_Login_login_with_apple": MessageLookupByLibrary.simpleMessage(
+      "Login with Apple",
+    ),
+    "on_Login_login_with_facebook": MessageLookupByLibrary.simpleMessage(
+      "Login with Facebook",
+    ),
+    "on_Login_login_with_google": MessageLookupByLibrary.simpleMessage(
+      "Login with Google",
+    ),
     "on_Login_password": MessageLookupByLibrary.simpleMessage("Password"),
     "on_boarding_buttom_text": MessageLookupByLibrary.simpleMessage(
       "Start now",

@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+import 'package:fruits_hub_app/constant.dart';
+import 'package:fruits_hub_app/core/utils/text_styles.dart';
+import 'package:fruits_hub_app/generated/l10n.dart';
+
+Text DontHaveAnAcoountWidget(BuildContext context) {
+  return Text.rich(
+    TextSpan(
+      children: [
+        TextSpan(
+          text: S.of(context).on_Login_create_account_text,
+          style: AppTextStyles.bodyBaseSemibold.copyWith(
+            color: const Color(0xFF949D9E) /* Grayscale-600 */,
+          ),
+        ),
+        TextSpan(
+          text: ' ',
+          style: AppTextStyles.bodyBaseSemibold.copyWith(
+            color: const Color(0xFF616A6B),
+          ),
+        ),
+
+        TextSpan(
+          text: S.of(context).on_Login_create_account,
+          style: AppTextStyles.bodyBaseSemibold.copyWith(
+            color: KprimaryColor /* Grayscale-600 */,
+          ),
+        ),
+      ],
+    ),
+    textAlign: TextAlign.center,
+  );
+}
