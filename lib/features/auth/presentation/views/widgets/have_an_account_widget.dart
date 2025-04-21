@@ -1,0 +1,40 @@
+import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
+import 'package:fruits_hub_app/constant.dart';
+import 'package:fruits_hub_app/core/utils/text_styles.dart';
+import 'package:fruits_hub_app/features/auth/presentation/views/sign_up_view.dart';
+import 'package:fruits_hub_app/generated/l10n.dart';
+
+Text HaveAnAcoountWidget(BuildContext context) {
+  return Text.rich(
+    TextSpan(
+      children: [
+        TextSpan(
+          text: S.of(context).on_signup_create_NewAccount_text,
+          style: AppTextStyles.bodyBaseSemibold.copyWith(
+            color: const Color(0xFF949D9E) /* Grayscale-600 */,
+          ),
+        ),
+        TextSpan(
+          text: ' ',
+          style: AppTextStyles.bodyBaseSemibold.copyWith(
+            color: const Color(0xFF616A6B),
+          ),
+        ),
+
+        TextSpan(
+          recognizer:
+              TapGestureRecognizer()
+                ..onTap = () {
+                  Navigator.pop(context);
+                },
+          text: S.of(context).on_signup_create_NewAccount_text2,
+          style: AppTextStyles.bodyBaseSemibold.copyWith(
+            color: KprimaryColor /* Grayscale-600 */,
+          ),
+        ),
+      ],
+    ),
+    textAlign: TextAlign.center,
+  );
+}

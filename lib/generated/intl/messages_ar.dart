@@ -69,6 +69,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "on_signup_TermsandConditions_text3": MessageLookupByLibrary.simpleMessage(
       "بنا",
     ),
+    "on_signup_create_NewAccount": MessageLookupByLibrary.simpleMessage(
+      "إنشاء حساب جديد",
+    ),
+    "on_signup_create_NewAccount_text": MessageLookupByLibrary.simpleMessage(
+      "هل لديك حساب بالفعل؟",
+    ),
+    "on_signup_create_NewAccount_text2": MessageLookupByLibrary.simpleMessage(
+      "تسجيل الدخول",
+    ),
     "on_signup_email": MessageLookupByLibrary.simpleMessage(
       "البريد الإلكتروني",
     ),

@@ -71,6 +71,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "on_signup_TermsandConditions_text3": MessageLookupByLibrary.simpleMessage(
       "Privacy Policy",
     ),
+    "on_signup_create_NewAccount": MessageLookupByLibrary.simpleMessage(
+      "Create New Account",
+    ),
+    "on_signup_create_NewAccount_text": MessageLookupByLibrary.simpleMessage(
+      "Already have an account?",
+    ),
+    "on_signup_create_NewAccount_text2": MessageLookupByLibrary.simpleMessage(
+      "Login",
+    ),
     "on_signup_email": MessageLookupByLibrary.simpleMessage("Email"),
     "on_signup_name": MessageLookupByLibrary.simpleMessage("Name"),
     "on_signup_password": MessageLookupByLibrary.simpleMessage("Password"),

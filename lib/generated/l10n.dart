@@ -269,6 +269,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Create New Account`
+  String get on_signup_create_NewAccount {
+    return Intl.message(
+      'Create New Account',
+      name: 'on_signup_create_NewAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account?`
+  String get on_signup_create_NewAccount_text {
+    return Intl.message(
+      'Already have an account?',
+      name: 'on_signup_create_NewAccount_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get on_signup_create_NewAccount_text2 {
+    return Intl.message(
+      'Login',
+      name: 'on_signup_create_NewAccount_text2',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
