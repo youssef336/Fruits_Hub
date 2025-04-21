@@ -1,5 +1,6 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:fruits_hub_app/core/utils/text_styles.dart';
 import 'package:fruits_hub_app/core/widgets/Custom_app_bar.dart';
 import 'package:fruits_hub_app/features/auth/presentation/views/widgets/Login_view_body.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';

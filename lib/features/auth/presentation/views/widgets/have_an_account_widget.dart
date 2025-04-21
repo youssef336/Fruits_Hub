@@ -1,8 +1,9 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_hub_app/constant.dart';
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
-import 'package:fruits_hub_app/features/auth/presentation/views/sign_up_view.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
 
 Text HaveAnAcoountWidget(BuildContext context) {

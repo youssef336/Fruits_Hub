@@ -3,7 +3,7 @@ import 'package:fruits_hub_app/core/utils/text_styles.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
 
 class OrDivider extends StatelessWidget {
-  const OrDivider({Key? key}) : super(key: key);
+  const OrDivider({super.key});
 
   @override
   Widget build(BuildContext context) {

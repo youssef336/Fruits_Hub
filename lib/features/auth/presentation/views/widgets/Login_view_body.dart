@@ -1,3 +1,6 @@
+// ignore: file_names
+// ignore_for_file: file_names, duplicate_ignore
+
 import 'package:flutter/cupertino.dart';
 import 'package:fruits_hub_app/constant.dart';
 import 'package:fruits_hub_app/core/utils/app_images.dart';

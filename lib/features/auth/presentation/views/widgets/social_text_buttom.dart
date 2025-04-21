@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
-import 'package:fruits_hub_app/generated/l10n.dart';
 
 class SocialTextButtom extends StatelessWidget {
   const SocialTextButtom({

@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names, duplicate_ignore
+
 import 'dart:ui';
 
 // ignore: constant_identifier_names

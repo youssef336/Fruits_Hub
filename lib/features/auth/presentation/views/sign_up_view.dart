@@ -10,7 +10,7 @@ import 'package:fruits_hub_app/features/auth/presentation/views/widgets/terms_an
 import 'package:fruits_hub_app/generated/l10n.dart';
 
 class SignUpView extends StatelessWidget {
-  const SignUpView({Key? key}) : super(key: key);
+  const SignUpView({super.key});
   static const String routeName = '/sign-up';
   @override
   Widget build(BuildContext context) {
