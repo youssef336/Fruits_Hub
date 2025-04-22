@@ -5,8 +5,8 @@ import 'package:meta/meta.dart';
 
 part 'signup_cubit_state.dart';
 
-class SignupCubitCubit extends Cubit<SignupCubitState> {
-  SignupCubitCubit(this.authRepo) : super(SignupCubitInitial());
+class SignupCubit extends Cubit<SignupCubitState> {
+  SignupCubit(this.authRepo) : super(SignupCubitInitial());
   final AuthRepo authRepo;
   Future<void> createUserWithEmailAndPassword({
     required String email,

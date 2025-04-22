@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruits_hub_app/constant.dart';
-import 'package:fruits_hub_app/core/services/shared_preferences_singletone.dart';
+import 'package:fruits_hub_app/core/services/shared_preferences_singletone_service.dart';
 import 'package:fruits_hub_app/core/utils/app_images.dart';
 import 'package:fruits_hub_app/features/auth/presentation/views/Login_view.dart';
 import 'package:fruits_hub_app/features/onBoarding/presentation/views/on_boarding.dart';

@@ -45,6 +45,7 @@ dependencies:
   firebase_auth: ^5.5.2
   bloc: ^9.0.0
   flutter_bloc: ^9.1.0
+  get_it: ^8.0.3
 
 dev_dependencies:
   flutter_test:
