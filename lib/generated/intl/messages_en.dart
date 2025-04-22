@@ -22,6 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Custom_Exception_email_already_in_use":
+        MessageLookupByLibrary.simpleMessage(
+          "The email address is already in use by another account.",
+        ),
+    "Custom_Exception_unknown": MessageLookupByLibrary.simpleMessage(
+      "An unknown error occurred please try again later.",
+    ),
+    "Custom_Exception_weak_password": MessageLookupByLibrary.simpleMessage(
+      "The password provided is too weak.",
+    ),
     "on_Login_create_account": MessageLookupByLibrary.simpleMessage(
       "Create Account",
     ),
@@ -70,6 +80,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "on_signup_TermsandConditions_text3": MessageLookupByLibrary.simpleMessage(
       "Privacy Policy",
+    ),
+    "on_signup_Text_feils": MessageLookupByLibrary.simpleMessage(
+      "Please fill in all fields",
     ),
     "on_signup_create_NewAccount": MessageLookupByLibrary.simpleMessage(
       "Create New Account",

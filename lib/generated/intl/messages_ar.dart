@@ -22,6 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Custom_Exception_email_already_in_use":
+        MessageLookupByLibrary.simpleMessage(
+          "عنوان البريد الإلكتروني قيد الاستخدام بالفعل بواسطة حساب آخر.",
+        ),
+    "Custom_Exception_unknown": MessageLookupByLibrary.simpleMessage(
+      "حدث خطأ غير معروف يرجى المحاولة مرة أخرى لاحقًا.",
+    ),
+    "Custom_Exception_weak_password": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور المقدمة ضعيفة جدًا.",
+    ),
     "on_Login_create_account": MessageLookupByLibrary.simpleMessage(
       "قم بإنشاء حساب",
     ),
@@ -68,6 +78,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "on_signup_TermsandConditions_text3": MessageLookupByLibrary.simpleMessage(
       "بنا",
+    ),
+    "on_signup_Text_feils": MessageLookupByLibrary.simpleMessage(
+      "يرجى ملء جميع الحقول",
     ),
     "on_signup_create_NewAccount": MessageLookupByLibrary.simpleMessage(
       "إنشاء حساب جديد",

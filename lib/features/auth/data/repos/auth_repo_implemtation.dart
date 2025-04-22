@@ -5,6 +5,7 @@ import 'package:fruits_hub_app/core/services/firebase_auth_services.dart';
 import 'package:fruits_hub_app/features/auth/data/models/user_model.dart';
 import 'package:fruits_hub_app/features/auth/domains/entities/user_entity.dart';
 import 'package:fruits_hub_app/features/auth/domains/repos/auth_repo.dart';
+import 'package:fruits_hub_app/generated/l10n.dart';
 
 class AuthRepoImplemtation extends AuthRepo {
   final FirebaseAuthServices firebaseAuthServices;
@@ -24,9 +25,7 @@ class AuthRepoImplemtation extends AuthRepo {
     } on CustomException catch (e) {
       return Left(ServerFailure(e.message));
     } catch (e) {
-      return Left(
-        ServerFailure("An unknown error occurred please try again later."),
-      );
+      return Left(ServerFailure(S.current.Custom_Exception_unknown));
     }
   }
 }

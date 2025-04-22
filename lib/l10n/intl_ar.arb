@@ -28,7 +28,15 @@
     "on_signup_TermsandConditions_text3": "بنا",
     "on_signup_create_NewAccount": "إنشاء حساب جديد",
     "on_signup_create_NewAccount_text": "هل لديك حساب بالفعل؟",
-    "on_signup_create_NewAccount_text2": "تسجيل الدخول"
+    "on_signup_create_NewAccount_text2": "تسجيل الدخول",
+
+    "on_signup_Text_feils": "يرجى ملء جميع الحقول",
+
+
+    "Custom_Exception_weak_password":"كلمة المرور المقدمة ضعيفة جدًا.",
+    "Custom_Exception_email_already_in_use":"عنوان البريد الإلكتروني قيد الاستخدام بالفعل بواسطة حساب آخر.",
+    "Custom_Exception_unknown":"حدث خطأ غير معروف يرجى المحاولة مرة أخرى لاحقًا."
+
 
 
 

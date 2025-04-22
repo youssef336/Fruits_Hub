@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
+import 'package:fruits_hub_app/generated/l10n.dart';
 
 class CustomTextFormFeild extends StatelessWidget {
   const CustomTextFormFeild({
@@ -7,13 +8,23 @@ class CustomTextFormFeild extends StatelessWidget {
     required this.hintText,
     required this.textInputType,
     this.suffixIcon,
+    this.onSaved,
   });
   final String hintText;
   final TextInputType textInputType;
   final Widget? suffixIcon;
+  final void Function(String?)? onSaved;
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onSaved: onSaved,
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return S.of(context).on_signup_Text_feils;
+        }
+        return null;
+      },
       keyboardType: textInputType,
       decoration: InputDecoration(
         suffixIcon: suffixIcon,
