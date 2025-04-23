@@ -32,6 +32,7 @@ class SignUpView extends StatelessWidget {
             S.of(context).on_signup_Signup,
             style: AppTextStyles.bodyLargeBold,
           ),
+          backgroundColor: Colors.transparent,
         ),
         body: SignupViewBodyBlocConsumer(),
       ),
