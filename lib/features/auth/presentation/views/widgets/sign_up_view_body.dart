@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub_app/constant.dart';
+import 'package:fruits_hub_app/core/services/build_passward_state.dart';
 import 'package:fruits_hub_app/core/widgets/custom_buttom.dart';
 import 'package:fruits_hub_app/core/widgets/custom_text_feild.dart';
 import 'package:fruits_hub_app/features/auth/presentation/manager/cubits/signup_cubit/signup_cubit_cubit.dart';
@@ -50,16 +51,10 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                 textInputType: TextInputType.emailAddress,
               ),
               const SizedBox(height: 16),
-              CustomTextFormFeild(
+              BiludPasswordState(
                 onSaved: (value) {
                   password = value!;
                 },
-                hintText: S.of(context).on_signup_password,
-                textInputType: TextInputType.visiblePassword,
-                suffixIcon: const Icon(
-                  CupertinoIcons.eye_fill,
-                  color: Color(0xFFC9CECF),
-                ),
               ),
               const SizedBox(height: 16),
               TermsAndConditionsWidget(),
