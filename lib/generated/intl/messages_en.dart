@@ -72,6 +72,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "on_signup_TermsandConditions": MessageLookupByLibrary.simpleMessage(
       "By creating an account, you agree to ",
     ),
+    "on_signup_TermsandConditions_error_bar":
+        MessageLookupByLibrary.simpleMessage(
+          "Please accept the Terms and Conditions and Privacy Policy",
+        ),
     "on_signup_TermsandConditions_text": MessageLookupByLibrary.simpleMessage(
       "Terms and Conditions",
     ),

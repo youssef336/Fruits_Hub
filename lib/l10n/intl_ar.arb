@@ -26,6 +26,7 @@
     "on_signup_TermsandConditions_text": "الشروط والأحكام",
     "on_signup_TermsandConditions_text2": "الخاصة",
     "on_signup_TermsandConditions_text3": "بنا",
+    "on_signup_TermsandConditions_error_bar": "يرجى قبول الشروط والأحكام وسياسة الخصوصية",
     "on_signup_create_NewAccount": "إنشاء حساب جديد",
     "on_signup_create_NewAccount_text": "هل لديك حساب بالفعل؟",
     "on_signup_create_NewAccount_text2": "تسجيل الدخول",

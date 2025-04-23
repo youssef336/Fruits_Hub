@@ -6,8 +6,8 @@ import 'package:fruits_hub_app/generated/l10n.dart';
 import 'package:fruits_hub_app/main.dart';
 
 class TermsAndConditionsWidget extends StatefulWidget {
-  const TermsAndConditionsWidget({super.key});
-
+  const TermsAndConditionsWidget({super.key, required this.onChanged});
+  final ValueChanged<bool> onChanged;
   @override
   State<TermsAndConditionsWidget> createState() =>
       _TermsAndConditionsWidgetState();
@@ -15,6 +15,7 @@ class TermsAndConditionsWidget extends StatefulWidget {
 
 class _TermsAndConditionsWidgetState extends State<TermsAndConditionsWidget> {
   bool isTermsAccepted = false;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -22,6 +23,7 @@ class _TermsAndConditionsWidgetState extends State<TermsAndConditionsWidget> {
         CustomChekBox(
           onChanged: (value) {
             isTermsAccepted = value;
+            widget.onChanged(value!);
             setState(() {});
           },
           isChecked: isTermsAccepted,

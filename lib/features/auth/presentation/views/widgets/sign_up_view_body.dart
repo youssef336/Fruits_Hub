@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub_app/constant.dart';
+import 'package:fruits_hub_app/core/helper_functions/build_error_bar.dart';
 import 'package:fruits_hub_app/core/services/build_passward_state.dart';
 import 'package:fruits_hub_app/core/widgets/custom_buttom.dart';
 import 'package:fruits_hub_app/core/widgets/custom_text_feild.dart';
@@ -26,6 +27,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   AutovalidateMode autoValidateMode = AutovalidateMode.disabled;
   late String email, password, name;
+  late bool isTermsAccepted = false;
   SingleChildScrollView SignupViewBody(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
@@ -57,18 +59,32 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                 },
               ),
               const SizedBox(height: 16),
-              TermsAndConditionsWidget(),
+              TermsAndConditionsWidget(
+                onChanged: (value) {
+                  isTermsAccepted = value;
+                },
+              ),
               const SizedBox(height: 30),
               CustomButtom(
                 text: S.of(context).on_signup_create_NewAccount,
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
-                    context.read<SignupCubit>().createUserWithEmailAndPassword(
-                      email: email,
-                      password: password,
-                      name: name,
-                    );
+                    if (isTermsAccepted) {
+                      // Call the signup method from the SignupCubit
+                      context
+                          .read<SignupCubit>()
+                          .createUserWithEmailAndPassword(
+                            email: email,
+                            password: password,
+                            name: name,
+                          );
+                    } else {
+                      buildErrorBar(
+                        context,
+                        S.of(context).on_signup_TermsandConditions_error_bar,
+                      );
+                    }
                     // Perform signup logic here
                   } else {
                     setState(() {

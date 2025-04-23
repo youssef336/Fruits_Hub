@@ -28,6 +28,7 @@
     "on_signup_TermsandConditions_text": "Terms and Conditions",
     "on_signup_TermsandConditions_text2": "and",
     "on_signup_TermsandConditions_text3": "Privacy Policy",
+    "on_signup_TermsandConditions_error_bar": "Please accept the Terms and Conditions and Privacy Policy",
     "on_signup_create_NewAccount": "Create New Account",
     "on_signup_create_NewAccount_text": "Already have an account?",
     "on_signup_create_NewAccount_text2": "Login",

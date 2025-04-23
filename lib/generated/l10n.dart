@@ -270,6 +270,16 @@ class S {
     );
   }
 
+  /// `Please accept the Terms and Conditions and Privacy Policy`
+  String get on_signup_TermsandConditions_error_bar {
+    return Intl.message(
+      'Please accept the Terms and Conditions and Privacy Policy',
+      name: 'on_signup_TermsandConditions_error_bar',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Create New Account`
   String get on_signup_create_NewAccount {
     return Intl.message(
