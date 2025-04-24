@@ -1,9 +1,11 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:bloc/bloc.dart';
 import 'package:fruits_hub_app/features/auth/domains/entities/user_entity.dart';
 import 'package:fruits_hub_app/features/auth/domains/repos/auth_repo.dart';
 import 'package:meta/meta.dart';
 
-part 'signup_cubit_state.dart';
+part 'signup_state.dart';
 
 class SignupCubit extends Cubit<SignupCubitState> {
   SignupCubit(this.authRepo) : super(SignupCubitInitial());

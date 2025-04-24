@@ -1,9 +1,11 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruits_hub_app/constant.dart';
 import 'package:fruits_hub_app/core/services/shared_preferences_singletone.dart';
 import 'package:fruits_hub_app/core/utils/app_images.dart';
-import 'package:fruits_hub_app/features/auth/presentation/views/Login_view.dart';
+import 'package:fruits_hub_app/features/auth/presentation/views/Sign_in_view.dart';
 import 'package:fruits_hub_app/features/onBoarding/presentation/views/on_boarding.dart';
 
 // Splash screen widget that shows animated elements in sequence
@@ -95,7 +97,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     );
     Future.delayed(const Duration(seconds: 4), () {
       if (isBorderingViewSeen) {
-        Navigator.pushReplacementNamed(context, LoginView.routeName);
+        Navigator.pushReplacementNamed(context, SigninView.routeName);
       } else {
         Navigator.pushReplacementNamed(context, OnBoarding.routeName);
       }

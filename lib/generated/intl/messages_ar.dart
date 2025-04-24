@@ -4,7 +4,7 @@
 // function name.
 
 // Ignore issues from commonly used lints in this file.
-// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new
+// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new, depend_on_referenced_packages
 // ignore_for_file:prefer_single_quotes,comment_references, directives_ordering
 // ignore_for_file:annotate_overrides,prefer_generic_function_type_aliases
 // ignore_for_file:unused_import, file_names, avoid_escaping_inner_quotes
@@ -32,6 +32,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "Custom_Exception_network_request_failed":
         MessageLookupByLibrary.simpleMessage(
           "فشل الطلب الشبكي ، يرجى التحقق من اتصالك بالإنترنت.",
+        ),
+    "Custom_Exception_there_is_problem_in_email_or_password":
+        MessageLookupByLibrary.simpleMessage(
+          "هناك مشكلة في البريد الإلكتروني أو كلمة المرور",
         ),
     "Custom_Exception_unknown": MessageLookupByLibrary.simpleMessage(
       "حدث خطأ غير معروف يرجى المحاولة مرة أخرى لاحقًا.",

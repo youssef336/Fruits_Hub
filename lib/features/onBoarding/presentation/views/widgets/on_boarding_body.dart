@@ -9,7 +9,7 @@ import 'package:fruits_hub_app/constant.dart';
 import 'package:fruits_hub_app/core/services/shared_preferences_singletone.dart';
 
 import 'package:fruits_hub_app/core/widgets/custom_buttom.dart';
-import 'package:fruits_hub_app/features/auth/presentation/views/Login_view.dart';
+import 'package:fruits_hub_app/features/auth/presentation/views/Sign_in_view.dart';
 import 'package:fruits_hub_app/features/onBoarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
 
@@ -69,7 +69,9 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             child: CustomButtom(
               onPressed: () {
                 Prefs.setBool(KisBoardingViewSeen, true);
-                Navigator.of(context).pushReplacementNamed(LoginView.routeName);
+                Navigator.of(
+                  context,
+                ).pushReplacementNamed(SigninView.routeName);
               },
               text: S.of(context).on_boarding_buttom_text,
             ),

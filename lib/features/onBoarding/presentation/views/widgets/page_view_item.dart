@@ -4,7 +4,7 @@ import 'package:fruits_hub_app/constant.dart';
 import 'package:fruits_hub_app/core/services/shared_preferences_singletone.dart';
 
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
-import 'package:fruits_hub_app/features/auth/presentation/views/Login_view.dart';
+import 'package:fruits_hub_app/features/auth/presentation/views/Sign_in_view.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
 
 class PageViewItem extends StatelessWidget {
@@ -46,7 +46,7 @@ class PageViewItem extends StatelessWidget {
                     Prefs.setBool(KisBoardingViewSeen, true);
                     Navigator.of(
                       context,
-                    ).pushReplacementNamed(LoginView.routeName);
+                    ).pushReplacementNamed(SigninView.routeName);
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(16),

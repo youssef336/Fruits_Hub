@@ -1,4 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'intl/messages_all.dart';
@@ -110,6 +112,11 @@ class S {
     );
   }
 
+  /// `Login`
+  String get on_Login_login {
+    return Intl.message('Login', name: 'on_Login_login', desc: '', args: []);
+  }
+
   /// `Email`
   String get on_Login_email {
     return Intl.message('Email', name: 'on_Login_email', desc: '', args: []);
@@ -133,11 +140,6 @@ class S {
       desc: '',
       args: [],
     );
-  }
-
-  /// `Login`
-  String get on_Login_login {
-    return Intl.message('Login', name: 'on_Login_login', desc: '', args: []);
   }
 
   /// `Create Account`
@@ -365,6 +367,16 @@ class S {
     return Intl.message(
       'The email address is not valid.',
       name: 'Custom_Exception_invalid_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There is a problem in email or password`
+  String get Custom_Exception_there_is_problem_in_email_or_password {
+    return Intl.message(
+      'There is a problem in email or password',
+      name: 'Custom_Exception_there_is_problem_in_email_or_password',
       desc: '',
       args: [],
     );

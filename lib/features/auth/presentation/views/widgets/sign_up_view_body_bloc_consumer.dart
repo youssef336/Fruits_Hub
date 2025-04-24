@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub_app/core/helper_functions/build_error_bar.dart';
-import 'package:fruits_hub_app/features/auth/presentation/manager/cubits/signup_cubit/signup_cubit_cubit.dart';
+import 'package:fruits_hub_app/features/auth/presentation/manager/cubits/sign_up_cubit/signup_cubit.dart';
 import 'package:fruits_hub_app/features/auth/presentation/views/widgets/sign_up_view_body.dart';
+// ignore: unused_import
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import 'custom_modal_progress_hub.dart';

@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruits_hub_app/core/helper_functions/build_error_bar.dart';
+import 'package:fruits_hub_app/features/auth/presentation/manager/cubits/sign_in_cubit/sign_in_cubit.dart';
+
+import 'Sign_in_view_body.dart';
+import 'custom_modal_progress_hub.dart';
+
+class SigninViewBodyBlocConsumer extends StatelessWidget {
+  const SigninViewBodyBlocConsumer({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocConsumer<SignInCubit, SignInState>(
+      listener: (context, state) {
+        if (state is SignInSuccess) {}
+        if (state is SignInError) {
+          buildErrorBar(context, state.message);
+        }
+      },
+      builder: (context, state) {
+        return CustomModalProgressHUD(
+          inAsyncCall: state is SignInLoading ? true : false,
+          child: SigninViewBody(),
+        );
+      },
+    );
+  }
+}

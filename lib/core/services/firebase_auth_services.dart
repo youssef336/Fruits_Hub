@@ -41,4 +41,42 @@ class FirebaseAuthServices {
       throw CustomException(message: S.current.Custom_Exception_unknown);
     }
   }
+
+  Future<User> signInWithEmailAndPassword({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return credential.user!;
+    } on FirebaseAuthException catch (e) {
+      log(
+        "Error in FirebaseAuthServices.signInWithEmailAndPassword: $e code: ${e.code} message: ${e.message} ",
+      );
+      if (e.code == 'user-not-found') {
+        throw CustomException(
+          message:
+              S.current.Custom_Exception_there_is_problem_in_email_or_password,
+        );
+      } else if (e.code == 'wrong-password') {
+        throw CustomException(
+          message:
+              S.current.Custom_Exception_there_is_problem_in_email_or_password,
+        );
+      } else if (e.code == 'network-request-failed') {
+        throw CustomException(
+          message: S.current.Custom_Exception_network_request_failed,
+        );
+      } else if (e.code == 'invalid-email') {
+        throw CustomException(
+          message: S.current.Custom_Exception_invalid_email,
+        );
+      } else {
+        throw CustomException(message: S.current.Custom_Exception_unknown);
+      }
+    }
+  }
 }

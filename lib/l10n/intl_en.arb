@@ -8,10 +8,10 @@
     "on_boarding_buttom_text": "Start now",
 
 
+    "on_Login_login": "Login",
     "on_Login_email": "Email",
     "on_Login_password": "Password",
     "on_Login_forgot_password": "Forgot Password?",
-    "on_Login_login": "Login",
     "on_Login_create_account": "Create Account",
     "on_Login_create_account_text": "Don't have an account?",
     "on_Login_login_or_divider": "or",
@@ -41,7 +41,8 @@
     "Custom_Exception_email_already_in_use":"The email address is already in use by another account.",
     "Custom_Exception_unknown":"An unknown error occurred please try again later.",
     "Custom_Exception_network_request_failed" :"Network request failed, please check your internet connection.",
-    "Custom_Exception_invalid_email":"The email address is not valid."
+    "Custom_Exception_invalid_email":"The email address is not valid.",
+    "Custom_Exception_there_is_problem_in_email_or_password":"There is a problem in email or password"
 
 
 

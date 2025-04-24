@@ -31,4 +31,23 @@ class AuthRepoImplemtation extends AuthRepo {
       return Left(ServerFailure(S.current.Custom_Exception_unknown));
     }
   }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithEmailAndPassword(
+    String email,
+    String password,
+  ) async {
+    try {
+      var user = await firebaseAuthServices.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return right(UserModel.fromFireabaseUser(user));
+    } on CustomException catch (e) {
+      return Left(ServerFailure(e.message));
+    } catch (e) {
+      log("Error in AuthRepoImplemtation.signInWithEmailAndPassword: $e");
+      return Left(ServerFailure(S.current.Custom_Exception_unknown));
+    }
+  }
 }

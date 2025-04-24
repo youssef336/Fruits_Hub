@@ -1,6 +1,5 @@
-part of 'signup_cubit_cubit.dart';
+import '../../../../domains/entities/user_entity.dart';
 
-@immutable
 sealed class SignupCubitState {}
 
 final class SignupCubitInitial extends SignupCubitState {}

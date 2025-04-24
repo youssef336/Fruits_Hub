@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -6,7 +8,7 @@ import 'package:fruits_hub_app/core/helper_functions/build_error_bar.dart';
 import 'package:fruits_hub_app/core/services/build_passward_state.dart';
 import 'package:fruits_hub_app/core/widgets/custom_buttom.dart';
 import 'package:fruits_hub_app/core/widgets/custom_text_feild.dart';
-import 'package:fruits_hub_app/features/auth/presentation/manager/cubits/signup_cubit/signup_cubit_cubit.dart';
+import 'package:fruits_hub_app/features/auth/presentation/manager/cubits/sign_up_cubit/signup_cubit.dart';
 import 'package:fruits_hub_app/features/auth/presentation/views/widgets/have_an_account_widget.dart';
 import 'package:fruits_hub_app/features/auth/presentation/views/widgets/terms_and_condations.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
@@ -34,6 +36,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
         padding: const EdgeInsets.symmetric(horizontal: KhorzontalPadding),
         child: Form(
           key: formKey,
+          autovalidateMode: autoValidateMode,
           child: Column(
             children: [
               const SizedBox(height: 24),
