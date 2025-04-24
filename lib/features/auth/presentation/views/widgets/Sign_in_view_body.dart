@@ -89,7 +89,9 @@ class _SigninViewBodyState extends State<SigninViewBody> {
               SocialTextButtom(
                 image: Assets.imagesGoogleIcon,
                 text: S.of(context).on_Login_login_with_google,
-                onPressed: () {},
+                onPressed: () {
+                  context.read<SignInCubit>().signInWithGoogle();
+                },
               ),
               const SizedBox(height: 16),
               SocialTextButtom(

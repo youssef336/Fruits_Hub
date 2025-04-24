@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fruits_hub_app/core/errors/exception.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class FirebaseAuthServices {
   Future<User> createUserWithEmailAndPassword({
@@ -75,8 +76,29 @@ class FirebaseAuthServices {
           message: S.current.Custom_Exception_invalid_email,
         );
       } else {
-        throw CustomException(message: S.current.Custom_Exception_unknown);
+        throw CustomException(
+          message:
+              S.current.Custom_Exception_there_is_problem_in_email_or_password,
+        );
       }
     }
+  }
+
+  Future<User> signInWithGoogle() async {
+    // Trigger the authentication flow
+    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+
+    // Obtain the auth details from the request
+    final GoogleSignInAuthentication? googleAuth =
+        await googleUser?.authentication;
+
+    // Create a new credential
+    final credential = GoogleAuthProvider.credential(
+      accessToken: googleAuth?.accessToken,
+      idToken: googleAuth?.idToken,
+    );
+
+    // Once signed in, return the UserCredential
+    return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
   }
 }
