@@ -4,7 +4,7 @@ import 'package:fruits_hub_app/core/widgets/custom_text_feild.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
 
 class BiludPasswordState extends StatefulWidget {
-  const BiludPasswordState({this.onSaved});
+  const BiludPasswordState({super.key, this.onSaved});
   final void Function(String?)? onSaved;
 
   @override

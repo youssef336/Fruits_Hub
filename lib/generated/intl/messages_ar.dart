@@ -26,6 +26,13 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage(
           "عنوان البريد الإلكتروني قيد الاستخدام بالفعل بواسطة حساب آخر.",
         ),
+    "Custom_Exception_invalid_email": MessageLookupByLibrary.simpleMessage(
+      "عنوان البريد الإلكتروني غير صالح.",
+    ),
+    "Custom_Exception_network_request_failed":
+        MessageLookupByLibrary.simpleMessage(
+          "فشل الطلب الشبكي ، يرجى التحقق من اتصالك بالإنترنت.",
+        ),
     "Custom_Exception_unknown": MessageLookupByLibrary.simpleMessage(
       "حدث خطأ غير معروف يرجى المحاولة مرة أخرى لاحقًا.",
     ),

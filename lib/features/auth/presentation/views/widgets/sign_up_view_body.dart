@@ -12,7 +12,7 @@ import 'package:fruits_hub_app/features/auth/presentation/views/widgets/terms_an
 import 'package:fruits_hub_app/generated/l10n.dart';
 
 class SignUpViewBody extends StatefulWidget {
-  const SignUpViewBody({Key? key}) : super(key: key);
+  const SignUpViewBody({super.key});
 
   @override
   State<SignUpViewBody> createState() => _SignUpViewBodyState();

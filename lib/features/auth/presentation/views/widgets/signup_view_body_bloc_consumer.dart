@@ -5,6 +5,8 @@ import 'package:fruits_hub_app/features/auth/presentation/manager/cubits/signup_
 import 'package:fruits_hub_app/features/auth/presentation/views/widgets/sign_up_view_body.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
+import 'custom_modal_progress_hub.dart';
+
 class SignupViewBodyBlocConsumer extends StatelessWidget {
   const SignupViewBodyBlocConsumer({super.key});
 
@@ -18,11 +20,8 @@ class SignupViewBodyBlocConsumer extends StatelessWidget {
         }
       },
       builder: (context, state) {
-        return ModalProgressHUD(
+        return CustomModalProgressHUD(
           inAsyncCall: state is SignupCubitLoading ? true : false,
-          opacity: 0.5,
-          progressIndicator: const CircularProgressIndicator(),
-          color: Colors.white,
           child: const SignUpViewBody(),
         );
       },

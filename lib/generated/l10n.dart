@@ -349,6 +349,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Network request failed, please check your internet connection.`
+  String get Custom_Exception_network_request_failed {
+    return Intl.message(
+      'Network request failed, please check your internet connection.',
+      name: 'Custom_Exception_network_request_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The email address is not valid.`
+  String get Custom_Exception_invalid_email {
+    return Intl.message(
+      'The email address is not valid.',
+      name: 'Custom_Exception_invalid_email',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

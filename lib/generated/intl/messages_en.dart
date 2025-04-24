@@ -26,6 +26,13 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage(
           "The email address is already in use by another account.",
         ),
+    "Custom_Exception_invalid_email": MessageLookupByLibrary.simpleMessage(
+      "The email address is not valid.",
+    ),
+    "Custom_Exception_network_request_failed":
+        MessageLookupByLibrary.simpleMessage(
+          "Network request failed, please check your internet connection.",
+        ),
     "Custom_Exception_unknown": MessageLookupByLibrary.simpleMessage(
       "An unknown error occurred please try again later.",
     ),

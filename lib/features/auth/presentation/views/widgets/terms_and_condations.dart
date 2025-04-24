@@ -23,7 +23,7 @@ class _TermsAndConditionsWidgetState extends State<TermsAndConditionsWidget> {
         CustomChekBox(
           onChanged: (value) {
             isTermsAccepted = value;
-            widget.onChanged(value!);
+            widget.onChanged(value);
             setState(() {});
           },
           isChecked: isTermsAccepted,
