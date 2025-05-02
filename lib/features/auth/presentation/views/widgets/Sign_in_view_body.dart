@@ -104,7 +104,9 @@ class _SigninViewBodyState extends State<SigninViewBody> {
               SocialTextButtom(
                 image: Assets.imagesFacebookIcon,
                 text: S.of(context).on_Login_login_with_facebook,
-                onPressed: () {},
+                onPressed: () {
+                  context.read<SignInCubit>().signInWithFacebook();
+                },
               ),
             ],
           ),
