@@ -12,6 +12,7 @@ import 'package:fruits_hub_app/features/auth/presentation/views/widgets/dont_hav
 import 'package:fruits_hub_app/features/auth/presentation/views/widgets/or_divider.dart';
 import 'package:fruits_hub_app/features/auth/presentation/views/widgets/social_text_buttom.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
+import 'dart:io';
 
 import '../../../../../core/services/build_passward_state.dart';
 import '../../manager/cubits/sign_in_cubit/sign_in_cubit.dart';
@@ -94,12 +95,18 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                 },
               ),
               const SizedBox(height: 16),
-              SocialTextButtom(
-                image: Assets.imagesApplIcon,
-                text: S.of(context).on_Login_login_with_apple,
-                onPressed: () {},
-              ),
-              const SizedBox(height: 16),
+              Platform.isIOS
+                  ? Column(
+                    children: [
+                      SocialTextButtom(
+                        image: Assets.imagesApplIcon,
+                        text: S.of(context).on_Login_login_with_apple,
+                        onPressed: () {},
+                      ),
+                      const SizedBox(height: 16),
+                    ],
+                  )
+                  : const SizedBox(),
 
               SocialTextButtom(
                 image: Assets.imagesFacebookIcon,
