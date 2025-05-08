@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fruits_hub_app/core/services/database_servies.dart';
 import 'package:fruits_hub_app/features/auth/data/models/user_model.dart';
 import 'package:fruits_hub_app/features/auth/domains/entities/user_entity.dart';
+import 'package:fruits_hub_app/generated/l10n.dart';
 
 class FirestoreServices implements DatabaseServies {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
@@ -9,16 +10,30 @@ class FirestoreServices implements DatabaseServies {
   Future<void> addData({
     required String path,
     required Map<String, dynamic> data,
+    String? documentId,
   }) async {
-    await firestore.collection(path).add(data);
+    if (documentId != null) {
+      await firestore.collection(path).doc(documentId).set(data);
+    } else {
+      await firestore.collection(path).add(data);
+    }
   }
 
   @override
-  Future<UserEntity> getUserData({
+  Future<Map<String, dynamic>> getData({
     required String path,
-    required String uid,
+    required String documentId,
   }) async {
-    var data = await firestore.collection(path).doc(uid).get();
-    return UserModel.fromJson(data.data() as Map<String, dynamic>);
+    var data = await firestore.collection(path).doc(documentId).get();
+    return data.data() as Map<String, dynamic>;
+  }
+
+  @override
+  Future<bool> checkifDataExists({
+    required String path,
+    required String documentId,
+  }) async {
+    var data = await firestore.collection(path).doc(documentId).get();
+    return data.exists;
   }
 }

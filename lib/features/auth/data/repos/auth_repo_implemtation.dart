@@ -60,7 +60,9 @@ class AuthRepoImplemtation extends AuthRepo {
         email: email,
         password: password,
       );
-      return right(UserModel.fromFireabaseUser(user));
+      var userEntity = await getUserData(uId: user.uid);
+      await addUserData(user: userEntity);
+      return right(userEntity);
     } on CustomException catch (e) {
       return Left(ServerFailure(e.message));
     } catch (e) {
@@ -75,7 +77,15 @@ class AuthRepoImplemtation extends AuthRepo {
     try {
       user = await firebaseAuthServices.signInWithGoogle();
       var userEntity = UserModel.fromFireabaseUser(user);
-      await addUserData(user: userEntity);
+      var isUserExists = await databaseServies.checkifDataExists(
+        path: BackEndEndpoints.checkifUserDataExists,
+        documentId: user.uid,
+      );
+      if (isUserExists) {
+        await getUserData(uId: user.uid);
+      } else {
+        await addUserData(user: userEntity);
+      }
 
       return right(userEntity);
     } catch (e) {
@@ -92,7 +102,15 @@ class AuthRepoImplemtation extends AuthRepo {
       user = await firebaseAuthServices.signInWithFacebook();
       var userEntity = UserModel.fromFireabaseUser(user);
       await addUserData(user: userEntity);
-
+      var isUserExists = await databaseServies.checkifDataExists(
+        path: BackEndEndpoints.checkifUserDataExists,
+        documentId: user.uid,
+      );
+      if (isUserExists) {
+        await getUserData(uId: user.uid);
+      } else {
+        await addUserData(user: userEntity);
+      }
       return right(userEntity);
     } catch (e) {
       await DeleteUser(user);
@@ -106,6 +124,16 @@ class AuthRepoImplemtation extends AuthRepo {
     await databaseServies.addData(
       path: BackEndEndpoints.addUserData,
       data: user.toMap(),
+      documentId: user.id,
     );
+  }
+
+  @override
+  Future<UserEntity> getUserData({required String uId}) async {
+    var userData = await databaseServies.getData(
+      path: BackEndEndpoints.getUserData,
+      documentId: uId,
+    );
+    return UserModel.fromJson(userData);
   }
 }
