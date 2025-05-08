@@ -39,7 +39,9 @@
     "Custom_Exception_unknown":"حدث خطأ غير معروف يرجى المحاولة مرة أخرى لاحقًا.",
     "Custom_Exception_network_request_failed" :"فشل الطلب الشبكي ، يرجى التحقق من اتصالك بالإنترنت.",
     "Custom_Exception_invalid_email":"عنوان البريد الإلكتروني غير صالح.",
-    "Custom_Exception_there_is_problem_in_email_or_password":"هناك مشكلة في البريد الإلكتروني أو كلمة المرور"
+    "Custom_Exception_there_is_problem_in_email_or_password":"هناك مشكلة في البريد الإلكتروني أو كلمة المرور",
+
+    "Home_view_welcome_appbar":"صباح الخير !.."
 
 
 

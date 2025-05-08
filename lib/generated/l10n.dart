@@ -379,6 +379,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Good Morning !..`
+  String get Home_view_welcome_appbar {
+    return Intl.message(
+      'Good Morning !..',
+      name: 'Home_view_welcome_appbar',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
