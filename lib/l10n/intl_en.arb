@@ -51,7 +51,10 @@
 
     "Home_view_feature_home_item_first_text":"Eid Offers",
     "Home_view_feature_home_item_second_text":"25% Discount",
-    "Home_view_feature_home_item_third_text":"Shop Now"
+    "Home_view_feature_home_item_third_text":"Shop Now",
+
+    "Home_Best_Seller_Header":"Best Selling",
+    "Home_Best_Seller_Header_subtitle":"More"
 
 
 

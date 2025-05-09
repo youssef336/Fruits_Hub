@@ -47,7 +47,10 @@
 
     "Home_view_feature_home_item_first_text":"عروض العيد",
     "Home_view_feature_home_item_second_text":"خصم 25%",
-    "Home_view_feature_home_item_third_text":"تسوق الآن"
+    "Home_view_feature_home_item_third_text":"تسوق الآن",
+
+    "Home_Best_Seller_Header":"الأكثر مبيعًا",
+    "Home_Best_Seller_Header_subtitle":"المزيد"
 
 
 

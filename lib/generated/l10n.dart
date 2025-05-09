@@ -429,6 +429,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Best Selling`
+  String get Home_Best_Seller_Header {
+    return Intl.message(
+      'Best Selling',
+      name: 'Home_Best_Seller_Header',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `More`
+  String get Home_Best_Seller_Header_subtitle {
+    return Intl.message(
+      'More',
+      name: 'Home_Best_Seller_Header_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

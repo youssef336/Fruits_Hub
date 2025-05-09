@@ -43,6 +43,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "Custom_Exception_weak_password": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور المقدمة ضعيفة جدًا.",
     ),
+    "Home_Best_Seller_Header": MessageLookupByLibrary.simpleMessage(
+      "الأكثر مبيعًا",
+    ),
+    "Home_Best_Seller_Header_subtitle": MessageLookupByLibrary.simpleMessage(
+      "المزيد",
+    ),
     "Home_view_feature_home_item_first_text":
         MessageLookupByLibrary.simpleMessage("عروض العيد"),
     "Home_view_feature_home_item_second_text":
