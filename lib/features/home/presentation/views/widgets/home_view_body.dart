@@ -3,6 +3,7 @@ import 'package:fruits_hub_app/constant.dart';
 import 'package:fruits_hub_app/core/widgets/search_text_feild.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/custom_home_appbar.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/feature_home_item.dart';
+import 'package:fruits_hub_app/features/home/presentation/views/widgets/feature_home_list.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -21,7 +22,7 @@ class HomeViewBody extends StatelessWidget {
                 SizedBox(height: KTopPadding),
                 SearchTextFeild(),
                 SizedBox(height: 12),
-                FeatureHomeItem(),
+                FeatureHomeList(),
               ],
             ),
           ),

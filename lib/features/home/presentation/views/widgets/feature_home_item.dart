@@ -11,7 +11,7 @@ class FeatureHomeItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var itemwidth = MediaQuery.of(context).size.width;
+    var itemwidth = MediaQuery.of(context).size.width - 32;
     return ClipRRect(
       borderRadius: BorderRadius.circular(4),
       child: SizedBox(
