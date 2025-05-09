@@ -47,7 +47,11 @@
 
     "Home_view_welcome_appbar":"Good Morning !..",
 
-    "Home_view_search_text_feild":"Search for......."
+    "Home_view_search_text_feild":"Search for.......",
+
+    "Home_view_feature_home_item_first_text":"Eid Offers",
+    "Home_view_feature_home_item_second_text":"25% Discount",
+    "Home_view_feature_home_item_third_text":"Shop Now"
 
 
 

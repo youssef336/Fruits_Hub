@@ -399,6 +399,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Eid Offers`
+  String get Home_view_feature_home_item_first_text {
+    return Intl.message(
+      'Eid Offers',
+      name: 'Home_view_feature_home_item_first_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `25% Discount`
+  String get Home_view_feature_home_item_second_text {
+    return Intl.message(
+      '25% Discount',
+      name: 'Home_view_feature_home_item_second_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shop Now`
+  String get Home_view_feature_home_item_third_text {
+    return Intl.message(
+      'Shop Now',
+      name: 'Home_view_feature_home_item_third_text',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

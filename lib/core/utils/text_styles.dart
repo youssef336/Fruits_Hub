@@ -73,6 +73,11 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w700,
     fontFamily: 'Cairo',
   );
+  static const TextStyle cairoBold19 = TextStyle(
+    fontSize: 19,
+    fontWeight: FontWeight.w700,
+    fontFamily: 'Cairo',
+  );
 
   static const TextStyle cairoRegular = TextStyle(
     fontSize: 14,

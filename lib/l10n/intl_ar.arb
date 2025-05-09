@@ -43,7 +43,11 @@
 
     "Home_view_welcome_appbar":"صباح الخير !..",
 
-    "Home_view_search_text_feild":"ابحث عن......."
+    "Home_view_search_text_feild":"ابحث عن.......",
+
+    "Home_view_feature_home_item_first_text":"عروض العيد",
+    "Home_view_feature_home_item_second_text":"خصم 25%",
+    "Home_view_feature_home_item_third_text":"تسوق الآن"
 
 
 
