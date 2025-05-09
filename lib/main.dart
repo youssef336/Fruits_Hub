@@ -39,7 +39,6 @@ class FruitsHubApp extends StatelessWidget {
       locale: const Locale("ar"),
       title: 'Fruits Hub',
       theme: ThemeData(
-        fontFamily: 'Cairo',
         scaffoldBackgroundColor: Colors.white,
         colorScheme: ColorScheme.fromSeed(seedColor: KprimaryColor),
         useMaterial3: true,

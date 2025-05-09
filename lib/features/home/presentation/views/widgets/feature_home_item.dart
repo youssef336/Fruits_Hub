@@ -1,40 +1,64 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg_provider/flutter_svg_provider.dart' as svg;
 import 'package:fruits_hub_app/core/utils/app_images.dart';
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/feature_home_item_buttom.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
+import 'package:fruits_hub_app/main.dart';
 
 class FeatureHomeItem extends StatelessWidget {
   const FeatureHomeItem({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var itemwidth = MediaQuery.of(context).size.width;
     return SizedBox(
-      width: MediaQuery.of(context).size.width,
-      child: Stack(
-        children: [
-          Image.asset(Assets.imagesWatermelonTest),
-          Container(
-            child: Column(
-              children: [
-                Text(
-                  S.of(context).Home_view_feature_home_item_first_text,
-                  style: AppTextStyles.cairoRegular.copyWith(
-                    color: Colors.white,
-                  ),
+      width: itemwidth,
+      child: AspectRatio(
+        aspectRatio: 342 / 158,
+        child: Stack(
+          children: [
+            Image.asset(Assets.imagesWatermelonTest),
+            Container(
+              width: itemwidth * 0.5,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: svg.Svg(Assets.imagesFeaturedItemBackground),
+                  fit: BoxFit.fill,
                 ),
-                Text(
-                  S.of(context).Home_view_feature_home_item_second_text,
-                  style: AppTextStyles.cairoBold19.copyWith(
-                    color: Colors.white,
-                  ),
+              ),
+
+              child: Padding(
+                padding:
+                    isArabic()
+                        ? const EdgeInsets.only(left: 0, right: 33)
+                        : const EdgeInsets.only(left: 33, right: 0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(height: 25),
+                    Text(
+                      S.of(context).Home_view_feature_home_item_first_text,
+                      style: AppTextStyles.cairoRegular.copyWith(
+                        color: Colors.white,
+                      ),
+                    ),
+                    Spacer(),
+                    Text(
+                      S.of(context).Home_view_feature_home_item_second_text,
+                      style: AppTextStyles.cairoBold19.copyWith(
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(height: 11),
+                    FeatureHomeItemButtom(onPressed: () {}),
+                    const SizedBox(height: 29),
+                  ],
                 ),
-                FeatureHomeItemButtom(onPressed: () {}),
-              ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

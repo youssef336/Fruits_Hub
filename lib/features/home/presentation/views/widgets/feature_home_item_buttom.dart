@@ -9,19 +9,22 @@ class FeatureHomeItemButtom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 54,
-      width: double.infinity,
+      height: 32,
+
       child: TextButton(
         style: TextButton.styleFrom(
           backgroundColor: Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
-          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
         ),
         onPressed: onPressed,
-        child: Text(
-          S.of(context).Home_view_feature_home_item_third_text,
-          style: AppTextStyles.cairoBold.copyWith(color: KprimaryColor),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: FittedBox(
+            child: Text(
+              S.of(context).Home_view_feature_home_item_third_text,
+              style: AppTextStyles.cairoBold.copyWith(color: KprimaryColor),
+            ),
+          ),
         ),
       ),
     );
