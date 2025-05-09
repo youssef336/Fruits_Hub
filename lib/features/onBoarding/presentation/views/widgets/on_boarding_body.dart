@@ -77,7 +77,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             ),
           ),
         ),
-        const SizedBox(height: 43),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.04),
       ],
     );
   }

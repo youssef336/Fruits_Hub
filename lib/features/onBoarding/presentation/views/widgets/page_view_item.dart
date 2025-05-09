@@ -62,7 +62,7 @@ class PageViewItem extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: 64),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.07),
         title,
         const SizedBox(height: 24),
         Padding(
