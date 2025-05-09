@@ -45,7 +45,9 @@
     "Custom_Exception_there_is_problem_in_email_or_password":"There is a problem in email or password",
 
 
-    "Home_view_welcome_appbar":"Good Morning !.."
+    "Home_view_welcome_appbar":"Good Morning !..",
+
+    "Home_view_search_text_feild":"Search for......."
 
 
 

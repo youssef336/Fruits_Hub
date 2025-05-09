@@ -389,6 +389,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Search for.......`
+  String get Home_view_search_text_feild {
+    return Intl.message(
+      'Search for.......',
+      name: 'Home_view_search_text_feild',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

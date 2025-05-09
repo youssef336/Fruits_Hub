@@ -41,7 +41,9 @@
     "Custom_Exception_invalid_email":"عنوان البريد الإلكتروني غير صالح.",
     "Custom_Exception_there_is_problem_in_email_or_password":"هناك مشكلة في البريد الإلكتروني أو كلمة المرور",
 
-    "Home_view_welcome_appbar":"صباح الخير !.."
+    "Home_view_welcome_appbar":"صباح الخير !..",
+
+    "Home_view_search_text_feild":"ابحث عن......."
 
 
 
