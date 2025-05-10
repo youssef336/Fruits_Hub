@@ -21,10 +21,10 @@ class FeatureHomeItem extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                left: 0,
+                left: isArabic() ? 0 : itemwidth * 0.4,
                 bottom: 0,
                 top: 0,
-                right: itemwidth * 0.4,
+                right: isArabic() ? itemwidth * 0.4 : 0,
                 child: Image.asset(Assets.imagesPlateFruite, fit: BoxFit.fill),
               ),
               Container(

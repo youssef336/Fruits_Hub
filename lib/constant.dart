@@ -9,6 +9,8 @@ const KTopPadding = 16.0;
 // ignore: constant_identifier_names
 const KprimaryColor = Color(0xff0E5E39);
 const KprimaryColorLight = Color(0xFF2D9F5D);
-const KprimaryColorDark = Color(0xff0E5E39);
+const KprimaryColorDark = Color.fromRGBO(14, 94, 57, 1);
+const KsecondaryColor = const Color(0xFFF4A91F);
+const KsecondaryColorLight = const Color(0xFFF8C76D);
 
 const KisBoardingViewSeen = 'isBoardingViewSeen';
