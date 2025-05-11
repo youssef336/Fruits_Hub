@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:fruits_hub_app/constant.dart';
 import 'package:fruits_hub_app/core/utils/app_images.dart';
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
+import 'package:fruits_hub_app/generated/l10n.dart';
+import 'package:fruits_hub_app/main.dart';
 
 class FruiteItem extends StatelessWidget {
   const FruiteItem({super.key});
@@ -9,8 +11,6 @@ class FruiteItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
-      width: 200,
       decoration: ShapeDecoration(
         color: const Color(0xFFF3F5F7),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
@@ -33,29 +33,35 @@ class FruiteItem extends StatelessWidget {
                 const SizedBox(height: 24),
                 ListTile(
                   title: Text(
-                    'بطيخ',
-                    textAlign: TextAlign.right,
+                    S.of(context).Frute_first_item,
+
                     style: AppTextStyles.cairoBold,
                   ),
                   subtitle: Text.rich(
                     TextSpan(
                       children: [
                         TextSpan(
-                          text: '20جنية ',
+                          text:
+                              isArabic()
+                                  ? S.of(context).Frute_first_item_price
+                                  : S.of(context).Frute_first_item_weight,
                           style: AppTextStyles.cairoBold.copyWith(
                             color: KsecondaryColor /* Orange-300 */,
                             fontSize: 13,
                           ),
                         ),
                         TextSpan(
-                          text: '/',
+                          text: "/",
                           style: AppTextStyles.cairoBold.copyWith(
                             color: KsecondaryColorLight /* Orange-300 */,
                             fontSize: 13,
                           ),
                         ),
                         TextSpan(
-                          text: ' الكيلو',
+                          text:
+                              isArabic()
+                                  ? S.of(context).Frute_first_item_weight
+                                  : S.of(context).Frute_first_item_price,
                           style: AppTextStyles.cairoBold.copyWith(
                             color: KsecondaryColorLight /* Grey-300 */,
                             fontSize: 13,

@@ -50,7 +50,17 @@
     "Home_view_feature_home_item_third_text":"تسوق الآن",
 
     "Home_Best_Seller_Header":"الأكثر مبيعًا",
-    "Home_Best_Seller_Header_subtitle":"المزيد"
+    "Home_Best_Seller_Header_subtitle":"المزيد",
+
+    "Frute_first_item": "بطيخ",
+"Frute_first_item_price": "20جنية ",
+"Frute_first_item_weight": "الكيلو",
+
+
+    "Button_NavigationBar_Entity_Home":"الرئيسية",
+    "Button_NavigationBar_Entity_Cart":"عربة التسوق",
+    "Button_NavigationBar_Entity_Profile":"الملف الشخصي",
+    "Button_NavigationBar_Entity_Products":"المنتجات"
 
 
 

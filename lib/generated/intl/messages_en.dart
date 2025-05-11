@@ -22,6 +22,17 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Button_NavigationBar_Entity_Cart": MessageLookupByLibrary.simpleMessage(
+      "Cart",
+    ),
+    "Button_NavigationBar_Entity_Home": MessageLookupByLibrary.simpleMessage(
+      "Home",
+    ),
+    "Button_NavigationBar_Entity_Products":
+        MessageLookupByLibrary.simpleMessage("products"),
+    "Button_NavigationBar_Entity_Profile": MessageLookupByLibrary.simpleMessage(
+      "Profile",
+    ),
     "Custom_Exception_email_already_in_use":
         MessageLookupByLibrary.simpleMessage(
           "The email address is already in use by another account.",
@@ -43,6 +54,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "Custom_Exception_weak_password": MessageLookupByLibrary.simpleMessage(
       "The password provided is too weak.",
     ),
+    "Frute_first_item": MessageLookupByLibrary.simpleMessage("Watermelon"),
+    "Frute_first_item_price": MessageLookupByLibrary.simpleMessage("20 EGP"),
+    "Frute_first_item_weight": MessageLookupByLibrary.simpleMessage("1kg"),
     "Home_Best_Seller_Header": MessageLookupByLibrary.simpleMessage(
       "Best Selling",
     ),

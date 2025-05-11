@@ -22,6 +22,17 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Button_NavigationBar_Entity_Cart": MessageLookupByLibrary.simpleMessage(
+      "عربة التسوق",
+    ),
+    "Button_NavigationBar_Entity_Home": MessageLookupByLibrary.simpleMessage(
+      "الرئيسية",
+    ),
+    "Button_NavigationBar_Entity_Products":
+        MessageLookupByLibrary.simpleMessage("المنتجات"),
+    "Button_NavigationBar_Entity_Profile": MessageLookupByLibrary.simpleMessage(
+      "الملف الشخصي",
+    ),
     "Custom_Exception_email_already_in_use":
         MessageLookupByLibrary.simpleMessage(
           "عنوان البريد الإلكتروني قيد الاستخدام بالفعل بواسطة حساب آخر.",
@@ -43,6 +54,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "Custom_Exception_weak_password": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور المقدمة ضعيفة جدًا.",
     ),
+    "Frute_first_item": MessageLookupByLibrary.simpleMessage("بطيخ"),
+    "Frute_first_item_price": MessageLookupByLibrary.simpleMessage("20جنية "),
+    "Frute_first_item_weight": MessageLookupByLibrary.simpleMessage("الكيلو"),
     "Home_Best_Seller_Header": MessageLookupByLibrary.simpleMessage(
       "الأكثر مبيعًا",
     ),

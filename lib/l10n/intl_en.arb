@@ -54,7 +54,18 @@
     "Home_view_feature_home_item_third_text":"Shop Now",
 
     "Home_Best_Seller_Header":"Best Selling",
-    "Home_Best_Seller_Header_subtitle":"More"
+    "Home_Best_Seller_Header_subtitle":"More",
+
+    "Frute_first_item": "Watermelon",
+    "Frute_first_item_price": "20 EGP",
+    "Frute_first_item_weight": "1kg",
+
+
+    "Button_NavigationBar_Entity_Home":"Home",
+    "Button_NavigationBar_Entity_Cart":"Cart",
+    "Button_NavigationBar_Entity_Profile":"Profile",
+    "Button_NavigationBar_Entity_Products":"products"
+
 
 
 

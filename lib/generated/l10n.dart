@@ -449,6 +449,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Watermelon`
+  String get Frute_first_item {
+    return Intl.message(
+      'Watermelon',
+      name: 'Frute_first_item',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `20 EGP`
+  String get Frute_first_item_price {
+    return Intl.message(
+      '20 EGP',
+      name: 'Frute_first_item_price',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1kg`
+  String get Frute_first_item_weight {
+    return Intl.message(
+      '1kg',
+      name: 'Frute_first_item_weight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get Button_NavigationBar_Entity_Home {
+    return Intl.message(
+      'Home',
+      name: 'Button_NavigationBar_Entity_Home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cart`
+  String get Button_NavigationBar_Entity_Cart {
+    return Intl.message(
+      'Cart',
+      name: 'Button_NavigationBar_Entity_Cart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get Button_NavigationBar_Entity_Profile {
+    return Intl.message(
+      'Profile',
+      name: 'Button_NavigationBar_Entity_Profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `products`
+  String get Button_NavigationBar_Entity_Products {
+    return Intl.message(
+      'products',
+      name: 'Button_NavigationBar_Entity_Products',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

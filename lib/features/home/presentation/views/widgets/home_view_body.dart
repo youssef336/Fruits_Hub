@@ -6,6 +6,7 @@ import 'package:fruits_hub_app/features/home/presentation/views/widgets/custom_h
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/feature_home_item.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/feature_home_list.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/home_best_seller_header.dart';
+import 'package:fruits_hub_app/features/home/presentation/views/widgets/home_best_selliing_items.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -27,10 +28,11 @@ class HomeViewBody extends StatelessWidget {
                 FeatureHomeList(),
                 SizedBox(height: 12),
                 HomeBestSellerHeader(),
-                FruiteItem(),
+                SizedBox(height: 8),
               ],
             ),
           ),
+          HomeBestSelliingItems(),
         ],
       ),
     );
