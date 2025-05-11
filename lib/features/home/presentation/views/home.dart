@@ -8,7 +8,9 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: HomeCustomBottomNavigationBar(),
+      bottomNavigationBar: HomeCustomBottomNavigationBar(
+        onItemTapped: (int value) {},
+      ),
       body: SafeArea(child: HomeViewBody()),
     );
   }

@@ -5,6 +5,8 @@ import 'package:fruits_hub_app/features/home/presentation/views/home.dart';
 import 'package:fruits_hub_app/features/onBoarding/presentation/views/on_boarding.dart';
 import 'package:fruits_hub_app/features/splash/presentation/views/splash_view.dart';
 
+import '../../features/best_selling_fruits/presentation/views/best_selling_view.dart';
+
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
     case SplashView.routeName:
@@ -15,6 +17,8 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const SigninView());
     case HomeView.routeName:
       return MaterialPageRoute(builder: (_) => const HomeView());
+    case BestSellingFruitsView.routeName:
+      return MaterialPageRoute(builder: (_) => const BestSellingFruitsView());
     case SignUpView.routeName:
       return MaterialPageRoute(
         builder: (_) => const SignUpView(),

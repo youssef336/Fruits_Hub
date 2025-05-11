@@ -17,7 +17,10 @@ class CustomBottomNavigationBarItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return isSelected
-        ? ActiveItem(ActiveimagePath: Assets.imagesApplIcon)
+        ? ActiveItem(
+          text: buttonNavigationBarEntity.name,
+          image: buttonNavigationBarEntity.activeImagePath,
+        )
         : InActiveItem(imagePath: buttonNavigationBarEntity.inactiveImagePath);
   }
 }

@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:fruits_hub_app/core/utils/app_images.dart';
-import 'package:fruits_hub_app/features/home/domain/entities/button_navigation_bar_entity.dart';
-
+import '../../../domain/entities/button_navigation_bar_entity.dart';
 import 'custom_bottom_navigation_bari_tem.dart';
 
-class HomeCustomBottomNavigationBar extends StatelessWidget {
-  const HomeCustomBottomNavigationBar({super.key});
+class HomeCustomBottomNavigationBar extends StatefulWidget {
+  const HomeCustomBottomNavigationBar({super.key, required this.onItemTapped});
+  final ValueChanged<int> onItemTapped;
+  @override
+  State<HomeCustomBottomNavigationBar> createState() =>
+      _HomeCustomBottomNavigationBarState();
+}
 
+class _HomeCustomBottomNavigationBarState
+    extends State<HomeCustomBottomNavigationBar> {
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 375,
       height: 70,
-      decoration: ShapeDecoration(
+      decoration: const ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
@@ -32,19 +37,27 @@ class HomeCustomBottomNavigationBar extends StatelessWidget {
       ),
       child: Row(
         children:
-            getButtonNavigationBarItems(context).map((e) {
-              return CustomBottomNavigationBarItem(
-                buttonNavigationBarEntity: e,
-                isSelected: false,
+            getButtonNavigationBarItems(context).asMap().entries.map((e) {
+              var index = e.key;
+              var entity = e.value;
+
+              return Expanded(
+                flex: index == selectedIndex ? 3 : 2,
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      selectedIndex = index;
+                      widget.onItemTapped(index);
+                    });
+                  },
+                  child: CustomBottomNavigationBarItem(
+                    isSelected: selectedIndex == index,
+                    buttonNavigationBarEntity: entity,
+                  ),
+                ),
               );
             }).toList(),
       ),
     );
   }
 }
-
-
-
-
-
-//                           fontSize: 13,
