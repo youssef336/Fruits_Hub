@@ -36,7 +36,7 @@ class FruitsHubApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      locale: const Locale('en'),
+      locale: const Locale('ar'),
       title: 'Fruits Hub',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,

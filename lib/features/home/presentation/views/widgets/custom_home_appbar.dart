@@ -4,6 +4,8 @@ import 'package:fruits_hub_app/core/utils/app_images.dart';
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
 
+import '../../../../../core/widgets/notification_widget.dart';
+
 class CustomHomeAppBar extends StatelessWidget {
   const CustomHomeAppBar({super.key});
 
@@ -19,14 +21,7 @@ class CustomHomeAppBar extends StatelessWidget {
         ),
       ),
       subtitle: Text('أحمد مصطفي', style: AppTextStyles.cairoBold),
-      trailing: Container(
-        padding: const EdgeInsets.all(12),
-        decoration: ShapeDecoration(
-          color: const Color(0xFFEEF8ED) /* green-50 */,
-          shape: OvalBorder(),
-        ),
-        child: SvgPicture.asset(Assets.imagesNotification),
-      ),
+      trailing: NotificationWidget(),
     );
   }
 }
