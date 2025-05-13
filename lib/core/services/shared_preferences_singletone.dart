@@ -14,4 +14,12 @@ class Prefs {
   static bool? getBool(String key) {
     return _preferences?.getBool(key) ?? false;
   }
+
+  static setString(String key, String value) async {
+    await _preferences?.setString(key, value);
+  }
+
+  static getString(String key) {
+    return _preferences?.getString(key) ?? "";
+  }
 }

@@ -14,3 +14,5 @@ const KsecondaryColor = const Color(0xFFF4A91F);
 const KsecondaryColorLight = const Color(0xFFF8C76D);
 
 const KisBoardingViewSeen = 'isBoardingViewSeen';
+
+const KUserData = 'userData';
