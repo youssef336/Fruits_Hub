@@ -15,6 +15,7 @@ class Productmodel {
   final bool isOrganic;
   final int numbersOfCalories;
   final int unitAmount;
+  final int sellingcount;
   final num averageRating = 0;
   final num ratingCount = 0;
   final List<ReviewModel> reviews;
@@ -28,28 +29,30 @@ class Productmodel {
     required this.isOrganic,
     required this.description,
     required this.price,
+    required this.sellingcount,
     required this.image,
     required this.code,
     required this.isfeatured,
     this.imageurl,
   });
-  factory Productmodel.fromEntity(ProductEntity entity) {
-    return Productmodel(
-      reviews: entity.reviews.map((e) => ReviewModel.fromEntity(e)).toList(),
-      isOrganic: entity.isOrganic,
-      name: entity.name,
-      experationMonths: entity.experationMonths,
-      numbersOfCalories: entity.numbersOfCalories,
-      unitAmount: entity.unitAmount,
 
-      description: entity.description,
-      price: entity.price,
-      image: entity.image,
-      code: entity.code,
-      isfeatured: entity.isfeatured,
-      imageurl: entity.imageurl,
-    );
-  }
+  factory Productmodel.fromJson(Map<String, dynamic> json) => Productmodel(
+    name: json['name'],
+    description: json['description'],
+    price: json['price'],
+    code: json['code'],
+    isfeatured: json['isfeatured'],
+    imageurl: json['imageurl'],
+    experationMonths: json['experationMonths'],
+    isOrganic: json['isOrganic'],
+    numbersOfCalories: json['numbersOfCalories'],
+    unitAmount: json['unitAmount'],
+    reviews: List<ReviewModel>.from(
+      json['reviews'].map((x) => ReviewModel.fromJson(x)),
+    ),
+    sellingcount: json['sellingcount'],
+    image: File(json['imageurl']),
+  );
   toJson() => {
     'name': name,
     'description': description,
