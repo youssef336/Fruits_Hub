@@ -6,7 +6,7 @@ class ProductEntity {
   final String name;
   final String description;
   final num price;
-  final File image;
+
   final String code;
   final bool isfeatured;
   String? imageurl;
@@ -26,7 +26,7 @@ class ProductEntity {
     required this.description,
     required this.reviews,
     required this.price,
-    required this.image,
+
     required this.code,
     required this.isfeatured,
     this.isOrganic = false,

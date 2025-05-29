@@ -7,7 +7,7 @@ class Productmodel {
   final String name;
   final String description;
   final num price;
-  final File image;
+
   final String code;
   final bool isfeatured;
   String? imageurl;
@@ -30,7 +30,7 @@ class Productmodel {
     required this.description,
     required this.price,
     required this.sellingCount,
-    required this.image,
+
     required this.code,
     required this.isfeatured,
     this.imageurl,
@@ -51,7 +51,6 @@ class Productmodel {
       json['reviews'].map((x) => ReviewModel.fromJson(x)),
     ),
     sellingCount: json['sellingCount'],
-    image: File(json['imageurl']),
   );
   ProductEntity toEntity() => ProductEntity(
     name: name,
@@ -65,7 +64,6 @@ class Productmodel {
     numbersOfCalories: numbersOfCalories,
     unitAmount: unitAmount,
     reviews: reviews.map((e) => e.toEntity()).toList(),
-    image: image,
   );
   toJson() => {
     'name': name,
