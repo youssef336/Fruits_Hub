@@ -7,7 +7,6 @@ import 'package:fruits_hub_app/core/services/firebase_auth_services.dart';
 import 'package:fruits_hub_app/core/services/shared_preferences_singletone.dart';
 import 'package:fruits_hub_app/core/utils/app_images.dart';
 import 'package:fruits_hub_app/features/auth/presentation/views/Sign_in_view.dart';
-import 'package:fruits_hub_app/features/home/presentation/views/home.dart';
 import 'package:fruits_hub_app/features/onBoarding/presentation/views/on_boarding.dart';
 
 // Splash screen widget that shows animated elements in sequence

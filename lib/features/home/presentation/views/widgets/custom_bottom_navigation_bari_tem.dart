@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_hub_app/core/utils/app_images.dart';
 import 'package:fruits_hub_app/features/home/domain/entities/button_navigation_bar_entity.dart';
 
 import 'home_active_item.dart';

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub_app/constant.dart';
-import 'package:fruits_hub_app/core/widgets/fruite_item.dart';
 import 'package:fruits_hub_app/core/widgets/search_text_feild.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/custom_home_appbar.dart';
-import 'package:fruits_hub_app/features/home/presentation/views/widgets/feature_home_item.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/feature_home_list.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/home_best_seller_header.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/home_best_selliing_items.dart';
