@@ -4,7 +4,7 @@ import 'package:fruits_hub_app/core/helper_functions/build_error_bar.dart';
 import 'package:fruits_hub_app/features/auth/presentation/manager/cubits/sign_in_cubit/sign_in_cubit.dart';
 
 import 'Sign_in_view_body.dart';
-import 'custom_modal_progress_hub.dart';
+import '../../../../../core/widgets/custom_modal_progress_hub.dart';
 
 class SigninViewBodyBlocConsumer extends StatelessWidget {
   const SigninViewBodyBlocConsumer({super.key});

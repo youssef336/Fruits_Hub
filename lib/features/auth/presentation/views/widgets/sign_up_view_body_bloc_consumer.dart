@@ -6,7 +6,7 @@ import 'package:fruits_hub_app/features/auth/presentation/views/widgets/sign_up_
 // ignore: unused_import
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
-import 'custom_modal_progress_hub.dart';
+import '../../../../../core/widgets/custom_modal_progress_hub.dart';
 
 class SignupViewBodyBlocConsumer extends StatelessWidget {
   const SignupViewBodyBlocConsumer({super.key});
