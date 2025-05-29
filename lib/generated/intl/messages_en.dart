@@ -37,6 +37,8 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage(
           "The email address is already in use by another account.",
         ),
+    "Custom_Exception_failed_toget_product":
+        MessageLookupByLibrary.simpleMessage("Failed to get product"),
     "Custom_Exception_invalid_email": MessageLookupByLibrary.simpleMessage(
       "The email address is not valid.",
     ),

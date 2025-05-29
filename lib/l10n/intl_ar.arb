@@ -1,11 +1,10 @@
 {
-
     "on_boarding_skip": "تخطى",
-    "on_boarding_title" : " مرحبًا بك في ",
+    "on_boarding_title": " مرحبًا بك في ",
     "on_boarding_subtitle": "اكتشف تجربة تسوق فريدة مع FruitHUB. استكشف مجموعتنا الواسعة من الفواكه الطازجة الممتازة واحصل على أفضل العروض والجودة العالية.",
-    "on_boarding_title2" : " ابحث وتسوق",
-    "on_boarding_subtitle2":"نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
-    "on_boarding_buttom_text" :"ابدأ الان",
+    "on_boarding_title2": " ابحث وتسوق",
+    "on_boarding_subtitle2": "نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
+    "on_boarding_buttom_text": "ابدأ الان",
     "on_Login_email": "البريد الإلكتروني",
     "on_Login_password": "كلمة المرور",
     "on_Login_forgot_password": "نسيت كلمة المرور؟",
@@ -16,8 +15,6 @@
     "on_Login_login_with_google": "تسجيل الدخول باستخدام جوجل",
     "on_Login_login_with_facebook": "تسجيل الدخول باستخدام فيسبوك",
     "on_Login_login_with_apple": "تسجيل الدخول باستخدام ابل",
-
-
     "on_signup_Signup": "  حساب جديد",
     "on_signup_name": "الاسم",
     "on_signup_email": "البريد الإلكتروني",
@@ -30,41 +27,26 @@
     "on_signup_create_NewAccount": "إنشاء حساب جديد",
     "on_signup_create_NewAccount_text": "هل لديك حساب بالفعل؟",
     "on_signup_create_NewAccount_text2": "تسجيل الدخول",
-
     "on_signup_Text_feils": "يرجى ملء جميع الحقول",
-
-
-    "Custom_Exception_weak_password":"كلمة المرور المقدمة ضعيفة جدًا.",
-    "Custom_Exception_email_already_in_use":"عنوان البريد الإلكتروني قيد الاستخدام بالفعل بواسطة حساب آخر.",
-    "Custom_Exception_unknown":"حدث خطأ غير معروف يرجى المحاولة مرة أخرى لاحقًا.",
-    "Custom_Exception_network_request_failed" :"فشل الطلب الشبكي ، يرجى التحقق من اتصالك بالإنترنت.",
-    "Custom_Exception_invalid_email":"عنوان البريد الإلكتروني غير صالح.",
-    "Custom_Exception_there_is_problem_in_email_or_password":"هناك مشكلة في البريد الإلكتروني أو كلمة المرور",
-
-    "Home_view_welcome_appbar":"صباح الخير !..",
-
-    "Home_view_search_text_feild":"ابحث عن.......",
-
-    "Home_view_feature_home_item_first_text":"عروض العيد",
-    "Home_view_feature_home_item_second_text":"خصم 25%",
-    "Home_view_feature_home_item_third_text":"تسوق الآن",
-
-    "Home_Best_Seller_Header":"الأكثر مبيعًا",
-    "Home_Best_Seller_Header_subtitle":"المزيد",
-
+    "Custom_Exception_weak_password": "كلمة المرور المقدمة ضعيفة جدًا.",
+    "Custom_Exception_email_already_in_use": "عنوان البريد الإلكتروني قيد الاستخدام بالفعل بواسطة حساب آخر.",
+    "Custom_Exception_unknown": "حدث خطأ غير معروف يرجى المحاولة مرة أخرى لاحقًا.",
+    "Custom_Exception_network_request_failed": "فشل الطلب الشبكي ، يرجى التحقق من اتصالك بالإنترنت.",
+    "Custom_Exception_invalid_email": "عنوان البريد الإلكتروني غير صالح.",
+    "Custom_Exception_there_is_problem_in_email_or_password": "هناك مشكلة في البريد الإلكتروني أو كلمة المرور",
+    "Custom_Exception_failed_toget_product": "فشل في الحصول على المنتج",
+    "Home_view_welcome_appbar": "صباح الخير !..",
+    "Home_view_search_text_feild": "ابحث عن.......",
+    "Home_view_feature_home_item_first_text": "عروض العيد",
+    "Home_view_feature_home_item_second_text": "خصم 25%",
+    "Home_view_feature_home_item_third_text": "تسوق الآن",
+    "Home_Best_Seller_Header": "الأكثر مبيعًا",
+    "Home_Best_Seller_Header_subtitle": "المزيد",
     "Frute_first_item": "بطيخ",
-"Frute_first_item_price": "20جنية ",
-"Frute_first_item_weight": "الكيلو",
-
-
-    "Button_NavigationBar_Entity_Home":"الرئيسية",
-    "Button_NavigationBar_Entity_Cart":"عربة التسوق",
-    "Button_NavigationBar_Entity_Profile":"الملف الشخصي",
-    "Button_NavigationBar_Entity_Products":"المنتجات"
-
-
-
-
-
-
+    "Frute_first_item_price": "20جنية ",
+    "Frute_first_item_weight": "الكيلو",
+    "Button_NavigationBar_Entity_Home": "الرئيسية",
+    "Button_NavigationBar_Entity_Cart": "عربة التسوق",
+    "Button_NavigationBar_Entity_Profile": "الملف الشخصي",
+    "Button_NavigationBar_Entity_Products": "المنتجات"
 }

@@ -380,6 +380,16 @@ class S {
     );
   }
 
+  /// `Failed to get product`
+  String get Custom_Exception_failed_toget_product {
+    return Intl.message(
+      'Failed to get product',
+      name: 'Custom_Exception_failed_toget_product',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Good Morning !..`
   String get Home_view_welcome_appbar {
     return Intl.message(

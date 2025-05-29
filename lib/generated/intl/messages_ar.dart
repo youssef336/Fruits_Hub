@@ -37,6 +37,8 @@ class MessageLookup extends MessageLookupByLibrary {
         MessageLookupByLibrary.simpleMessage(
           "عنوان البريد الإلكتروني قيد الاستخدام بالفعل بواسطة حساب آخر.",
         ),
+    "Custom_Exception_failed_toget_product":
+        MessageLookupByLibrary.simpleMessage("فشل في الحصول على المنتج"),
     "Custom_Exception_invalid_email": MessageLookupByLibrary.simpleMessage(
       "عنوان البريد الإلكتروني غير صالح.",
     ),

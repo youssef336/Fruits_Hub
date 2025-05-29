@@ -22,6 +22,13 @@ class ReviewModel {
     review: reviewEntity.review,
     date: reviewEntity.date,
   );
+  ReviewEntity toEntity() => ReviewEntity(
+    name: name,
+    image: image,
+    rating: rating,
+    review: review,
+    date: date,
+  );
   factory ReviewModel.fromJson(Map<String, dynamic> json) => ReviewModel(
     name: json['name'],
     image: json['image'],
