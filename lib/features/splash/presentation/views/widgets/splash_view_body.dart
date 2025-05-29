@@ -7,6 +7,7 @@ import 'package:fruits_hub_app/core/services/firebase_auth_services.dart';
 import 'package:fruits_hub_app/core/services/shared_preferences_singletone.dart';
 import 'package:fruits_hub_app/core/utils/app_images.dart';
 import 'package:fruits_hub_app/features/auth/presentation/views/Sign_in_view.dart';
+import 'package:fruits_hub_app/features/home/presentation/views/Main.dart';
 import 'package:fruits_hub_app/features/onBoarding/presentation/views/on_boarding.dart';
 
 // Splash screen widget that shows animated elements in sequence
@@ -101,7 +102,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
         var isLoggedIn = FirebaseAuthServices().isUserLoggedIn();
         if (isLoggedIn) {
           // User is logged in, navigate to home
-          Navigator.pushReplacementNamed(context, SigninView.routeName);
+          Navigator.pushReplacementNamed(context, MainView.routeName);
         } else {
           // User is not logged in, navigate to sign-in
           Navigator.pushReplacementNamed(context, SigninView.routeName);
