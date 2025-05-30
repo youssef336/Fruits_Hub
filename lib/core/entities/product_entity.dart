@@ -31,19 +31,4 @@ class ProductEntity {
     required this.isFeatured,
     this.imageUrl,
   });
-
-  @override
-  List<Object?> get props => [
-    name,
-    code,
-    description,
-    price,
-    isFeatured,
-    imageUrl,
-    expirationsMonths,
-    isOrganic,
-    numbersOfCalories,
-    unitAmount,
-    reviews,
-  ];
 }
