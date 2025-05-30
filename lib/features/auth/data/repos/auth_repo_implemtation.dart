@@ -138,7 +138,7 @@ class AuthRepoImplemtation extends AuthRepo {
   Future<UserEntity> getUserData({required String uId}) async {
     var userData = await databaseServies.getData(
       path: BackEndEndpoints.getUserData,
-      documentId: uId,
+      docuementId: uId,
     );
     return UserModel.fromJson(userData);
   }

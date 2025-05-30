@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub_app/constant.dart';
+import 'package:fruits_hub_app/core/entities/product_entity.dart';
 import 'package:fruits_hub_app/core/utils/app_images.dart';
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
 import 'package:fruits_hub_app/main.dart';
 
 class FruiteItem extends StatelessWidget {
-  const FruiteItem({super.key});
-
+  const FruiteItem({super.key, required this.productEntity});
+  final ProductEntity productEntity;
   @override
   Widget build(BuildContext context) {
     return Container(

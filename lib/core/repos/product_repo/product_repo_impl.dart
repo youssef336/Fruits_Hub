@@ -16,8 +16,7 @@ class ProductRepoImpl extends ProductRepo {
     try {
       var data =
           await databaseServies.getData(
-                path: BackEndEndpoints.getproducts,
-
+                path: BackEndEndpoints.getProducts,
                 query: {
                   'limit': 10,
                   'orderBy': 'sellingCount',
@@ -25,16 +24,12 @@ class ProductRepoImpl extends ProductRepo {
                 },
               )
               as List<Map<String, dynamic>>;
-      List<Productmodel> products =
-          data.map((e) => Productmodel.fromJson(e)).toList();
-      List<ProductEntity> productsEntity =
-          products.map((e) => e.toEntity()).toList();
 
-      return right(productsEntity);
+      List<ProductEntity> products =
+          data.map((e) => ProductModel.fromJson(e).toEntity()).toList();
+      return right(products);
     } catch (e) {
-      return Left(
-        ServerFailure(S.current.Custom_Exception_failed_toget_product),
-      );
+      return left(ServerFailure('Failed to get products'));
     }
   }
 
@@ -42,10 +37,10 @@ class ProductRepoImpl extends ProductRepo {
   Future<Either<Failure, List<ProductEntity>>> getProducts() async {
     try {
       var data =
-          await databaseServies.getData(path: BackEndEndpoints.getproducts)
+          await databaseServies.getData(path: "s")
               as List<Map<String, dynamic>>;
-      List<Productmodel> products =
-          data.map((e) => Productmodel.fromJson(e)).toList();
+      List<ProductModel> products =
+          data.map((e) => ProductModel.fromJson(e)).toList();
       List<ProductEntity> productsEntity =
           products.map((e) => e.toEntity()).toList();
 

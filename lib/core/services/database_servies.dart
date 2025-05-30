@@ -6,7 +6,7 @@ abstract class DatabaseServies {
   });
   Future<dynamic> getData({
     required String path,
-    String? documentId,
+    String? docuementId,
     Map<String, dynamic>? query,
   });
   Future<bool> checkifDataExists({
