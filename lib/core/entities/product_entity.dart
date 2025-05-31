@@ -3,7 +3,9 @@
 import 'package:fruits_hub_app/core/entities/review_entity.dart';
 
 class ProductEntity {
-  final String name;
+  final String nameEn;
+  final String nameAr;
+
   final String code;
   final String description;
   final num price;
@@ -19,7 +21,8 @@ class ProductEntity {
   final List<ReviewEntity> reviews;
 
   ProductEntity({
-    required this.name,
+    required this.nameEn,
+    required this.nameAr,
     required this.code,
     required this.description,
     required this.price,

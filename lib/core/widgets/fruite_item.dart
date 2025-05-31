@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub_app/constant.dart';
 import 'package:fruits_hub_app/core/entities/product_entity.dart';
-import 'package:fruits_hub_app/core/utils/app_images.dart';
+
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
 import 'package:fruits_hub_app/main.dart';
+
+import 'custom_network_image.dart';
 
 class FruiteItem extends StatelessWidget {
   const FruiteItem({super.key, required this.productEntity});
@@ -30,11 +32,17 @@ class FruiteItem extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 20),
-                Image.asset(Assets.imagesWatermelonTest),
+                productEntity.imageUrl != null
+                    ? Flexible(
+                      child: CustomNetworkImage(
+                        ImageUrl: productEntity.imageUrl!,
+                      ),
+                    )
+                    : Container(width: 100, height: 100, color: Colors.grey),
                 const SizedBox(height: 24),
                 ListTile(
                   title: Text(
-                    S.of(context).Frute_first_item,
+                    isArabic() ? productEntity.nameAr : productEntity.nameEn,
 
                     style: AppTextStyles.cairoBold,
                   ),
@@ -42,10 +50,14 @@ class FruiteItem extends StatelessWidget {
                     TextSpan(
                       children: [
                         TextSpan(
-                          text:
-                              isArabic()
-                                  ? S.of(context).Frute_first_item_price
-                                  : S.of(context).Frute_first_item_weight,
+                          text: "${productEntity.price}",
+                          style: AppTextStyles.cairoBold.copyWith(
+                            color: KsecondaryColor /* Orange-300 */,
+                            fontSize: 13,
+                          ),
+                        ),
+                        TextSpan(
+                          text: isArabic() ? " جنية" : " EGP",
                           style: AppTextStyles.cairoBold.copyWith(
                             color: KsecondaryColor /* Orange-300 */,
                             fontSize: 13,
@@ -59,10 +71,7 @@ class FruiteItem extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text:
-                              isArabic()
-                                  ? S.of(context).Frute_first_item_weight
-                                  : S.of(context).Frute_first_item_price,
+                          text: S.of(context).Frute_first_item_weight,
                           style: AppTextStyles.cairoBold.copyWith(
                             color: KsecondaryColorLight /* Grey-300 */,
                             fontSize: 13,

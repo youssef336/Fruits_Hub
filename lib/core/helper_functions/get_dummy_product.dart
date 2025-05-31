@@ -2,7 +2,8 @@ import 'package:fruits_hub_app/core/entities/product_entity.dart';
 
 ProductEntity getDummyProduct() {
   return ProductEntity(
-    name: 'Apple',
+    nameAr: 'لللللل',
+    nameEn: 'Apple',
     description: 'A red apple',
     price: 10,
     code: 'A1',
@@ -10,6 +11,7 @@ ProductEntity getDummyProduct() {
     numbersOfCalories: 100,
     isOrganic: true,
     isFeatured: true,
+    imageUrl: null,
 
     unitAmount: 1,
     reviews: [],

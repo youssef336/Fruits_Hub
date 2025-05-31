@@ -4,14 +4,15 @@ import '../helper_functions/get_avg_rating.dart';
 import 'review_model.dart';
 
 class ProductModel {
-  final String name;
+  final String nameEn;
+  final String nameAr;
   final String code;
   final String description;
   final num price;
 
   final bool isfeatured;
   final num sellingCount;
-  String? imageUrl;
+  String? imageurl;
   final int experationMonths;
   final bool isOrganic;
   final int numbersOfCalories;
@@ -20,7 +21,9 @@ class ProductModel {
   final int unitAmount;
   final List<ReviewModel> reviews;
   ProductModel({
-    required this.name,
+    required this.nameEn,
+    required this.nameAr,
+
     required this.code,
     required this.description,
     required this.experationMonths,
@@ -32,12 +35,13 @@ class ProductModel {
     required this.price,
     required this.isOrganic,
     required this.isfeatured,
-    this.imageUrl,
+    this.imageurl,
   });
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
     return ProductModel(
-      name: json['name'],
+      nameEn: json['nameEn'],
+      nameAr: json['nameAr'],
       code: json['code'],
       description: json['description'],
       experationMonths: json['experationMonths'],
@@ -55,7 +59,7 @@ class ProductModel {
       price: json['price'],
       isOrganic: json['isOrganic'],
       isfeatured: json['isfeatured'],
-      imageUrl: json['imageUrl'],
+      imageurl: json['imageurl'],
       avgRating: getAvgRating(json['reviews']),
     );
   }
@@ -63,7 +67,8 @@ class ProductModel {
   // product_model.dart
   ProductEntity toEntity() {
     return ProductEntity(
-      name: name,
+      nameAr: nameAr,
+      nameEn: nameEn,
       code: code,
       description: description,
       price: price,
@@ -73,23 +78,9 @@ class ProductModel {
       unitAmount: unitAmount,
       isOrganic: isOrganic,
       isFeatured: isfeatured,
-      imageUrl: imageUrl,
+      imageUrl: imageurl,
     );
   }
 
-  toJson() {
-    return {
-      'name': name,
-      'code': code,
-      'description': description,
-      'price': price,
-      'isfeatured': isfeatured,
-      'imageUrl': imageUrl,
-      'experationMonths': experationMonths,
-      'numbersOfCalories': numbersOfCalories,
-      'unitAmount': unitAmount,
-      'isOrganic': isOrganic,
-      'reviews': reviews.map((e) => e.toJson()).toList(),
-    };
-  }
+
 }

@@ -1,29 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruits_hub_app/features/home/presentation/views/widgets/Prodeuct_view_header.dart';
 
 import '../../../../../constant.dart';
 import '../../../../../core/cubits/products_cubit.dart';
 import '../../../../../core/widgets/search_text_feild.dart';
 import 'custom_home_appbar.dart';
-import 'feature_home_list.dart';
-import 'home_best_seller_header.dart';
+
 import 'product_grid_view_bloc_builder.dart';
 
-class HomeViewBody extends StatefulWidget {
-  const HomeViewBody({super.key});
+class ProductsViewBody extends StatefulWidget {
+  const ProductsViewBody({super.key});
 
   @override
-  State<HomeViewBody> createState() => _HomeViewBodyState();
+  State<ProductsViewBody> createState() => _ProductsViewBodyState();
 }
 
-class _HomeViewBodyState extends State<HomeViewBody> {
+class _ProductsViewBodyState extends State<ProductsViewBody> {
   @override
   void initState() {
-    context.read<ProductsCubit>().getBestSellingProducts();
+    context.read<ProductsCubit>().getProducts();
     super.initState();
   }
 
-  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: KhorzontalPadding),
@@ -37,9 +36,10 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                 SizedBox(height: KTopPadding),
                 SearchTextFeild(),
                 SizedBox(height: 12),
-                FeatureHomeList(),
-                SizedBox(height: 12),
-                HomeBestSellerHeader(),
+
+                ProductViewHeader(
+                  productLength: context.read<ProductsCubit>().productsLength,
+                ),
                 SizedBox(height: 8),
               ],
             ),
