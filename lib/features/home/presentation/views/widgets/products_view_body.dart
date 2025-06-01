@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruits_hub_app/core/widgets/build_app_bar.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/Prodeuct_view_header.dart';
+import 'package:fruits_hub_app/main.dart';
 
 import '../../../../../constant.dart';
 import '../../../../../core/cubits/products_cubit.dart';
 import '../../../../../core/widgets/search_text_feild.dart';
-import 'custom_home_appbar.dart';
 
 import 'product_grid_view_bloc_builder.dart';
 
@@ -20,9 +21,13 @@ class _ProductsViewBodyState extends State<ProductsViewBody> {
   @override
   void initState() {
     context.read<ProductsCubit>().getProducts();
+    context.read<ProductsCubit>().productsLength;
+
     super.initState();
   }
 
+  @override
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: KhorzontalPadding),
@@ -32,13 +37,23 @@ class _ProductsViewBodyState extends State<ProductsViewBody> {
           SliverToBoxAdapter(
             child: Column(
               children: [
-                CustomHomeAppBar(),
+                buildAppbar(
+                  context,
+                  title: isArabic() ? 'المنتجات' : 'Products',
+                  showBackButton: false,
+                ),
                 SizedBox(height: KTopPadding),
                 SearchTextFeild(),
                 SizedBox(height: 12),
 
-                ProductViewHeader(
-                  productLength: context.read<ProductsCubit>().productsLength,
+                // Use BlocBuilder here
+                BlocBuilder<ProductsCubit, ProductsState>(
+                  builder: (context, state) {
+                    return ProductViewHeader(
+                      productLength:
+                          state is ProductsSuccess ? state.products.length : 0,
+                    );
+                  },
                 ),
                 SizedBox(height: 8),
               ],

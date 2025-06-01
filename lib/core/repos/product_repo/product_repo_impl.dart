@@ -18,7 +18,7 @@ class ProductRepoImpl extends ProductRepo {
           await databaseServies.getData(
                 path: BackEndEndpoints.getProducts,
                 query: {
-                  'limit': 10,
+                  'limit': 6,
                   'orderBy': 'sellingCount',
                   'descending': true,
                 },
@@ -49,6 +49,25 @@ class ProductRepoImpl extends ProductRepo {
       return Left(
         ServerFailure(S.current.Custom_Exception_failed_toget_product),
       );
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<ProductEntity>>>
+  getBestSellingProductMoreLimit() async {
+    try {
+      var data =
+          await databaseServies.getData(
+                path: BackEndEndpoints.getProducts,
+                query: {'orderBy': 'sellingCount', 'descending': true},
+              )
+              as List<Map<String, dynamic>>;
+
+      List<ProductEntity> products =
+          data.map((e) => ProductModel.fromJson(e).toEntity()).toList();
+      return right(products);
+    } catch (e) {
+      return left(ServerFailure('Failed to get products'));
     }
   }
 }
