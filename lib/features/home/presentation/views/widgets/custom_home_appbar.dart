@@ -21,7 +21,7 @@ class CustomHomeAppBar extends StatelessWidget {
         ),
       ),
       subtitle: Text(getUser().name, style: AppTextStyles.cairoBold),
-      trailing: NotificationWidget(),
+      trailing: const NotificationWidget(),
     );
   }
 }

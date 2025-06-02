@@ -19,10 +19,13 @@ class CartItem extends StatelessWidget {
           Container(
             width: 73,
             height: 92,
-            decoration: BoxDecoration(color: const Color(0xFFF3F5F7)),
-            child: CustomNetworkImage(ImageUrl: 'https://placehold.co/53x40'),
+            decoration: const BoxDecoration(color: Color(0xFFF3F5F7)),
+            child: const CustomNetworkImage(
+              ImageUrl:
+                  'https://tse1.mm.bing.net/th?id=OIP.AzdRE-LcrSDJiOIzdKmQHQHaFS&pid=Api&P=0&h=220',
+            ),
           ),
-          SizedBox(width: 17),
+          const SizedBox(width: 17),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,7 +34,7 @@ class CartItem extends StatelessWidget {
                 Row(
                   children: [
                     Text('بطيخ', style: AppTextStyles.cairoBold.copyWith()),
-                    Spacer(),
+                    const Spacer(),
                     GestureDetector(
                       onTap: () {},
                       child: SvgPicture.asset(Assets.imagesTrash),
@@ -48,8 +51,8 @@ class CartItem extends StatelessWidget {
 
                 Row(
                   children: [
-                    CartItemActionButtoms(),
-                    Spacer(),
+                    const CartItemActionButtoms(),
+                    const Spacer(),
                     Text.rich(
                       TextSpan(
                         children: [

@@ -24,7 +24,7 @@ class SigninView extends StatelessWidget {
             (context) => SignInCubit(
               getIt<AuthRepo>(), // Use getIt to provide the AuthRepo instance
             ),
-        child: SigninViewBodyBlocConsumer(),
+        child: const SigninViewBodyBlocConsumer(),
       ),
     );
   }

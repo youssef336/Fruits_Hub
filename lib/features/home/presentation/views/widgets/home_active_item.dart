@@ -37,7 +37,7 @@ class ActiveItem extends StatelessWidget {
               ),
               child: Center(child: SvgPicture.asset(image)),
             ),
-            SizedBox(width: 4),
+            const SizedBox(width: 4),
             Text(
               text,
               style: AppTextStyles.cairoBold.copyWith(

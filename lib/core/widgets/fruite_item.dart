@@ -23,7 +23,7 @@ class FruiteItem extends StatelessWidget {
           Positioned.fill(
             child: Column(
               children: [
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 productEntity.imageUrl != null
                     ? Flexible(
                       child: CustomNetworkImage(

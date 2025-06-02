@@ -28,7 +28,9 @@ class SocialTextButtom extends StatelessWidget {
         onPressed: onPressed,
 
         child: ListTile(
-          visualDensity: VisualDensity(vertical: VisualDensity.minimumDensity),
+          visualDensity: const VisualDensity(
+            vertical: VisualDensity.minimumDensity,
+          ),
           leading: SvgPicture.asset(image),
           title: Text(
             textAlign: TextAlign.center,

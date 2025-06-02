@@ -11,7 +11,7 @@ class OrDivider extends StatelessWidget {
       children: [
         Expanded(child: Divider(thickness: 2, color: Colors.grey.shade400)),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 18.0),
+          padding: const EdgeInsets.symmetric(horizontal: 18.0),
           child: Text(
             S.of(context).on_Login_login_or_divider,
             style: AppTextStyles.bodyBaseSemibold,

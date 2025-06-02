@@ -1,3 +1,6 @@
+// ignore: file_names
+// ignore_for_file: file_names, duplicate_ignore
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
@@ -21,13 +24,13 @@ class ProductViewHeader extends StatelessWidget {
             color: const Color(0xFF0C0D0D),
           ),
         ),
-        Spacer(),
+        const Spacer(),
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           decoration: ShapeDecoration(
             color: Colors.white.withValues(alpha: 26),
             shape: RoundedRectangleBorder(
-              side: BorderSide(width: 1, color: const Color(0x66CACECE)),
+              side: const BorderSide(width: 1, color: Color(0x66CACECE)),
               borderRadius: BorderRadius.circular(4),
             ),
           ),

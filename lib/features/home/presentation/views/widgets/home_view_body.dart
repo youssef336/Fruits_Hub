@@ -25,10 +25,10 @@ class _HomeViewBodyState extends State<HomeViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: KhorzontalPadding),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: KhorzontalPadding),
       child: CustomScrollView(
-        physics: const BouncingScrollPhysics(),
+        physics: BouncingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(
             child: Column(

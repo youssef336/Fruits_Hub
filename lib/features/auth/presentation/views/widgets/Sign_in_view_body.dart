@@ -38,7 +38,7 @@ class _SigninViewBodyState extends State<SigninViewBody> {
           autovalidateMode: autoValidateMode,
           child: Column(
             children: [
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               CustomTextFormFeild(
                 onSaved: (value) {
                   email = value!;
@@ -64,7 +64,7 @@ class _SigninViewBodyState extends State<SigninViewBody> {
                   ),
                 ],
               ),
-              SizedBox(height: 33),
+              const SizedBox(height: 33),
               CustomButtom(
                 text: S.of(context).on_Login_login,
                 onPressed: () {
@@ -84,7 +84,7 @@ class _SigninViewBodyState extends State<SigninViewBody> {
               const SizedBox(height: 33),
               DontHaveAnAcoountWidget(context),
               const SizedBox(height: 33),
-              OrDivider(),
+              const OrDivider(),
               const SizedBox(height: 16),
 
               SocialTextButtom(

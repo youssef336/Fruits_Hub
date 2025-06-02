@@ -12,9 +12,9 @@ class FeatureHomeList extends StatelessWidget {
       child: Row(
         children: List.generate(
           4,
-          (index) => Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 6),
-            child: const FeatureHomeItem(),
+          (index) => const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 6),
+            child: FeatureHomeItem(),
           ),
         ),
       ),

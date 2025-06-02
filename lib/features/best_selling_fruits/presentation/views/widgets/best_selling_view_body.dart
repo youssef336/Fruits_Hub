@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruits_hub_app/features/home/presentation/views/widgets/home_best_seller_header.dart';
 
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/product_grid_view_bloc_builder.dart';
 import 'package:fruits_hub_app/main.dart';
@@ -40,7 +39,7 @@ class _BestSellingViewBodyState extends State<BestSellingViewBody> {
               ),
             ),
           ),
-          ProductGridViewBlocBuilder(),
+          const ProductGridViewBlocBuilder(),
         ],
       ),
     );

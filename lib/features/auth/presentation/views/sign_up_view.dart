@@ -29,7 +29,7 @@ class SignUpView extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        body: SignupViewBodyBlocConsumer(),
+        body: const SignupViewBodyBlocConsumer(),
       ),
     );
   }

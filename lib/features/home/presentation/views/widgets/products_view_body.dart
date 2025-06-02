@@ -42,9 +42,9 @@ class _ProductsViewBodyState extends State<ProductsViewBody> {
                   title: isArabic() ? 'المنتجات' : 'Products',
                   showBackButton: false,
                 ),
-                SizedBox(height: KTopPadding),
-                SearchTextFeild(),
-                SizedBox(height: 12),
+                const SizedBox(height: KTopPadding),
+                const SearchTextFeild(),
+                const SizedBox(height: 12),
 
                 // Use BlocBuilder here
                 BlocBuilder<ProductsCubit, ProductsState>(
@@ -55,11 +55,11 @@ class _ProductsViewBodyState extends State<ProductsViewBody> {
                     );
                   },
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
               ],
             ),
           ),
-          ProductGridViewBlocBuilder(),
+          const ProductGridViewBlocBuilder(),
         ],
       ),
     );

@@ -22,7 +22,7 @@ class HomeBestSellerHeader extends StatelessWidget {
               color: const Color(0xFF0C0D0D),
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Text(
             S.of(context).Home_Best_Seller_Header_subtitle,
             textAlign: TextAlign.center,

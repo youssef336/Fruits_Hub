@@ -29,7 +29,7 @@ class FeatureHomeItem extends StatelessWidget {
               ),
               Container(
                 width: itemwidth * 0.5,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: svg.Svg(Assets.imagesFeaturedItemBackground),
                     fit: BoxFit.fill,
@@ -51,14 +51,14 @@ class FeatureHomeItem extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Text(
                         S.of(context).Home_view_feature_home_item_second_text,
                         style: AppTextStyles.cairoBold19.copyWith(
                           color: Colors.white,
                         ),
                       ),
-                      SizedBox(height: 11),
+                      const SizedBox(height: 11),
                       FeatureHomeItemButtom(onPressed: () {}),
                       const SizedBox(height: 29),
                     ],

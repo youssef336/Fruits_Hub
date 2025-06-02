@@ -11,9 +11,9 @@ class CartViewHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.symmetric(vertical: 20),
+      padding: const EdgeInsets.symmetric(vertical: 16),
 
-      decoration: BoxDecoration(color: const Color(0xFFEBF9F1) /* Green1-50 */),
+      decoration: const BoxDecoration(color: Color(0xFFEBF9F1) /* Green1-50 */),
       child: Center(
         child: Text(
           isArabic()

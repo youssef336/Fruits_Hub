@@ -14,7 +14,7 @@ class SearchTextFeild extends StatelessWidget {
         color: Colors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
         shadows: [
-          BoxShadow(
+          const BoxShadow(
             color: Color(0x0A000000),
             blurRadius: 9,
             offset: Offset(0, 2),
@@ -52,7 +52,7 @@ class SearchTextFeild extends StatelessWidget {
   OutlineInputBorder bulidBoarder() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(4),
-      borderSide: BorderSide(color: Colors.white, width: 1.0),
+      borderSide: const BorderSide(color: Colors.white, width: 1.0),
     );
   }
 }

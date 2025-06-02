@@ -22,7 +22,7 @@ class BestSellingFruitsView extends StatelessWidget {
       body: SafeArea(
         child: BlocProvider(
           create: (context) => ProductsCubit(getIt.get<ProductRepo>()),
-          child: BestSellingViewBody(),
+          child: const BestSellingViewBody(),
         ),
       ),
     );

@@ -13,6 +13,7 @@ class ProductsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => ProductsCubit(getIt.get<ProductRepo>()),
+      // ignore: prefer_const_constructors
       child: ProductsViewBody(),
     );
   }
