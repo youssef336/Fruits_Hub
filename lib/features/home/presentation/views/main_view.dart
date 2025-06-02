@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_hub_app/features/home/presentation/views/cart_view.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/products_view.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/home_custom_bottom_navigation_bar.dart';
 
@@ -26,11 +27,7 @@ class _MainViewState extends State<MainView> {
       body: SafeArea(
         child: IndexedStack(
           index: currentViewIndex,
-          children: [
-            const HomeView(),
-            const ProductsView(),
-            const Placeholder(),
-          ],
+          children: [const HomeView(), const ProductsView(), const CartView()],
         ),
       ),
     );

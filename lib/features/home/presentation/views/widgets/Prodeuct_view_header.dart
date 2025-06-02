@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
+import 'package:fruits_hub_app/main.dart';
 
 import '../../../../../core/utils/app_images.dart';
 
@@ -13,7 +14,7 @@ class ProductViewHeader extends StatelessWidget {
     return Row(
       children: [
         Text(
-          "$productLength نتائج",
+          isArabic() ? "$productLength نتائج" : "$productLength results",
           textAlign: TextAlign.right,
           style: AppTextStyles.cairoBold.copyWith(
             fontSize: 16,

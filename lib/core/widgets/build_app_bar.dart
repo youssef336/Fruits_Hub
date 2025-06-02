@@ -7,8 +7,10 @@ AppBar buildAppbar(
   BuildContext context, {
   required String title,
   bool showBackButton = true,
+  bool showNotification = true,
 }) {
   return AppBar(
+    surfaceTintColor: Colors.transparent,
     leading: Visibility(
       visible: showBackButton,
       child: IconButton(
@@ -19,9 +21,12 @@ AppBar buildAppbar(
       ),
     ),
     actions: [
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: NotificationWidget(),
+      Visibility(
+        visible: showNotification,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: NotificationWidget(),
+        ),
       ),
     ],
     title: Text(title, style: AppTextStyles.cairoBold19),
