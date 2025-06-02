@@ -1,8 +1,10 @@
 // product_entity.dart
 
+import 'package:dartz/dartz.dart';
+import 'package:equatable/equatable.dart';
 import 'package:fruits_hub_app/core/entities/review_entity.dart';
 
-class ProductEntity {
+class ProductEntity extends Equatable {
   final String nameEn;
   final String nameAr;
 
@@ -34,4 +36,7 @@ class ProductEntity {
     required this.isFeatured,
     this.imageUrl,
   });
+
+  @override
+  List<Object?> get props => [code, nameAr, nameEn];
 }

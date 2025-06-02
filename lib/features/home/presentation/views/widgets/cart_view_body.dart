@@ -9,8 +9,6 @@ import 'package:fruits_hub_app/features/home/presentation/views/widgets/cart_ite
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/cart_view_header.dart';
 import 'package:fruits_hub_app/main.dart';
 
-import '../../../../../core/cubits/products_cubit.dart';
-
 class CartViewBody extends StatelessWidget {
   const CartViewBody({super.key});
 
@@ -43,7 +41,9 @@ class CartViewBody extends StatelessWidget {
                       ? const SizedBox()
                       : const CustomDivider(),
             ),
-            const CartItemList(cartItems: []),
+            CartItemList(
+              cartItems: context.read<CartCubit>().cartEntites.cartItems,
+            ),
             SliverToBoxAdapter(
               child:
                   context.read<CartCubit>().cartEntites.cartItems.isEmpty
@@ -56,12 +56,17 @@ class CartViewBody extends StatelessWidget {
           left: 16,
           right: 16,
           bottom: MediaQuery.of(context).size.height * 0.07,
-          child: CustomButtom(
-            text: isArabic() ? 'الدفع  120جنيه' : 'Pay  120 EGP',
-            onPressed: () {},
+          child: Visibility(
+            visible: context.read<CartCubit>().cartEntites.cartItems.isNotEmpty,
+            child: CustomButtom(
+              text:
+                  isArabic()
+                      ? 'الدفع ${context.watch<CartCubit>().cartEntites.calculateTotalPrice()} جنيه'
+                      : 'Pay  ${context.watch<CartCubit>().cartEntites.calculateTotalPrice()} EGP',
+              onPressed: () {},
+            ),
           ),
         ),
-        const Text("dss"),
       ],
     );
   }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub_app/constant.dart';
+import 'package:fruits_hub_app/features/home/presentation/manager/cubits/cart_cubit.dart';
 import 'package:fruits_hub_app/main.dart';
 
 import '../../../../../core/utils/text_styles.dart';
@@ -17,8 +19,8 @@ class CartViewHeader extends StatelessWidget {
       child: Center(
         child: Text(
           isArabic()
-              ? 'لديك 3 منتجات في سله التسوق'
-              : ' You have 3 items in your cart',
+              ? 'لديك ${context.watch<CartCubit>().cartEntites.cartItems.length} منتجات في سله التسوق'
+              : ' You have ${context.watch<CartCubit>().cartEntites.cartItems.length} items in your cart',
           style: AppTextStyles.cairoRegular.copyWith(
             height: 1.60,
             color: KprimaryColor,
