@@ -74,7 +74,7 @@ class CartItem extends StatelessWidget {
 
                 Row(
                   children: [
-                    const CartItemActionButtoms(),
+                    CartItemActionButtoms(cartItemEntity: cartItemEntity),
                     const Spacer(),
                     Text.rich(
                       TextSpan(

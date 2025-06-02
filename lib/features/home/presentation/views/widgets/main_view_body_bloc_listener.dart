@@ -23,6 +23,14 @@ class MainViewBodyBlocListener extends StatelessWidget {
                 : "Product added to cart",
           );
         }
+        if (state is CartItemRemoved) {
+          buildErrorBar(
+            context,
+            isArabic()
+                ? "تم حذف المنتج من السلة"
+                : " Product removed from cart",
+          );
+        }
       },
       child: MainViewBody(currentViewIndex: currentViewIndex),
     );

@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 
 import '../cart_view.dart';
 import '../products_view.dart';
+import '../profile_view.dart';
 import 'home_view.dart';
 
 class MainViewBody extends StatelessWidget {
@@ -14,7 +15,12 @@ class MainViewBody extends StatelessWidget {
     return SafeArea(
       child: IndexedStack(
         index: currentViewIndex,
-        children: [const HomeView(), const ProductsView(), const CartView()],
+        children: [
+          const HomeView(),
+          const ProductsView(),
+          const CartView(),
+          const ProfileView(),
+        ],
       ),
     );
   }

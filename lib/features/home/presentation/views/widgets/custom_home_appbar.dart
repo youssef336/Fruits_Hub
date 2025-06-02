@@ -7,11 +7,12 @@ import 'package:fruits_hub_app/generated/l10n.dart';
 import '../../../../../core/widgets/notification_widget.dart';
 
 class CustomHomeAppBar extends StatelessWidget {
-  const CustomHomeAppBar({super.key});
-
+  const CustomHomeAppBar({super.key, this.showNotification = true});
+  final bool showNotification;
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      contentPadding: const EdgeInsets.all(0),
       leading: Image.asset(Assets.imagesProfileImage),
       title: Text(
         S.of(context).Home_view_welcome_appbar,
@@ -21,7 +22,10 @@ class CustomHomeAppBar extends StatelessWidget {
         ),
       ),
       subtitle: Text(getUser().name, style: AppTextStyles.cairoBold),
-      trailing: const NotificationWidget(),
+      trailing: Visibility(
+        visible: showNotification,
+        child: const NotificationWidget(),
+      ),
     );
   }
 }
