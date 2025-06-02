@@ -7,10 +7,11 @@ import 'package:fruits_hub_app/main.dart';
 
 import '../../../../../core/utils/app_images.dart';
 import '../../../../../core/utils/text_styles.dart';
+import '../../../domain/entities/cart_item_entity.dart';
 
 class CartItem extends StatelessWidget {
-  const CartItem({super.key});
-
+  const CartItem({super.key, required this.cartItemEntity});
+  final CartItemEntity cartItemEntity;
   @override
   Widget build(BuildContext context) {
     return IntrinsicHeight(
@@ -20,9 +21,8 @@ class CartItem extends StatelessWidget {
             width: 73,
             height: 92,
             decoration: const BoxDecoration(color: Color(0xFFF3F5F7)),
-            child: const CustomNetworkImage(
-              ImageUrl:
-                  'https://tse1.mm.bing.net/th?id=OIP.AzdRE-LcrSDJiOIzdKmQHQHaFS&pid=Api&P=0&h=220',
+            child: CustomNetworkImage(
+              ImageUrl: cartItemEntity.productEntity.imageUrl!,
             ),
           ),
           const SizedBox(width: 17),
@@ -33,7 +33,12 @@ class CartItem extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text('بطيخ', style: AppTextStyles.cairoBold.copyWith()),
+                    Text(
+                      isArabic()
+                          ? cartItemEntity.productEntity.nameAr
+                          : cartItemEntity.productEntity.nameEn,
+                      style: AppTextStyles.cairoBold.copyWith(),
+                    ),
                     const Spacer(),
                     GestureDetector(
                       onTap: () {},
@@ -41,11 +46,23 @@ class CartItem extends StatelessWidget {
                     ),
                   ],
                 ),
-                Text(
-                  '3 كم',
-                  textAlign: TextAlign.right,
-                  style: AppTextStyles.cairoRegular.copyWith(
-                    color: KsecondaryColor,
+                Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "${cartItemEntity.calculateTotalWeight()}",
+
+                        style: AppTextStyles.cairoRegular.copyWith(
+                          color: KsecondaryColor,
+                        ),
+                      ),
+                      TextSpan(
+                        text: isArabic() ? 'كيلو' : 'Kg',
+                        style: AppTextStyles.cairoRegular.copyWith(
+                          color: KsecondaryColor,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
 
@@ -57,7 +74,7 @@ class CartItem extends StatelessWidget {
                       TextSpan(
                         children: [
                           TextSpan(
-                            text: '60 ',
+                            text: '${cartItemEntity.calculateTotalPrice()}',
                             style: AppTextStyles.cairoBold.copyWith(
                               fontSize: 16,
                               color: KsecondaryColor,
