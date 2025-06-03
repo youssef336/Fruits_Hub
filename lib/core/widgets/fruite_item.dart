@@ -4,7 +4,7 @@ import 'package:fruits_hub_app/constant.dart';
 import 'package:fruits_hub_app/core/entities/product_entity.dart';
 
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
-import 'package:fruits_hub_app/features/home/presentation/manager/cubits/cart_cubit.dart';
+import 'package:fruits_hub_app/features/home/presentation/manager/cubits/cart/cart_cubit.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
 import 'package:fruits_hub_app/main.dart';
 

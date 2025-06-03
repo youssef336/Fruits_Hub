@@ -7,7 +7,7 @@ import 'package:fruits_hub_app/core/helper_functions/on_generate_routes.dart';
 import 'package:fruits_hub_app/core/services/custom_bolc_observer.dart';
 import 'package:fruits_hub_app/core/services/get_it_service.dart';
 import 'package:fruits_hub_app/core/services/shared_preferences_singletone.dart';
-import 'package:fruits_hub_app/features/home/presentation/manager/cubits/cart_cubit.dart';
+import 'package:fruits_hub_app/features/home/presentation/manager/cubits/cart/cart_cubit.dart';
 
 import 'package:fruits_hub_app/features/splash/presentation/views/splash_view.dart';
 import 'package:fruits_hub_app/firebase_options.dart';

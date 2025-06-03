@@ -39,4 +39,12 @@ class CartEntites {
     }
     return CartItemEntity(productEntity: product, count: 1);
   }
+
+  int calculateTotalCount() {
+    int totalCount = 0;
+    for (var cartItem in cartItems) {
+      totalCount += cartItem.count;
+    }
+    return totalCount;
+  }
 }
