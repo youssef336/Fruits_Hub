@@ -21,17 +21,14 @@ class _MainViewState extends State<MainView> {
   int currentViewIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => CartCubit(),
-      child: Scaffold(
-        bottomNavigationBar: HomeCustomBottomNavigationBar(
-          onItemTapped: (int value) {
-            currentViewIndex = value;
-            setState(() {});
-          },
-        ),
-        body: MainViewBodyBlocListener(currentViewIndex: currentViewIndex),
+    return Scaffold(
+      bottomNavigationBar: HomeCustomBottomNavigationBar(
+        onItemTapped: (int value) {
+          currentViewIndex = value;
+          setState(() {});
+        },
       ),
+      body: MainViewBodyBlocListener(currentViewIndex: currentViewIndex),
     );
   }
 }

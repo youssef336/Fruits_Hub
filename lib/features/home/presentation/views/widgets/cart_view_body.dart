@@ -26,6 +26,7 @@ class CartViewBody extends StatelessWidget {
                     context,
                     title: isArabic() ? 'السلة' : 'Cart',
                     showNotification: false,
+                    showBackButton: false,
                   ),
                   const SizedBox(height: KTopPadding),
 
@@ -42,7 +43,7 @@ class CartViewBody extends StatelessWidget {
                       : const CustomDivider(),
             ),
             CartItemList(
-              cartItems: context.read<CartCubit>().cartEntites.cartItems,
+              cartItems: context.watch<CartCubit>().cartEntites.cartItems,
             ),
             SliverToBoxAdapter(
               child:
