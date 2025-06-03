@@ -47,9 +47,9 @@ class FruitsHubApp extends StatelessWidget {
             ],
             supportedLocales: S.delegate.supportedLocales,
             locale:
-                state is LocaleChangedtoArabic
-                    ? const Locale('ar')
-                    : const Locale('en'),
+                state is LocaleChangedtoEnglish
+                    ? const Locale('en')
+                    : const Locale('ar'),
             title: 'Fruits Hub',
             theme: ThemeData(
               scaffoldBackgroundColor: Colors.white,
