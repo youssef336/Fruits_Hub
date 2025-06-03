@@ -52,5 +52,10 @@
     "Button_NavigationBar_Entity_Home": "Home",
     "Button_NavigationBar_Entity_Cart": "Cart",
     "Button_NavigationBar_Entity_Profile": "Profile",
-    "Button_NavigationBar_Entity_Products": "products"
+    "Button_NavigationBar_Entity_Products": "products",
+    "ProfileViewLanguage":"Language",
+    "ProfileViewLanguage_value_Item":"English Language",
+    "ProfileViewLanguage_value":"English",
+    "CartViewHeader":"Cart"
+    
 }

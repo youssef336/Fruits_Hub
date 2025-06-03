@@ -569,6 +569,41 @@ class S {
       args: [],
     );
   }
+
+  /// `Language`
+  String get ProfileViewLanguage {
+    return Intl.message(
+      'Language',
+      name: 'ProfileViewLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English Language`
+  String get ProfileViewLanguage_value_Item {
+    return Intl.message(
+      'English Language',
+      name: 'ProfileViewLanguage_value_Item',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English`
+  String get ProfileViewLanguage_value {
+    return Intl.message(
+      'English',
+      name: 'ProfileViewLanguage_value',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cart`
+  String get CartViewHeader {
+    return Intl.message('Cart', name: 'CartViewHeader', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/product_grid_view_bloc_builder.dart';
-import 'package:fruits_hub_app/main.dart';
 
 import '../../../../../constant.dart';
-import '../../../../../core/cubits/products_cubit.dart';
+import '../../../../../core/cubits/products_cubit/products_cubit.dart';
 import '../../../../../core/utils/text_styles.dart';
 import '../../../../../generated/l10n.dart';
 

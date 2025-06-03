@@ -6,9 +6,9 @@ import 'package:fruits_hub_app/features/home/presentation/manager/cubits/cart/ca
 
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/cart_item_list.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/cart_view_header.dart';
-import 'package:fruits_hub_app/main.dart';
 
 import '../../../../../core/widgets/custom_divider.dart';
+import '../../../../../generated/l10n.dart';
 import 'custom_cart_buttom_bloc_builder.dart';
 
 class CartViewBody extends StatelessWidget {
@@ -26,7 +26,7 @@ class CartViewBody extends StatelessWidget {
                 children: [
                   buildAppbar(
                     context,
-                    title: isArabic() ? 'السلة' : 'Cart',
+                    title: S.of(context).CartViewHeader,
                     showNotification: false,
                     showBackButton: false,
                   ),

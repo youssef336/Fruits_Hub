@@ -52,5 +52,10 @@
     "Button_NavigationBar_Entity_Home": "الرئيسية",
     "Button_NavigationBar_Entity_Cart": "عربة التسوق",
     "Button_NavigationBar_Entity_Profile": "الملف الشخصي",
-    "Button_NavigationBar_Entity_Products": "المنتجات"
+    "Button_NavigationBar_Entity_Products": "المنتجات",
+    "ProfileViewLanguage":"اللغة",
+    "ProfileViewLanguage_value":"العربية",
+    "CartViewHeader":"عربة التسوق",
+    "ProfileViewLanguage_value_Item":"اللغة العربية" 
+ 
 }

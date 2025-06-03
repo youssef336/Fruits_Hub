@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../constant.dart';
-import '../../../../../core/cubits/products_cubit.dart';
+import '../../../../../core/cubits/products_cubit/products_cubit.dart';
 import '../../../../../core/widgets/search_text_feild.dart';
 import 'custom_home_appbar.dart';
 import 'feature_home_list.dart';

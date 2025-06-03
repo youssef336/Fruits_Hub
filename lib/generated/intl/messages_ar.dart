@@ -4,7 +4,7 @@
 // function name.
 
 // Ignore issues from commonly used lints in this file.
-// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new
+// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new, depend_on_referenced_packages
 // ignore_for_file:prefer_single_quotes,comment_references, directives_ordering
 // ignore_for_file:annotate_overrides,prefer_generic_function_type_aliases
 // ignore_for_file:unused_import, file_names, avoid_escaping_inner_quotes
@@ -33,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Button_NavigationBar_Entity_Profile": MessageLookupByLibrary.simpleMessage(
       "الملف الشخصي",
     ),
+    "CartViewHeader": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
     "Custom_Exception_email_already_in_use":
         MessageLookupByLibrary.simpleMessage(
           "عنوان البريد الإلكتروني قيد الاستخدام بالفعل بواسطة حساب آخر.",
@@ -78,6 +79,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "صباح الخير !..",
     ),
     "Products_view_title": MessageLookupByLibrary.simpleMessage("المنتجات"),
+    "ProfileViewLanguage": MessageLookupByLibrary.simpleMessage("اللغة"),
+    "ProfileViewLanguage_value": MessageLookupByLibrary.simpleMessage(
+      "العربية",
+    ),
+    "ProfileViewLanguage_value_Item": MessageLookupByLibrary.simpleMessage(
+      "اللغة العربية",
+    ),
     "on_Login_create_account": MessageLookupByLibrary.simpleMessage(
       "قم بإنشاء حساب",
     ),
