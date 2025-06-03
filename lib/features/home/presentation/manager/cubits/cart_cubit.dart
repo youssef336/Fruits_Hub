@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:bloc/bloc.dart';
 import 'package:fruits_hub_app/core/entities/product_entity.dart';
 import 'package:fruits_hub_app/features/home/domain/entities/cart_entites.dart';

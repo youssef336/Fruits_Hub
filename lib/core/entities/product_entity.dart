@@ -1,5 +1,7 @@
 // product_entity.dart
 
+// ignore_for_file: unused_import, must_be_immutable
+
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:fruits_hub_app/core/entities/review_entity.dart';

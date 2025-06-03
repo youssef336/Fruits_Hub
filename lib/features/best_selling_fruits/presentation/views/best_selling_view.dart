@@ -3,13 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub_app/core/cubits/products_cubit.dart';
 import 'package:fruits_hub_app/core/repos/product_repo/product_repo.dart';
 import 'package:fruits_hub_app/core/services/get_it_service.dart';
-import 'package:fruits_hub_app/features/home/presentation/manager/cubits/cart_cubit.dart';
 
-import '../../../../core/helper_functions/build_error_bar.dart';
 import '../../../../core/widgets/build_app_bar.dart';
 
 import '../../../../generated/l10n.dart';
-import '../../../../main.dart';
 import 'widgets/best_selling_view_body.dart';
 
 class BestSellingFruitsView extends StatelessWidget {
