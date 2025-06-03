@@ -8,6 +8,7 @@ import '../../../../../constant.dart';
 import '../../../../../core/cubits/products_cubit.dart';
 import '../../../../../core/widgets/search_text_feild.dart';
 
+import '../../../../../generated/l10n.dart';
 import 'product_grid_view_bloc_builder.dart';
 
 class ProductsViewBody extends StatefulWidget {
@@ -39,7 +40,7 @@ class _ProductsViewBodyState extends State<ProductsViewBody> {
               children: [
                 buildAppbar(
                   context,
-                  title: isArabic() ? 'المنتجات' : 'Products',
+                  title: S.of(context).Products_view_title,
                   showBackButton: false,
                 ),
                 const SizedBox(height: KTopPadding),

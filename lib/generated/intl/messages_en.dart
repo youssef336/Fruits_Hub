@@ -77,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Home_view_welcome_appbar": MessageLookupByLibrary.simpleMessage(
       "Good Morning !..",
     ),
+    "Products_view_title": MessageLookupByLibrary.simpleMessage("Products"),
     "on_Login_create_account": MessageLookupByLibrary.simpleMessage(
       "Create Account",
     ),
@@ -145,5 +146,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "on_signup_email": MessageLookupByLibrary.simpleMessage("Email"),
     "on_signup_name": MessageLookupByLibrary.simpleMessage("Name"),
     "on_signup_password": MessageLookupByLibrary.simpleMessage("Password"),
+    "product_added_to_cart": MessageLookupByLibrary.simpleMessage(
+      "Product added to cart",
+    ),
+    "product_removed_from_cart": MessageLookupByLibrary.simpleMessage(
+      "Product removed from cart",
+    ),
+    "top_selling": MessageLookupByLibrary.simpleMessage(" Top Selling"),
   };
 }

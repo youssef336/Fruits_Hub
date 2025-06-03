@@ -320,6 +320,46 @@ class S {
     );
   }
 
+  /// ` Top Selling`
+  String get top_selling {
+    return Intl.message(
+      ' Top Selling',
+      name: 'top_selling',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Products`
+  String get Products_view_title {
+    return Intl.message(
+      'Products',
+      name: 'Products_view_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product added to cart`
+  String get product_added_to_cart {
+    return Intl.message(
+      'Product added to cart',
+      name: 'product_added_to_cart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product removed from cart`
+  String get product_removed_from_cart {
+    return Intl.message(
+      'Product removed from cart',
+      name: 'product_removed_from_cart',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `The password provided is too weak.`
   String get Custom_Exception_weak_password {
     return Intl.message(

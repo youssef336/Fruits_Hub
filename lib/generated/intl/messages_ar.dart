@@ -77,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "Home_view_welcome_appbar": MessageLookupByLibrary.simpleMessage(
       "صباح الخير !..",
     ),
+    "Products_view_title": MessageLookupByLibrary.simpleMessage("المنتجات"),
     "on_Login_create_account": MessageLookupByLibrary.simpleMessage(
       "قم بإنشاء حساب",
     ),
@@ -145,5 +146,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "on_signup_name": MessageLookupByLibrary.simpleMessage("الاسم"),
     "on_signup_password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "product_added_to_cart": MessageLookupByLibrary.simpleMessage(
+      "تمت اضافة المنتج للسلة",
+    ),
+    "product_removed_from_cart": MessageLookupByLibrary.simpleMessage(
+      "تم حذف المنتج من السلة",
+    ),
+    "top_selling": MessageLookupByLibrary.simpleMessage("الأكثر مبيعًا"),
   };
 }

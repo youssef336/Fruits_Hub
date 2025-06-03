@@ -7,6 +7,7 @@ import 'package:fruits_hub_app/main.dart';
 import '../../../../../constant.dart';
 import '../../../../../core/cubits/products_cubit.dart';
 import '../../../../../core/utils/text_styles.dart';
+import '../../../../../generated/l10n.dart';
 
 class BestSellingViewBody extends StatefulWidget {
   const BestSellingViewBody({super.key});
@@ -33,7 +34,7 @@ class _BestSellingViewBodyState extends State<BestSellingViewBody> {
             child: Padding(
               padding: const EdgeInsets.only(top: 24, bottom: 8),
               child: Text(
-                isArabic() ? 'الأكثر مبيعًا' : 'Best Selling',
+                S.of(context).top_selling,
 
                 style: AppTextStyles.cairoBold.copyWith(fontSize: 16),
               ),

@@ -2,8 +2,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub_app/core/helper_functions/build_error_bar.dart';
 import 'package:fruits_hub_app/features/home/presentation/manager/cubits/cart/cart_cubit.dart';
-import 'package:fruits_hub_app/main.dart';
 
+import '../../../../../generated/l10n.dart';
 import 'main_view_body.dart';
 
 class MainViewBodyBlocListener extends StatelessWidget {
@@ -16,20 +16,10 @@ class MainViewBodyBlocListener extends StatelessWidget {
     return BlocListener<CartCubit, CartState>(
       listener: (context, state) {
         if (state is CartItemAdd) {
-          buildErrorBar(
-            context,
-            isArabic()
-                ? "تم إضافة المنتج إلى السلة"
-                : "Product added to cart",
-          );
+          buildErrorBar(context, S.of(context).product_added_to_cart);
         }
         if (state is CartItemRemoved) {
-          buildErrorBar(
-            context,
-            isArabic()
-                ? "تم حذف المنتج من السلة"
-                : " Product removed from cart",
-          );
+          buildErrorBar(context, S.of(context).product_removed_from_cart);
         }
       },
       child: MainViewBody(currentViewIndex: currentViewIndex),
