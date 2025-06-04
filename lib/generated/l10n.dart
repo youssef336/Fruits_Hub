@@ -582,11 +582,21 @@ class S {
     );
   }
 
-  /// `English Language`
+  /// `Arabic Language`
   String get ProfileViewLanguage_value_Item {
     return Intl.message(
-      'English Language',
+      'Arabic Language',
       name: 'ProfileViewLanguage_value_Item',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English Language`
+  String get ProfileViewLanguage_value_Item2 {
+    return Intl.message(
+      'English Language',
+      name: 'ProfileViewLanguage_value_Item2',
       desc: '',
       args: [],
     );

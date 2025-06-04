@@ -6,13 +6,13 @@ part 'locale_state.dart';
 class LocaleCubit extends Cubit<LocaleState> {
   LocaleCubit() : super(LocaleInitial());
 
-  bool changeLocale() {
-    if (state is LocaleChangedtoEnglish) {
-      emit(LocaleChangedtoArabic());
-      return true;
-    } else {
-      emit(LocaleChangedtoEnglish());
-      return false;
-    }
+  bool changeLocaleToEnglish() {
+    emit(LocaleChangedtoEnglish());
+    return true;
+  }
+
+  bool changeLocaleToArabic() {
+    emit(LocaleChangedtoArabic());
+    return true;
   }
 }

@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub_app/core/cubits/locale/locale_cubit.dart';
+import 'package:fruits_hub_app/core/widgets/custom_divider.dart';
 
-import '../../../../../constant.dart';
 import '../../../../../core/utils/text_styles.dart';
 import '../../../../../core/widgets/build_app_bar.dart';
 import '../../../../../generated/l10n.dart';
@@ -34,6 +34,16 @@ class _ProfileViewLanguagePageState extends State<ProfileViewLanguagePage> {
             ),
             Language_container(
               text: S.of(context).ProfileViewLanguage_value_Item,
+              onPressed: () {
+                BlocProvider.of<LocaleCubit>(context).changeLocaleToArabic();
+              },
+            ),
+            const CustomDivider(),
+            Language_container(
+              text: S.of(context).ProfileViewLanguage_value_Item2,
+              onPressed: () {
+                BlocProvider.of<LocaleCubit>(context).changeLocaleToEnglish();
+              },
             ),
           ],
         ),
@@ -43,8 +53,9 @@ class _ProfileViewLanguagePageState extends State<ProfileViewLanguagePage> {
 }
 
 class Language_container extends StatelessWidget {
-  const Language_container({super.key, required this.text});
+  const Language_container({super.key, required this.text, this.onPressed});
   final String text;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -52,9 +63,7 @@ class Language_container extends StatelessWidget {
       child: Row(
         children: [
           TextButton(
-            onPressed: () {
-              context.read<LocaleCubit>().changeLocale();
-            },
+            onPressed: onPressed,
             child: Text(text, style: AppTextStyles.cairoBold19),
           ),
         ],

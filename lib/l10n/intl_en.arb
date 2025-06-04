@@ -54,7 +54,9 @@
     "Button_NavigationBar_Entity_Profile": "Profile",
     "Button_NavigationBar_Entity_Products": "products",
     "ProfileViewLanguage":"Language",
-    "ProfileViewLanguage_value_Item":"English Language",
+    "ProfileViewLanguage_value_Item":"Arabic Language",
+    "ProfileViewLanguage_value_Item2":"English Language",
+
     "ProfileViewLanguage_value":"English",
     "CartViewHeader":"Cart"
     

@@ -18,7 +18,7 @@ class CustomCartButtomBlocBuilder extends StatelessWidget {
           text:
               isArabic()
                   ? 'الدفع ${context.watch<CartCubit>().cartEntites.calculateTotalPrice()} جنيه'
-                  : 'Pay  ${context.watch<CartCubit>().cartEntites.calculateTotalPrice()} EGP',
+                  : 'Pay ${context.watch<CartCubit>().cartEntites.calculateTotalPrice()} EGP',
           onPressed: () {},
         );
       },

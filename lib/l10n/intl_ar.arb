@@ -56,6 +56,8 @@
     "ProfileViewLanguage":"اللغة",
     "ProfileViewLanguage_value":"العربية",
     "CartViewHeader":"عربة التسوق",
-    "ProfileViewLanguage_value_Item":"اللغة العربية" 
+    "ProfileViewLanguage_value_Item":"اللغة العربية",
+    "ProfileViewLanguage_value_Item2":"اللغة الانجليزية"
+
  
 }

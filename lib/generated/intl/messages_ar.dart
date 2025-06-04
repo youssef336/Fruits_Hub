@@ -86,6 +86,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "ProfileViewLanguage_value_Item": MessageLookupByLibrary.simpleMessage(
       "اللغة العربية",
     ),
+    "ProfileViewLanguage_value_Item2": MessageLookupByLibrary.simpleMessage(
+      "اللغة الانجليزية",
+    ),
     "on_Login_create_account": MessageLookupByLibrary.simpleMessage(
       "قم بإنشاء حساب",
     ),

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub_app/constant.dart';
@@ -91,13 +93,44 @@ class FruiteItem extends StatelessWidget {
           Positioned(
             top: 0,
             right: 0,
-            child: IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.favorite_border_outlined),
+            child: CustomFavoriteIconButton(
+              productId:
+                  isArabic() ? productEntity.nameAr : productEntity.nameEn,
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class CustomFavoriteIconButton extends StatefulWidget {
+  final String productId;
+
+  const CustomFavoriteIconButton({super.key, required this.productId});
+
+  @override
+  State<CustomFavoriteIconButton> createState() =>
+      _CustomFavoriteIconButtonState();
+}
+
+class _CustomFavoriteIconButtonState extends State<CustomFavoriteIconButton> {
+  bool isFavorite = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      onPressed: () {
+        const Duration(milliseconds: 1);
+        setState(() {
+          isFavorite = !isFavorite;
+        });
+        log("Product ${widget.productId} favorite: $isFavorite");
+      },
+      icon:
+          isFavorite
+              ? const Icon(Icons.favorite, color: Colors.red)
+              : const Icon(Icons.favorite_border, color: Colors.grey),
     );
   }
 }

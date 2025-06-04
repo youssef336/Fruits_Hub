@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub_app/core/widgets/build_app_bar.dart';
-import 'package:fruits_hub_app/features/home/presentation/views/widgets/Prodeuct_view_header.dart';
+import 'package:fruits_hub_app/features/home/presentation/views/widgets/Product_view_header.dart';
 import '../../../../../constant.dart';
 import '../../../../../core/cubits/products_cubit/products_cubit.dart';
 import '../../../../../core/widgets/search_text_feild.dart';
