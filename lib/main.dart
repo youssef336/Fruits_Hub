@@ -38,6 +38,7 @@ class FruitsHubApp extends StatelessWidget {
 
       child: BlocBuilder<LocaleCubit, LocaleState>(
         builder: (context, state) {
+          String locale = Prefs.getString(Klocale);
           return MaterialApp(
             localizationsDelegates: [
               S.delegate,
@@ -52,7 +53,7 @@ class FruitsHubApp extends StatelessWidget {
                     ? const Locale('en')
                     : state is LocaleChangedtoArabic
                     ? const Locale('ar')
-                    : const Locale('ar'),
+                    : Locale(locale.isEmpty ? 'ar' : locale),
             title: 'Fruits Hub',
             theme: ThemeData(
               scaffoldBackgroundColor: Colors.white,

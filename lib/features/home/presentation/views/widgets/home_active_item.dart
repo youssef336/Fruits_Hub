@@ -15,7 +15,9 @@ class ActiveItem extends StatelessWidget {
       child: Container(
         padding:
             isArabic()
-                ? const EdgeInsets.only(left: 16)
+                ? EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * 0.03,
+                )
                 : const EdgeInsets.only(right: 16),
         decoration: ShapeDecoration(
           color: const Color(0xFFEEEEEE),

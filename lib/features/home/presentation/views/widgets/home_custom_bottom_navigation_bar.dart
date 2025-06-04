@@ -16,7 +16,7 @@ class _HomeCustomBottomNavigationBarState
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 375,
+      width: MediaQuery.of(context).size.width,
       height: 70,
       decoration: const ShapeDecoration(
         color: Colors.white,

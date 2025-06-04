@@ -1,9 +1,8 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub_app/constant.dart';
 import 'package:fruits_hub_app/core/entities/product_entity.dart';
+import 'package:fruits_hub_app/core/services/shared_preferences_singletone.dart';
 
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
 import 'package:fruits_hub_app/features/home/presentation/manager/cubits/cart/cart_cubit.dart';
@@ -116,17 +115,42 @@ class CustomFavoriteIconButton extends StatefulWidget {
 
 class _CustomFavoriteIconButtonState extends State<CustomFavoriteIconButton> {
   bool isFavorite = false;
+  bool isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadFavoriteStatus();
+  }
+
+  Future<void> _loadFavoriteStatus() async {
+    final result = Prefs.getBool(widget.productId) ?? false;
+    setState(() {
+      isFavorite = result;
+      isLoading = false;
+    });
+  }
+
+  Future<void> _toggleFavorite() async {
+    final newValue = !isFavorite;
+    await Prefs.setBool(widget.productId, newValue);
+    setState(() {
+      isFavorite = newValue;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
+    if (isLoading) {
+      return const SizedBox(
+        width: 24,
+        height: 24,
+        child: CircularProgressIndicator(strokeWidth: 2),
+      );
+    }
+
     return IconButton(
-      onPressed: () {
-        const Duration(milliseconds: 1);
-        setState(() {
-          isFavorite = !isFavorite;
-        });
-        log("Product ${widget.productId} favorite: $isFavorite");
-      },
+      onPressed: _toggleFavorite,
       icon:
           isFavorite
               ? const Icon(Icons.favorite, color: Colors.red)

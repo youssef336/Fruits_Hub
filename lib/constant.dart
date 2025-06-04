@@ -16,3 +16,4 @@ const KsecondaryColorLight = Color(0xFFF8C76D);
 const KisBoardingViewSeen = 'isBoardingViewSeen';
 
 const KUserData = 'userData';
+const Klocale = 'locale';
