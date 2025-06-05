@@ -59,7 +59,14 @@
     "ProfileViewLanguage_value":"العربية",
     "CartViewHeader":"عربة التسوق",
     "ProfileViewLanguage_value_Item":"اللغة العربية",
-    "ProfileViewLanguage_value_Item2":"اللغة الانجليزية"
+    "ProfileViewLanguage_value_Item2":"اللغة الانجليزية",
+
+
+    "CheckOutView_title":"الشحن",
+    "CheckOutView_address":"العنوان",
+    "CheckOutView_payment":"الدفع",
+    "CheckOutView_recheck":"المراجعه",
+    "CheckOutView_summary":"الملخص"
 
  
 }

@@ -4,7 +4,7 @@
 // function name.
 
 // Ignore issues from commonly used lints in this file.
-// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new
+// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new, depend_on_referenced_packages
 // ignore_for_file:prefer_single_quotes,comment_references, directives_ordering
 // ignore_for_file:annotate_overrides,prefer_generic_function_type_aliases
 // ignore_for_file:unused_import, file_names, avoid_escaping_inner_quotes
@@ -34,6 +34,11 @@ class MessageLookup extends MessageLookupByLibrary {
       "الملف الشخصي",
     ),
     "CartViewHeader": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
+    "CheckOutView_address": MessageLookupByLibrary.simpleMessage("العنوان"),
+    "CheckOutView_payment": MessageLookupByLibrary.simpleMessage("الدفع"),
+    "CheckOutView_recheck": MessageLookupByLibrary.simpleMessage("المراجعه"),
+    "CheckOutView_summary": MessageLookupByLibrary.simpleMessage("الملخص"),
+    "CheckOutView_title": MessageLookupByLibrary.simpleMessage("الشحن"),
     "Custom_Exception_email_already_in_use":
         MessageLookupByLibrary.simpleMessage(
           "عنوان البريد الإلكتروني قيد الاستخدام بالفعل بواسطة حساب آخر.",

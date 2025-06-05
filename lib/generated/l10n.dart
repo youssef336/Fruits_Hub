@@ -1,4 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'intl/messages_all.dart';
@@ -633,6 +635,56 @@ class S {
   /// `Cart`
   String get CartViewHeader {
     return Intl.message('Cart', name: 'CartViewHeader', desc: '', args: []);
+  }
+
+  /// `Checkout`
+  String get CheckOutView_title {
+    return Intl.message(
+      'Checkout',
+      name: 'CheckOutView_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address`
+  String get CheckOutView_address {
+    return Intl.message(
+      'Address',
+      name: 'CheckOutView_address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment`
+  String get CheckOutView_payment {
+    return Intl.message(
+      'Payment',
+      name: 'CheckOutView_payment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recheck`
+  String get CheckOutView_recheck {
+    return Intl.message(
+      'Recheck',
+      name: 'CheckOutView_recheck',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Summary`
+  String get CheckOutView_summary {
+    return Intl.message(
+      'Summary',
+      name: 'CheckOutView_summary',
+      desc: '',
+      args: [],
+    );
   }
 }
 

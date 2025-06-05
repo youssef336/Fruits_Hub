@@ -61,6 +61,12 @@
     "ProfileViewLanguage_value_Item2":"English Language",
 
     "ProfileViewLanguage_value":"English",
-    "CartViewHeader":"Cart"
+    "CartViewHeader":"Cart",
+
+    "CheckOutView_title":"Checkout",
+    "CheckOutView_address":"Address",
+    "CheckOutView_payment":"Payment",
+    "CheckOutView_recheck":"Recheck",
+    "CheckOutView_summary":"Summary"
     
 }
