@@ -7,6 +7,8 @@ import '../../../../../core/utils/text_styles.dart';
 import '../../../../../core/widgets/build_app_bar.dart';
 import '../../../../../generated/l10n.dart';
 import 'custom_home_appbar.dart';
+import 'profile_viewLanguage_page.dart';
+import 'profile_view_avtar_page.dart';
 
 class ProfileViewBody extends StatefulWidget {
   const ProfileViewBody({super.key});
@@ -41,8 +43,27 @@ class _ProfileViewBodyState extends State<ProfileViewBody> {
                   style: AppTextStyles.cairoBold.copyWith(height: 1.70),
                 ),
                 const SizedBox(height: 16),
-                const ProfileViewItem(),
+                ProfileViewItem(
+                  headText: S.of(context).ProfileViewLanguage,
+                  value: S.of(context).ProfileViewLanguage_value,
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context,
+                      ProfileViewLanguagePage.routeName,
+                    );
+                  },
+                ),
                 Divider(height: 1, thickness: 1, color: Colors.grey.shade300),
+                ProfileViewItem(
+                  headText: "d",
+                  value: "d",
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context,
+                      ProfileViewAvtarPage.routeName,
+                    );
+                  },
+                ),
               ],
             ),
           ),

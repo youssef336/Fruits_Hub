@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/text_styles.dart';
-import '../../../../../generated/l10n.dart';
-import 'profile_viewLanguage_page.dart';
 
 class ProfileViewItem extends StatelessWidget {
-  const ProfileViewItem({super.key});
-
+  const ProfileViewItem({
+    super.key,
+    required this.headText,
+    required this.value,
+    required this.onPressed,
+  });
+  final String headText;
+  final String value;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,20 +20,11 @@ class ProfileViewItem extends StatelessWidget {
       decoration: const ShapeDecoration(shape: RoundedRectangleBorder()),
       child: Row(
         children: [
-          Text(
-            S.of(context).ProfileViewLanguage,
-            style: AppTextStyles.bodyBaseSemibold,
-          ),
+          Text(headText, style: AppTextStyles.bodyBaseSemibold),
           const Spacer(),
-          Text(
-            S.of(context).ProfileViewLanguage_value,
-            style: AppTextStyles.bodyBaseSemibold,
-          ),
+          Text(value, style: AppTextStyles.bodyBaseSemibold),
           IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, ProfileViewLanguagePage.routeName);
-              const ProfileViewLanguagePage();
-            },
+            onPressed: onPressed,
             icon: const Icon(Icons.arrow_forward_ios_rounded),
           ),
         ],

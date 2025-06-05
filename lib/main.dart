@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:fruits_hub_app/constant.dart';
 import 'package:fruits_hub_app/core/cubits/locale/locale_cubit.dart';
 import 'package:fruits_hub_app/core/helper_functions/on_generate_routes.dart';
@@ -22,7 +23,7 @@ void main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await Prefs.init();
   setupGetIt();
-  runApp(const FruitsHubApp());
+  runApp(Phoenix(child: const FruitsHubApp()));
 }
 
 class FruitsHubApp extends StatelessWidget {

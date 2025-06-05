@@ -17,3 +17,4 @@ const KisBoardingViewSeen = 'isBoardingViewSeen';
 
 const KUserData = 'userData';
 const Klocale = 'locale';
+const Kavatar = 'avatar';

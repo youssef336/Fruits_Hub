@@ -7,6 +7,7 @@ import 'package:fruits_hub_app/features/splash/presentation/views/splash_view.da
 
 import '../../features/best_selling_fruits/presentation/views/best_selling_view.dart';
 import '../../features/home/presentation/views/widgets/profile_viewLanguage_page.dart';
+import '../../features/home/presentation/views/widgets/profile_view_avtar_page.dart';
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -22,6 +23,8 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const BestSellingFruitsView());
     case ProfileViewLanguagePage.routeName:
       return MaterialPageRoute(builder: (_) => const ProfileViewLanguagePage());
+    case ProfileViewAvtarPage.routeName:
+      return MaterialPageRoute(builder: (_) => const ProfileViewAvtarPage());
     case SignUpView.routeName:
       return MaterialPageRoute(
         builder: (_) => const SignUpView(),

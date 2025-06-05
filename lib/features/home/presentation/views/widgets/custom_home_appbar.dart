@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruits_hub_app/core/cubits/avatar/avatar_cubit.dart';
 import 'package:fruits_hub_app/core/helper_functions/get_user.dart';
+import 'package:fruits_hub_app/core/services/shared_preferences_singletone.dart';
 import 'package:fruits_hub_app/core/utils/app_images.dart';
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
 
+import '../../../../../constant.dart';
 import '../../../../../core/widgets/notification_widget.dart';
 
 class CustomHomeAppBar extends StatelessWidget {
@@ -11,9 +15,31 @@ class CustomHomeAppBar extends StatelessWidget {
   final bool showNotification;
   @override
   Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => AvatarCubit(),
+      child: WWWWW(showNotification: showNotification),
+    );
+  }
+}
+
+class WWWWW extends StatelessWidget {
+  const WWWWW({super.key, required this.showNotification});
+
+  final bool showNotification;
+
+  @override
+  Widget build(BuildContext context) {
+    String avatar = Prefs.getString(Kavatar);
     return ListTile(
       contentPadding: const EdgeInsets.all(0),
-      leading: Image.asset(Assets.imagesProfileImage),
+      leading: BlocBuilder<AvatarCubit, AvatarState>(
+        builder: (context, state) {
+          if (state is ChangeAvatar) {
+            avatar = state.avatar;
+          }
+          return Image.asset(avatar.isEmpty ? Assets.imagesAvatar1 : avatar);
+        },
+      ),
       title: Text(
         S.of(context).Home_view_welcome_appbar,
 
