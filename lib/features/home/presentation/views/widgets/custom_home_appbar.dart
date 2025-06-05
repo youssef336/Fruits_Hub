@@ -17,13 +17,13 @@ class CustomHomeAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => AvatarCubit(),
-      child: WWWWW(showNotification: showNotification),
+      child: CustomHomeAppBar_body(showNotification: showNotification),
     );
   }
 }
 
-class WWWWW extends StatelessWidget {
-  const WWWWW({super.key, required this.showNotification});
+class CustomHomeAppBar_body extends StatelessWidget {
+  const CustomHomeAppBar_body({super.key, required this.showNotification});
 
   final bool showNotification;
 

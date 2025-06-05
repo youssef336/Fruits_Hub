@@ -54,6 +54,9 @@
     "Button_NavigationBar_Entity_Profile": "Profile",
     "Button_NavigationBar_Entity_Products": "products",
     "ProfileViewLanguage":"Language",
+    "ProfileViewProfileImage":"Profile Image",
+    "ProfileViewProfileImage_value":"Avatar",
+    
     "ProfileViewLanguage_value_Item":"Arabic Language",
     "ProfileViewLanguage_value_Item2":"English Language",
 

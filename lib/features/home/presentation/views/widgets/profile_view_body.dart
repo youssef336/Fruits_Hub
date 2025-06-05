@@ -55,8 +55,8 @@ class _ProfileViewBodyState extends State<ProfileViewBody> {
                 ),
                 Divider(height: 1, thickness: 1, color: Colors.grey.shade300),
                 ProfileViewItem(
-                  headText: "d",
-                  value: "d",
+                  headText: S.of(context).ProfileViewProfileImage,
+                  value: S.of(context).ProfileViewProfileImage_value,
                   onPressed: () {
                     Navigator.pushNamed(
                       context,

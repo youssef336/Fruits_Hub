@@ -41,7 +41,7 @@ class ProfileViewAvtarBody extends StatelessWidget {
           children: [
             buildAppbar(
               context,
-              title: S.of(context).ProfileViewLanguage,
+              title: S.of(context).ProfileViewProfileImage,
               showNotification: false,
             ),
             GestureDetector(

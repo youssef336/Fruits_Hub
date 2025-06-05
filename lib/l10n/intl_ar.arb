@@ -54,6 +54,8 @@
     "Button_NavigationBar_Entity_Profile": "الملف الشخصي",
     "Button_NavigationBar_Entity_Products": "المنتجات",
     "ProfileViewLanguage":"اللغة",
+    "ProfileViewProfileImage":"صورة الملف الشخصي",
+    "ProfileViewProfileImage_value":"الصورة الافتراضية",
     "ProfileViewLanguage_value":"العربية",
     "CartViewHeader":"عربة التسوق",
     "ProfileViewLanguage_value_Item":"اللغة العربية",

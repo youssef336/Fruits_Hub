@@ -1,6 +1,4 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: depend_on_referenced_packages
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'intl/messages_all.dart';
@@ -577,6 +575,26 @@ class S {
     return Intl.message(
       'Language',
       name: 'ProfileViewLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile Image`
+  String get ProfileViewProfileImage {
+    return Intl.message(
+      'Profile Image',
+      name: 'ProfileViewProfileImage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avatar`
+  String get ProfileViewProfileImage_value {
+    return Intl.message(
+      'Avatar',
+      name: 'ProfileViewProfileImage_value',
       desc: '',
       args: [],
     );
