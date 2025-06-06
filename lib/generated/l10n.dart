@@ -1,6 +1,4 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: depend_on_referenced_packages
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'intl/messages_all.dart';
@@ -680,6 +678,16 @@ class S {
   /// `Next`
   String get CheckOutView_Next {
     return Intl.message('Next', name: 'CheckOutView_Next', desc: '', args: []);
+  }
+
+  /// `Pay with PayPal`
+  String get CheckOutView_PayWithPayPal {
+    return Intl.message(
+      'Pay with PayPal',
+      name: 'CheckOutView_PayWithPayPal',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Cash On Delivery`

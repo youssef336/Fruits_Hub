@@ -18,6 +18,11 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
   @override
   void initState() {
     pageController = PageController();
+    pageController.addListener(() {
+      setState(() {
+        currentPageindex = pageController.page!.toInt();
+      });
+    });
     super.initState();
   }
 
@@ -27,6 +32,7 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
     super.dispose();
   }
 
+  int currentPageindex = 0;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -34,16 +40,16 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
       child: Column(
         children: [
           const SizedBox(height: 20),
-          const CheckOutStage(),
+          CheckOutStage(currentPageindex: currentPageindex),
 
           Expanded(
             child: CheckOutStepsPageView(pageController: pageController),
           ),
           CustomButtom(
-            text: S.of(context).CheckOutView_Next,
+            text: getNextButtonText(currentPageindex),
             onPressed: () {
               pageController.animateToPage(
-                2,
+                currentPageindex + 1,
                 duration: const Duration(milliseconds: 600),
                 curve: Curves.fastOutSlowIn,
               );
@@ -53,5 +59,18 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
         ],
       ),
     );
+  }
+
+  String getNextButtonText(int currentPageindex) {
+    switch (currentPageindex) {
+      case 0:
+        return S.of(context).CheckOutView_Next;
+      case 1:
+        return S.of(context).CheckOutView_Next;
+      case 2:
+        return S.of(context).CheckOutView_PayWithPayPal;
+      default:
+        return S.of(context).CheckOutView_Next;
+    }
   }
 }

@@ -4,7 +4,7 @@
 // function name.
 
 // Ignore issues from commonly used lints in this file.
-// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new, depend_on_referenced_packages
+// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new
 // ignore_for_file:prefer_single_quotes,comment_references, directives_ordering
 // ignore_for_file:annotate_overrides,prefer_generic_function_type_aliases
 // ignore_for_file:unused_import, file_names, avoid_escaping_inner_quotes
@@ -35,6 +35,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "CartViewHeader": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
     "CheckOutView_Next": MessageLookupByLibrary.simpleMessage("التالي"),
+    "CheckOutView_PayWithPayPal": MessageLookupByLibrary.simpleMessage(
+      "الدفع باستخدام PayPal",
+    ),
     "CheckOutView_Shipinng_Subtitle1": MessageLookupByLibrary.simpleMessage(
       "التسليم من المكان",
     ),

@@ -4,15 +4,15 @@ import 'package:fruits_hub_app/features/check_out/presentation/views/widgets/ste
 import '../../../../../generated/l10n.dart';
 
 class CheckOutStage extends StatelessWidget {
-  const CheckOutStage({super.key});
-
+  const CheckOutStage({super.key, required this.currentPageindex});
+  final int currentPageindex;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: List.generate(getSteps(context).length, (index) {
         return Expanded(
           child: StepItem(
-            isActive: false,
+            isActive: index <= currentPageindex,
             index: (index + 1).toString(),
             text: getSteps(context)[index],
           ),

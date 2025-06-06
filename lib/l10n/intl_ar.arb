@@ -67,6 +67,7 @@
     "CheckOutView_payment":"الدفع",
     "CheckOutView_recheck":"المراجعه",
     "CheckOutView_Next":"التالي",
+    "CheckOutView_PayWithPayPal":"الدفع باستخدام PayPal",
 
     "CheckOutView_Shipinng_title1":"الدفع عند الاستلام",
      "CheckOutView_Shipinng_Subtitle1":"التسليم من المكان",
