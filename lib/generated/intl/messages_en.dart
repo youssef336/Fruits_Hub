@@ -34,10 +34,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "Profile",
     ),
     "CartViewHeader": MessageLookupByLibrary.simpleMessage("Cart"),
+    "CheckOutView_Next": MessageLookupByLibrary.simpleMessage("Next"),
+    "CheckOutView_Shipinng_Subtitle1": MessageLookupByLibrary.simpleMessage(
+      "Delivery From Location",
+    ),
+    "CheckOutView_Shipinng_Subtitle2": MessageLookupByLibrary.simpleMessage(
+      "Select Payment Method",
+    ),
+    "CheckOutView_Shipinng_title1": MessageLookupByLibrary.simpleMessage(
+      "Cash On Delivery",
+    ),
+    "CheckOutView_Shipinng_title2": MessageLookupByLibrary.simpleMessage(
+      "Online Payment",
+    ),
     "CheckOutView_address": MessageLookupByLibrary.simpleMessage("Address"),
     "CheckOutView_payment": MessageLookupByLibrary.simpleMessage("Payment"),
     "CheckOutView_recheck": MessageLookupByLibrary.simpleMessage("Recheck"),
-    "CheckOutView_summary": MessageLookupByLibrary.simpleMessage("Summary"),
     "CheckOutView_title": MessageLookupByLibrary.simpleMessage("Checkout"),
     "Custom_Exception_email_already_in_use":
         MessageLookupByLibrary.simpleMessage(

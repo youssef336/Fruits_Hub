@@ -13,20 +13,20 @@ class CheckOutStage extends StatelessWidget {
         return Expanded(
           child: StepItem(
             isActive: false,
-            index: index.toString(),
+            index: (index + 1).toString(),
             text: getSteps(context)[index],
           ),
         );
       }),
     );
   }
+}
 
-  List<String> getSteps(context) {
-    return [
-      S.of(context).CheckOutView_title,
-      S.of(context).CheckOutView_address,
-      S.of(context).CheckOutView_payment,
-      S.of(context).CheckOutView_recheck,
-    ];
-  }
+List<String> getSteps(context) {
+  return [
+    S.of(context).CheckOutView_title,
+    S.of(context).CheckOutView_address,
+    S.of(context).CheckOutView_payment,
+    S.of(context).CheckOutView_recheck,
+  ];
 }

@@ -675,11 +675,46 @@ class S {
     );
   }
 
-  /// `Summary`
-  String get CheckOutView_summary {
+  /// `Next`
+  String get CheckOutView_Next {
+    return Intl.message('Next', name: 'CheckOutView_Next', desc: '', args: []);
+  }
+
+  /// `Cash On Delivery`
+  String get CheckOutView_Shipinng_title1 {
     return Intl.message(
-      'Summary',
-      name: 'CheckOutView_summary',
+      'Cash On Delivery',
+      name: 'CheckOutView_Shipinng_title1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery From Location`
+  String get CheckOutView_Shipinng_Subtitle1 {
+    return Intl.message(
+      'Delivery From Location',
+      name: 'CheckOutView_Shipinng_Subtitle1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Online Payment`
+  String get CheckOutView_Shipinng_title2 {
+    return Intl.message(
+      'Online Payment',
+      name: 'CheckOutView_Shipinng_title2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Payment Method`
+  String get CheckOutView_Shipinng_Subtitle2 {
+    return Intl.message(
+      'Select Payment Method',
+      name: 'CheckOutView_Shipinng_Subtitle2',
       desc: '',
       args: [],
     );

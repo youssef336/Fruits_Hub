@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub_app/constant.dart';
+import 'package:fruits_hub_app/core/cubits/locale/locale_cubit.dart';
 import 'package:fruits_hub_app/features/home/presentation/manager/cubits/cart/cart_cubit.dart';
 import 'package:fruits_hub_app/main.dart';
 
@@ -24,14 +25,18 @@ class CartViewHeader extends StatelessWidget {
         child: BlocBuilder<CartItemCubit, CartItemState>(
           builder: (context, state) {
             return Center(
-              child: Text(
-                isArabic()
-                    ? 'لديك ${context.watch<CartCubit>().cartEntites.calculateTotalCount()} منتجات في سله التسوق'
-                    : ' You have ${context.watch<CartCubit>().cartEntites.calculateTotalCount()} items in your cart',
-                style: AppTextStyles.cairoRegular.copyWith(
-                  height: 1.60,
-                  color: KprimaryColor,
-                ),
+              child: BlocBuilder<LocaleCubit, LocaleState>(
+                builder: (context, state) {
+                  return Text(
+                    isArabic()
+                        ? 'لديك ${context.watch<CartCubit>().cartEntites.calculateTotalCount()} منتجات في سله التسوق'
+                        : ' You have ${context.watch<CartCubit>().cartEntites.calculateTotalCount()} items in your cart',
+                    style: AppTextStyles.cairoRegular.copyWith(
+                      height: 1.60,
+                      color: KprimaryColor,
+                    ),
+                  );
+                },
               ),
             );
           },

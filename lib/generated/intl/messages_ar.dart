@@ -34,10 +34,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "الملف الشخصي",
     ),
     "CartViewHeader": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
+    "CheckOutView_Next": MessageLookupByLibrary.simpleMessage("التالي"),
+    "CheckOutView_Shipinng_Subtitle1": MessageLookupByLibrary.simpleMessage(
+      "التسليم من المكان",
+    ),
+    "CheckOutView_Shipinng_Subtitle2": MessageLookupByLibrary.simpleMessage(
+      "تحديد طريقة الدفع",
+    ),
+    "CheckOutView_Shipinng_title1": MessageLookupByLibrary.simpleMessage(
+      "الدفع عند الاستلام",
+    ),
+    "CheckOutView_Shipinng_title2": MessageLookupByLibrary.simpleMessage(
+      "الدفع اونلاين",
+    ),
     "CheckOutView_address": MessageLookupByLibrary.simpleMessage("العنوان"),
     "CheckOutView_payment": MessageLookupByLibrary.simpleMessage("الدفع"),
     "CheckOutView_recheck": MessageLookupByLibrary.simpleMessage("المراجعه"),
-    "CheckOutView_summary": MessageLookupByLibrary.simpleMessage("الملخص"),
     "CheckOutView_title": MessageLookupByLibrary.simpleMessage("الشحن"),
     "Custom_Exception_email_already_in_use":
         MessageLookupByLibrary.simpleMessage(

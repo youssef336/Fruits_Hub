@@ -67,6 +67,13 @@
     "CheckOutView_address":"Address",
     "CheckOutView_payment":"Payment",
     "CheckOutView_recheck":"Recheck",
-    "CheckOutView_summary":"Summary"
+    "CheckOutView_Next":"Next",
+
+    "CheckOutView_Shipinng_title1":"Cash On Delivery",
+     "CheckOutView_Shipinng_Subtitle1":"Delivery From Location",
+     "CheckOutView_Shipinng_title2":"Online Payment",
+     "CheckOutView_Shipinng_Subtitle2":"Select Payment Method"
+
+    
     
 }

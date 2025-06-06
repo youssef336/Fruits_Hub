@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruits_hub_app/core/cubits/locale/locale_cubit.dart';
 
 import '../../../../../core/widgets/custom_buttom.dart';
 
@@ -15,13 +16,17 @@ class CustomCartButtomBlocBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<CartItemCubit, CartItemState>(
       builder: (context, state) {
-        return CustomButtom(
-          text:
-              isArabic()
-                  ? 'الدفع ${context.watch<CartCubit>().cartEntites.calculateTotalPrice()} جنيه'
-                  : 'Pay ${context.watch<CartCubit>().cartEntites.calculateTotalPrice()} EGP',
-          onPressed: () {
-            Navigator.pushNamed(context, CheckOutView.routeName);
+        return BlocBuilder<LocaleCubit, LocaleState>(
+          builder: (context, state) {
+            return CustomButtom(
+              text:
+                  isArabic()
+                      ? 'الدفع ${context.watch<CartCubit>().cartEntites.calculateTotalPrice()} جنيه'
+                      : 'Pay ${context.watch<CartCubit>().cartEntites.calculateTotalPrice()} EGP',
+              onPressed: () {
+                Navigator.pushNamed(context, CheckOutView.routeName);
+              },
+            );
           },
         );
       },

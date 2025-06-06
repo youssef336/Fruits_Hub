@@ -66,7 +66,12 @@
     "CheckOutView_address":"العنوان",
     "CheckOutView_payment":"الدفع",
     "CheckOutView_recheck":"المراجعه",
-    "CheckOutView_summary":"الملخص"
+    "CheckOutView_Next":"التالي",
+
+    "CheckOutView_Shipinng_title1":"الدفع عند الاستلام",
+     "CheckOutView_Shipinng_Subtitle1":"التسليم من المكان",
+     "CheckOutView_Shipinng_title2":"الدفع اونلاين",
+     "CheckOutView_Shipinng_Subtitle2":"تحديد طريقة الدفع"
 
  
 }
