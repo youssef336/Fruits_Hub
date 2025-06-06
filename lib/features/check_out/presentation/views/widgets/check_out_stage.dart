@@ -27,6 +27,5 @@ List<String> getSteps(context) {
     S.of(context).CheckOutView_title,
     S.of(context).CheckOutView_address,
     S.of(context).CheckOutView_payment,
-    S.of(context).CheckOutView_recheck,
   ];
 }
