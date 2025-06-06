@@ -39,7 +39,15 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
           Expanded(
             child: CheckOutStepsPageView(pageController: pageController),
           ),
-          CustomButtom(text: S.of(context).CheckOutView_Next, onPressed: () {}),
+          CustomButtom(
+            text: S.of(context).CheckOutView_Next,
+            onPressed: () {
+              pageController.nextPage(
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeIn,
+              );
+            },
+          ),
           const SizedBox(height: 32),
         ],
       ),
