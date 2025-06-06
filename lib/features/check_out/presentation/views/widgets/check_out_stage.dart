@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_hub_app/features/check_out/presentation/views/widgets/active_step_item.dart';
+import 'package:fruits_hub_app/features/check_out/presentation/views/widgets/step_item.dart';
 
 import '../../../../../generated/l10n.dart';
 
@@ -10,7 +10,13 @@ class CheckOutStage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: List.generate(getSteps(context).length, (index) {
-        return Expanded(child: ActiveStepItem(text: getSteps(context)[index]));
+        return Expanded(
+          child: StepItem(
+            isActive: false,
+            index: index.toString(),
+            text: getSteps(context)[index],
+          ),
+        );
       }),
     );
   }
