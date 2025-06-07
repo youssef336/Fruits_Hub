@@ -38,11 +38,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "CheckOutView_PayWithPayPal": MessageLookupByLibrary.simpleMessage(
       "الدفع باستخدام PayPal",
     ),
+    "CheckOutView_Shipinng_Error": MessageLookupByLibrary.simpleMessage(
+      "يرجى تحديد طريقة الدفع",
+    ),
     "CheckOutView_Shipinng_Subtitle1": MessageLookupByLibrary.simpleMessage(
       "التسليم من المكان",
     ),
     "CheckOutView_Shipinng_Subtitle2": MessageLookupByLibrary.simpleMessage(
       "تحديد طريقة الدفع",
+    ),
+    "CheckOutView_Shipinng_price": MessageLookupByLibrary.simpleMessage(
+      " جنيه ",
     ),
     "CheckOutView_Shipinng_title1": MessageLookupByLibrary.simpleMessage(
       "الدفع عند الاستلام",

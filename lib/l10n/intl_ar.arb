@@ -72,6 +72,8 @@
     "CheckOutView_Shipinng_title1":"الدفع عند الاستلام",
      "CheckOutView_Shipinng_Subtitle1":"التسليم من المكان",
      "CheckOutView_Shipinng_title2":"الدفع اونلاين",
+     "CheckOutView_Shipinng_price":" جنيه ",
+     "CheckOutView_Shipinng_Error": "يرجى تحديد طريقة الدفع",
      "CheckOutView_Shipinng_Subtitle2":"تحديد طريقة الدفع"
 
  

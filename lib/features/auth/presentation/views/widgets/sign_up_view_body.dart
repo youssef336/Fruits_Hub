@@ -83,7 +83,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                             name: name,
                           );
                     } else {
-                      buildErrorBar(
+                      showErrorBar(
                         context,
                         S.of(context).on_signup_TermsandConditions_error_bar,
                       );

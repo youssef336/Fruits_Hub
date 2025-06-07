@@ -13,7 +13,8 @@ class ShipinngItem extends StatelessWidget {
     required this.isSelected,
     required this.onTap,
   });
-  final String title, subTitle, price;
+  final String title, subTitle;
+  final Widget price;
   final bool isSelected;
   final VoidCallback onTap;
   @override
@@ -69,14 +70,7 @@ class ShipinngItem extends StatelessWidget {
                 ],
               ),
               const Spacer(),
-              Center(
-                child: Text(
-                  price,
-                  style: AppTextStyles.bodysmallBold.copyWith(
-                    color: KprimaryColorLight,
-                  ),
-                ),
-              ),
+              Center(child: price),
             ],
           ),
         ),

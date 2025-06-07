@@ -720,6 +720,26 @@ class S {
     );
   }
 
+  /// ` EGP`
+  String get CheckOutView_Shipinng_price {
+    return Intl.message(
+      ' EGP',
+      name: 'CheckOutView_Shipinng_price',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please Select Payment Method`
+  String get CheckOutView_Shipinng_Error {
+    return Intl.message(
+      'Please Select Payment Method',
+      name: 'CheckOutView_Shipinng_Error',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Select Payment Method`
   String get CheckOutView_Shipinng_Subtitle2 {
     return Intl.message(

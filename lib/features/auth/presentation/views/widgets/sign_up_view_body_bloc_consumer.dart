@@ -19,7 +19,7 @@ class SignupViewBodyBlocConsumer extends StatelessWidget {
           Navigator.pop(context);
         }
         if (state is SignupCubitError) {
-          buildErrorBar(context, state.message);
+          showErrorBar(context, state.message);
         }
       },
       builder: (context, state) {

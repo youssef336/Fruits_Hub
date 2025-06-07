@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_hub_app/core/helper_functions/build_error_bar.dart';
 import 'package:fruits_hub_app/core/widgets/custom_buttom.dart';
+import 'package:fruits_hub_app/features/check_out/domains/entities/order_entity.dart';
 import 'package:fruits_hub_app/features/check_out/presentation/views/widgets/check_out_stage.dart';
+import 'package:provider/provider.dart';
 
 import '../../../../../generated/l10n.dart';
 import 'check_out_steps_page_view.dart';
@@ -51,11 +54,18 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
           CustomButtom(
             text: getNextButtonText(currentPageindex),
             onPressed: () {
-              pageController.animateToPage(
-                currentPageindex + 1,
-                duration: const Duration(milliseconds: 600),
-                curve: Curves.fastOutSlowIn,
-              );
+              if (context.read<OrderEntity>().payWithCash != null) {
+                pageController.animateToPage(
+                  currentPageindex + 1,
+                  duration: const Duration(milliseconds: 600),
+                  curve: Curves.fastOutSlowIn,
+                );
+              } else {
+                showErrorBar(
+                  context,
+                  S.of(context).CheckOutView_Shipinng_Error,
+                );
+              }
             },
           ),
           const SizedBox(height: 32),

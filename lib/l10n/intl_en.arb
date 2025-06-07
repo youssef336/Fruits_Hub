@@ -73,6 +73,8 @@
     "CheckOutView_Shipinng_title1":"Cash On Delivery",
      "CheckOutView_Shipinng_Subtitle1":"Delivery From Location",
      "CheckOutView_Shipinng_title2":"Online Payment",
+     "CheckOutView_Shipinng_price":" EGP",
+     "CheckOutView_Shipinng_Error": "Please Select Payment Method",
      "CheckOutView_Shipinng_Subtitle2":"Select Payment Method"
 
     

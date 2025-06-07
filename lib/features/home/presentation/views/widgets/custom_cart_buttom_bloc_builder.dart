@@ -24,7 +24,11 @@ class CustomCartButtomBlocBuilder extends StatelessWidget {
                       ? 'الدفع ${context.watch<CartCubit>().cartEntites.calculateTotalPrice()} جنيه'
                       : 'Pay ${context.watch<CartCubit>().cartEntites.calculateTotalPrice()} EGP',
               onPressed: () {
-                Navigator.pushNamed(context, CheckOutView.routeName);
+                Navigator.pushNamed(
+                  context,
+                  CheckOutView.routeName,
+                  arguments: context.read<CartCubit>().cartEntites,
+                );
               },
             );
           },
