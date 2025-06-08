@@ -6,6 +6,10 @@ workflows:
       xcode: latest
       vars:
         APP_NAME: "YourApp"
+        BUNDLE_ID: "com.yourcompany.yourapp"
+        APP_STORE_CONNECT_KEY_ID: "YOUR_KEY_ID"
+        APP_STORE_CONNECT_ISSUER_ID: "YOUR_ISSUER_ID"
+        APP_STORE_CONNECT_TEAM_ID: "YOUR_TEAM_ID"
     triggering:
       events:
         - push
@@ -22,12 +26,11 @@ workflows:
           flutter build ipa --release
     artifacts:
       - build/ios/ipa/*.ipa
-    code_signing:
-      ios:
-        use_automatic_signing: true
-        app_store_connect:
+    publishing:
+      app_store_connect:
+        credentials:
           key_id: $APP_STORE_CONNECT_KEY_ID
           issuer_id: $APP_STORE_CONNECT_ISSUER_ID
           private_key: Encrypted(app_store_connect_private_key.p8)
           team_id: $APP_STORE_CONNECT_TEAM_ID
-          bundle_id: $BUNDLE_ID
+        bundle_id: $BUNDLE_ID
