@@ -6,7 +6,7 @@ on:
 jobs:
   build-ios:
     name: 🎉 iOS Build
-    runs-on: macos-14  # use latest macOS with Xcode 15.3+ (Swift 6 support)
+    runs-on: macos-14  # ✅ Ensures Xcode 15.3+ (Swift 6) is available
     steps:
       - uses: actions/checkout@v3
 
@@ -15,8 +15,11 @@ jobs:
           channel: 'stable'
           architecture: x64
 
-      - name: Install Flutter dependencies
-        run: flutter pub get
+      - name: Upgrade Flutter packages
+        run: flutter pub upgrade
+
+      - name: Check for outdated dependencies
+        run: flutter pub outdated || true
 
       - name: Update CocoaPods repo
         run: pod repo update
@@ -24,6 +27,10 @@ jobs:
 
       - name: Clean build artifacts
         run: flutter clean
+
+      - name: Reinstall CocoaPods dependencies
+        run: pod install
+        working-directory: ios
 
       - name: Build iOS App (Release, No Codesign)
         run: flutter build ios --release --no-codesign
@@ -33,7 +40,7 @@ jobs:
         working-directory: build/ios/iphoneos
 
       - name: Move app to Payload
-        run: mv Runner.app/ Payload
+        run: mv Runner.app Payload
         working-directory: build/ios/iphoneos
 
       - name: Zip IPA
