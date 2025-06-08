@@ -1,6 +1,22 @@
-code_signing:
-  ios:
-    provisioning_profiles:
-      - Developer_Provisioning.mobileprovision
-    certificates:
-      - Developer_Certificate.p12
+workflows:
+  ios-build:
+    name: iOS Build
+    environment:
+      flutter: stable
+      xcode: latest
+    scripts:
+      - name: Set iOS minimum deployment target to 13.0
+        script: |
+          echo "Updating iOS deployment target to 13.0"
+
+          # Update Podfile
+          sed -i '' 's/platform :ios, .*/platform :ios, '\''13.0'\''/' ios/Podfile || echo "platform :ios, '13.0'" >> ios/Podfile
+
+          # Update project.pbxproj
+          sed -i '' 's/IPHONEOS_DEPLOYMENT_TARGET = [0-9.]*/IPHONEOS_DEPLOYMENT_TARGET = 13.0/g' ios/Runner.xcodeproj/project.pbxproj
+          
+      - name: Get dependencies
+        script: flutter pub get
+
+      - name: Build IPA
+        script: flutter build ipa --release
