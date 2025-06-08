@@ -17,10 +17,13 @@ class CheckOutViewBody extends StatefulWidget {
 
 class _CheckOutViewBodyState extends State<CheckOutViewBody> {
   late PageController pageController;
-
+  ValueNotifier<AutovalidateMode> valueNotifier = ValueNotifier(
+    AutovalidateMode.disabled,
+  );
   @override
   void initState() {
     pageController = PageController();
+
     pageController.addListener(() {
       setState(() {
         currentPageindex = pageController.page!.toInt();
@@ -32,10 +35,13 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
   @override
   void dispose() {
     pageController.dispose();
+    valueNotifier.dispose();
     super.dispose();
   }
 
   int currentPageindex = 0;
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -49,22 +55,19 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
           ),
 
           Expanded(
-            child: CheckOutStepsPageView(pageController: pageController),
+            child: CheckOutStepsPageView(
+              autoValidateMode: valueNotifier,
+              formKey: _formKey,
+              pageController: pageController,
+            ),
           ),
           CustomButtom(
             text: getNextButtonText(currentPageindex),
             onPressed: () {
-              if (context.read<OrderEntity>().payWithCash != null) {
-                pageController.animateToPage(
-                  currentPageindex + 1,
-                  duration: const Duration(milliseconds: 600),
-                  curve: Curves.fastOutSlowIn,
-                );
-              } else {
-                showErrorBar(
-                  context,
-                  S.of(context).CheckOutView_Shipinng_Error,
-                );
+              if (currentPageindex == 0) {
+                _handleShipinngSectionValidation(context);
+              } else if (currentPageindex == 1) {
+                _handleAddressSectionValidation();
               }
             },
           ),
@@ -72,6 +75,18 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
         ],
       ),
     );
+  }
+
+  void _handleShipinngSectionValidation(BuildContext context) {
+    if (context.read<OrderEntity>().payWithCash != null) {
+      pageController.animateToPage(
+        currentPageindex + 1,
+        duration: const Duration(milliseconds: 600),
+        curve: Curves.fastOutSlowIn,
+      );
+    } else {
+      showErrorBar(context, S.of(context).CheckOutView_Shipinng_Error);
+    }
   }
 
   String getNextButtonText(int currentPageindex) {
@@ -84,6 +99,19 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
         return S.of(context).CheckOutView_PayWithPayPal;
       default:
         return S.of(context).CheckOutView_Next;
+    }
+  }
+
+  void _handleAddressSectionValidation() {
+    if (_formKey.currentState!.validate()) {
+      _formKey.currentState!.save();
+      pageController.animateToPage(
+        currentPageindex + 1,
+        duration: const Duration(milliseconds: 600),
+        curve: Curves.fastOutSlowIn,
+      );
+    } else {
+      valueNotifier.value = AutovalidateMode.always;
     }
   }
 }
