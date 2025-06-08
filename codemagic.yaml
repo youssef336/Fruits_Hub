@@ -1,17 +1,22 @@
 workflows:
+  ios-build:
+    name: iOS Build
+    environment:
+      flutter: stable
+      xcode: latest
+    scripts:
+      - name: Set iOS minimum deployment target to 13.0
+        script: |
+          echo "Updating iOS deployment target to 13.0"
 
-    android-workflow-id:
+          # Update Podfile
+          sed -i '' 's/platform :ios, .*/platform :ios, '\''13.0'\''/' ios/Podfile || echo "platform :ios, '13.0'" >> ios/Podfile
 
-        name: Android Sample Workflow
+          # Update project.pbxproj
+          sed -i '' 's/IPHONEOS_DEPLOYMENT_TARGET = [0-9.]*/IPHONEOS_DEPLOYMENT_TARGET = 13.0/g' ios/Runner.xcodeproj/project.pbxproj
+          
+      - name: Get dependencies
+        script: flutter pub get
 
-        # .......    
-
-        # .......
-
-        # .......  
-
-    ios-workflow-id:
-
-        name: iOS Sample Workflow
-
-        # ......
+      - name: Build IPA
+        script: flutter build ipa --release
