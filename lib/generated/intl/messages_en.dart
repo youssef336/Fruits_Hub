@@ -22,6 +22,12 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "AddressSummaryWidget_change": MessageLookupByLibrary.simpleMessage(
+      "Change",
+    ),
+    "AddressSummaryWidget_title": MessageLookupByLibrary.simpleMessage(
+      "Delivery Address :",
+    ),
     "Button_NavigationBar_Entity_Cart": MessageLookupByLibrary.simpleMessage(
       "Cart",
     ),
@@ -102,6 +108,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "Home_view_welcome_appbar": MessageLookupByLibrary.simpleMessage(
       "Good Morning !..",
     ),
+    "OrderSummaryWidget_shipping": MessageLookupByLibrary.simpleMessage(
+      "Shipping :",
+    ),
+    "OrderSummaryWidget_subtotal": MessageLookupByLibrary.simpleMessage(
+      "Subtotal :",
+    ),
+    "OrderSummaryWidget_title": MessageLookupByLibrary.simpleMessage(
+      "Order Summary :",
+    ),
+    "OrderSummaryWidget_total": MessageLookupByLibrary.simpleMessage("Total"),
     "Products_view_title": MessageLookupByLibrary.simpleMessage("Products"),
     "ProfileViewLanguage": MessageLookupByLibrary.simpleMessage("Language"),
     "ProfileViewLanguage_value": MessageLookupByLibrary.simpleMessage(

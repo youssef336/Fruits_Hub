@@ -749,6 +749,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Order Summary :`
+  String get OrderSummaryWidget_title {
+    return Intl.message(
+      'Order Summary :',
+      name: 'OrderSummaryWidget_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subtotal :`
+  String get OrderSummaryWidget_subtotal {
+    return Intl.message(
+      'Subtotal :',
+      name: 'OrderSummaryWidget_subtotal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shipping :`
+  String get OrderSummaryWidget_shipping {
+    return Intl.message(
+      'Shipping :',
+      name: 'OrderSummaryWidget_shipping',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total`
+  String get OrderSummaryWidget_total {
+    return Intl.message(
+      'Total',
+      name: 'OrderSummaryWidget_total',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery Address :`
+  String get AddressSummaryWidget_title {
+    return Intl.message(
+      'Delivery Address :',
+      name: 'AddressSummaryWidget_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change`
+  String get AddressSummaryWidget_change {
+    return Intl.message(
+      'Change',
+      name: 'AddressSummaryWidget_change',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

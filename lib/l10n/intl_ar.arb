@@ -74,7 +74,16 @@
      "CheckOutView_Shipinng_title2":"الدفع اونلاين",
      "CheckOutView_Shipinng_price":" جنيه ",
      "CheckOutView_Shipinng_Error": "يرجى تحديد طريقة الدفع",
-     "CheckOutView_Shipinng_Subtitle2":"تحديد طريقة الدفع"
+     "CheckOutView_Shipinng_Subtitle2":"تحديد طريقة الدفع",
+ 
+       "OrderSummaryWidget_title":"ملخص الطلب :",
+       "OrderSummaryWidget_subtotal":"المجموع الفرعي :",
+       "OrderSummaryWidget_shipping":"التوصيل :",
+       "OrderSummaryWidget_total":"الكلي",
+
+       "AddressSummaryWidget_title":"عنوان التوصيل :",
+       "AddressSummaryWidget_change":"تعديل"
+       
 
  
 }

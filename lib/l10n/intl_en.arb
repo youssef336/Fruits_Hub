@@ -75,7 +75,16 @@
      "CheckOutView_Shipinng_title2":"Online Payment",
      "CheckOutView_Shipinng_price":" EGP",
      "CheckOutView_Shipinng_Error": "Please Select Payment Method",
-     "CheckOutView_Shipinng_Subtitle2":"Select Payment Method"
+     "CheckOutView_Shipinng_Subtitle2":"Select Payment Method",
+
+
+     "OrderSummaryWidget_title":"Order Summary :",
+     "OrderSummaryWidget_subtotal":"Subtotal :",
+     "OrderSummaryWidget_shipping":"Shipping :",
+     "OrderSummaryWidget_total":"Total",
+
+     "AddressSummaryWidget_title":"Delivery Address :",
+     "AddressSummaryWidget_change":"Change"
 
     
     

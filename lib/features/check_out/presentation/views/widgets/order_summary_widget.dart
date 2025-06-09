@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub_app/features/check_out/presentation/views/widgets/payment_item.dart';
 
 import '../../../../../core/utils/text_styles.dart';
+import '../../../../../generated/l10n.dart';
+import '../../../domains/entities/order_entity.dart';
 
 class OrderSummaryWidget extends StatelessWidget {
   const OrderSummaryWidget({super.key});
@@ -9,23 +12,39 @@ class OrderSummaryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PaymentItem(
-      title: 'ملخص الطلب :',
+      title: S.of(context).OrderSummaryWidget_title,
       child: Column(
         children: [
           Row(
             children: [
               Text(
-                'المجموع الفرعي :',
+                S.of(context).OrderSummaryWidget_subtotal,
                 style: AppTextStyles.cairoRegular.copyWith(
                   color: const Color(0xFF4E5556),
                 ),
               ),
               const Spacer(),
-              Text(
-                '150 جنيه',
-
-                style: AppTextStyles.bodyBaseSemibold.copyWith(
-                  color: const Color(0xFF0C0D0D),
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(
+                      text:
+                          context
+                              .read<OrderEntity>()
+                              .cartEntites
+                              .calculateTotalPrice()
+                              .toString(),
+                      style: AppTextStyles.bodyBaseSemibold.copyWith(
+                        color: const Color(0xFF0C0D0D),
+                      ),
+                    ),
+                    TextSpan(
+                      text: S.of(context).CheckOutView_Shipinng_price,
+                      style: AppTextStyles.bodyBaseSemibold.copyWith(
+                        color: const Color(0xFF0C0D0D),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
@@ -34,17 +53,28 @@ class OrderSummaryWidget extends StatelessWidget {
           Row(
             children: [
               Text(
-                'التوصيل:',
+                S.of(context).OrderSummaryWidget_shipping,
                 style: AppTextStyles.cairoRegular.copyWith(
                   color: const Color(0xFF4E5556),
                 ),
               ),
               const Spacer(),
-              Text(
-                '30جنيه',
-
-                style: AppTextStyles.cairoRegular.copyWith(
-                  color: const Color(0xFF4E5556),
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(
+                      text: '40',
+                      style: AppTextStyles.cairoRegular.copyWith(
+                        color: const Color(0xFF4E5556),
+                      ),
+                    ),
+                    TextSpan(
+                      text: S.of(context).CheckOutView_Shipinng_price,
+                      style: AppTextStyles.cairoRegular.copyWith(
+                        color: const Color(0xFF4E5556),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               const SizedBox(width: 20),
@@ -56,18 +86,37 @@ class OrderSummaryWidget extends StatelessWidget {
           Row(
             children: [
               Text(
-                'الكلي',
+                S.of(context).OrderSummaryWidget_total,
                 style: AppTextStyles.cairoBold.copyWith(
                   fontSize: 16,
                   color: const Color(0xFF0C0D0D),
                 ),
               ),
               const Spacer(),
-              Text(
-                '180 جنيه',
-                style: AppTextStyles.cairoBold.copyWith(
-                  fontSize: 16,
-                  color: const Color(0xFF0C0D0D),
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(
+                      text:
+                          (context
+                                      .read<OrderEntity>()
+                                      .cartEntites
+                                      .calculateTotalPrice() +
+                                  40)
+                              .toString(),
+                      style: AppTextStyles.cairoBold.copyWith(
+                        fontSize: 16,
+                        color: const Color(0xFF0C0D0D),
+                      ),
+                    ),
+                    TextSpan(
+                      text: S.of(context).CheckOutView_Shipinng_price,
+                      style: AppTextStyles.cairoBold.copyWith(
+                        fontSize: 16,
+                        color: const Color(0xFF0C0D0D),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],

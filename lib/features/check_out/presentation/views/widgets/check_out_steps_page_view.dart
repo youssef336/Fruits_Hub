@@ -15,6 +15,7 @@ class CheckOutStepsPageView extends StatelessWidget {
   final PageController pageController;
   final GlobalKey<FormState> formKey;
   final ValueListenable<AutovalidateMode> autoValidateMode;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -34,7 +35,7 @@ class CheckOutStepsPageView extends StatelessWidget {
     return [
       const ShipinngSection(),
       AddressInputSection(autoValidateMode: autoValidateMode, formKey: formKey),
-      const PaymentSection(),
+      PaymentSection(pageController: pageController),
     ];
   }
 }
