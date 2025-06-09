@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruits_hub_app/core/helper_functions/build_error_bar.dart';
 import 'package:fruits_hub_app/core/widgets/custom_buttom.dart';
 import 'package:fruits_hub_app/features/check_out/domains/entities/order_entity.dart';
+import 'package:fruits_hub_app/features/check_out/presentation/manager/cubits/order_cubit/order_cubit.dart';
 import 'package:fruits_hub_app/features/check_out/presentation/views/widgets/check_out_stage.dart';
 import 'package:provider/provider.dart';
 
@@ -68,6 +69,9 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
                 _handleShipinngSectionValidation(context);
               } else if (currentPageindex == 1) {
                 _handleAddressSectionValidation();
+              } else {
+                var orderEntity = context.read<OrderEntity>();
+                context.read<OrderCubit>().addOrder(order: orderEntity);
               }
             },
           ),

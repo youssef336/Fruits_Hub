@@ -1,0 +1,27 @@
+import 'package:dartz/dartz.dart';
+
+import 'package:fruits_hub_app/core/errors/failures.dart';
+import 'package:fruits_hub_app/core/services/database_servies.dart';
+import 'package:fruits_hub_app/features/check_out/data/models/order_model.dart';
+
+import 'package:fruits_hub_app/features/check_out/domains/entities/order_entity.dart';
+
+import '../../utils/back_end_endpoints.dart';
+import 'orders_repo.dart';
+
+class OrdersRepoImpl implements OrdersRepo {
+  final DatabaseServies databaseServies;
+  OrdersRepoImpl({required this.databaseServies});
+  @override
+  Future<Either<Failure, void>> addOrder({required OrderEntity order}) async {
+    try {
+      await databaseServies.addData(
+        path: BackEndEndpoints.addOrder,
+        data: OrderModel.fromEntity(order).toJson(),
+      );
+      return const Right(null);
+    } catch (e) {
+      return Left(ServerFailure(e.toString()));
+    }
+  }
+}
