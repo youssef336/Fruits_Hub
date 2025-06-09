@@ -4,6 +4,7 @@ import 'package:fruits_hub_app/core/widgets/custom_modal_progress_hub.dart';
 import 'package:fruits_hub_app/features/check_out/presentation/manager/cubits/order_cubit/order_cubit.dart';
 
 import '../../../../../core/helper_functions/build_error_bar.dart';
+import '../../../../../generated/l10n.dart';
 
 class OrderCubitBlocConsumer extends StatelessWidget {
   const OrderCubitBlocConsumer({super.key, required this.child});
@@ -13,7 +14,7 @@ class OrderCubitBlocConsumer extends StatelessWidget {
     return BlocConsumer<OrderCubit, OrderState>(
       listener: (context, state) {
         if (state is OrderSuccess) {
-          showErrorBar(context, "Order Placed Successfully");
+          showErrorBar(context, S.of(context).OrderCubitBlocConsumer);
           Navigator.pop(context);
         }
         if (state is Orderfailure) {

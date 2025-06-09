@@ -92,7 +92,8 @@
      "AddressInputSection_phone":"Phone Number",
      "AddressInputSection_address":"Address",
      "AddressInputSection_city":"City",
-     "AddressInputSection_floor":"Floor Number , Apartment Number .."
+     "AddressInputSection_floor":"Floor Number , Apartment Number ..",
+     "OrderCubitBlocConsumer":"Order Placed Successfully"
 
     
     

@@ -89,7 +89,9 @@
        "AddressInputSection_phone":"رقم الهاتف",
        "AddressInputSection_address":"العنوان",
        "AddressInputSection_city":"المدينة",
-       "AddressInputSection_floor":"رقم الطابق , رقم الشقه .."
+       "AddressInputSection_floor":"رقم الطابق , رقم الشقه ..",
+
+       "OrderCubitBlocConsumer":"تم تسجيل الطلب بنجاح"
       
        
 

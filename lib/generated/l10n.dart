@@ -869,6 +869,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Order Placed Successfully`
+  String get OrderCubitBlocConsumer {
+    return Intl.message(
+      'Order Placed Successfully',
+      name: 'OrderCubitBlocConsumer',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
