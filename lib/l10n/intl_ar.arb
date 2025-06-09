@@ -82,7 +82,15 @@
        "OrderSummaryWidget_total":"الكلي",
 
        "AddressSummaryWidget_title":"عنوان التوصيل :",
-       "AddressSummaryWidget_change":"تعديل"
+       "AddressSummaryWidget_change":"تعديل",
+
+       "AddressInputSection_name":"الاسم كامل",
+       "AddressInputSection_email":"البريد الالكتروني",
+       "AddressInputSection_phone":"رقم الهاتف",
+       "AddressInputSection_address":"العنوان",
+       "AddressInputSection_city":"المدينة",
+       "AddressInputSection_floor":"رقم الطابق , رقم الشقه .."
+      
        
 
  

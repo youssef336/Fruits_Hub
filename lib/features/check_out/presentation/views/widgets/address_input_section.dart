@@ -4,6 +4,8 @@ import 'package:fruits_hub_app/core/widgets/custom_text_feild.dart';
 import 'package:fruits_hub_app/features/check_out/domains/entities/order_entity.dart';
 import 'package:provider/provider.dart';
 
+import '../../../../../generated/l10n.dart';
+
 class AddressInputSection extends StatelessWidget {
   const AddressInputSection({
     super.key,
@@ -26,57 +28,55 @@ class AddressInputSection extends StatelessWidget {
                   const SizedBox(height: 24),
                   CustomTextFormFeild(
                     onSaved: (value) {
-                      context.read<OrderEntity>().shipingAddressEntity!.name =
+                      context.read<OrderEntity>().shipingAddressEntity.name =
                           value!;
                     },
-                    hintText: "الاسم كامل",
+                    hintText: S.of(context).AddressInputSection_name,
                     textInputType: TextInputType.text,
                   ),
                   const SizedBox(height: 16),
                   CustomTextFormFeild(
                     onSaved: (value) {
-                      context.read<OrderEntity>().shipingAddressEntity!.email =
+                      context.read<OrderEntity>().shipingAddressEntity.email =
                           value!;
                     },
-                    hintText: "البريد الإلكتروني",
+                    hintText: S.of(context).AddressInputSection_email,
                     textInputType: TextInputType.text,
                   ),
                   const SizedBox(height: 16),
                   CustomTextFormFeild(
                     onSaved: (value) {
-                      context
-                          .read<OrderEntity>()
-                          .shipingAddressEntity!
-                          .address = value!;
+                      context.read<OrderEntity>().shipingAddressEntity.address =
+                          value!;
                     },
-                    hintText: "العنوان",
+                    hintText: S.of(context).AddressInputSection_address,
                     textInputType: TextInputType.text,
                   ),
                   const SizedBox(height: 16),
                   CustomTextFormFeild(
                     onSaved: (value) {
-                      context.read<OrderEntity>().shipingAddressEntity!.city =
+                      context.read<OrderEntity>().shipingAddressEntity.city =
                           value!;
                     },
-                    hintText: "المدينه",
+                    hintText: S.of(context).AddressInputSection_city,
                     textInputType: TextInputType.text,
                   ),
                   const SizedBox(height: 16),
                   CustomTextFormFeild(
                     onSaved: (value) {
-                      context.read<OrderEntity>().shipingAddressEntity!.floor =
+                      context.read<OrderEntity>().shipingAddressEntity.floor =
                           value!;
                     },
-                    hintText: "رقم الطابق , رقم الشقه ..",
+                    hintText: S.of(context).AddressInputSection_floor,
                     textInputType: TextInputType.text,
                   ),
                   const SizedBox(height: 16),
                   CustomTextFormFeild(
                     onSaved: (value) {
-                      context.read<OrderEntity>().shipingAddressEntity!.phone =
+                      context.read<OrderEntity>().shipingAddressEntity.phone =
                           value!;
                     },
-                    hintText: "رقم الهاتف",
+                    hintText: S.of(context).AddressInputSection_phone,
                     textInputType: TextInputType.phone,
                   ),
                   const SizedBox(height: 16),

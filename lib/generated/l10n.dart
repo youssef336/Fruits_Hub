@@ -809,6 +809,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Full Name`
+  String get AddressInputSection_name {
+    return Intl.message(
+      'Full Name',
+      name: 'AddressInputSection_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get AddressInputSection_email {
+    return Intl.message(
+      'Email',
+      name: 'AddressInputSection_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone Number`
+  String get AddressInputSection_phone {
+    return Intl.message(
+      'Phone Number',
+      name: 'AddressInputSection_phone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address`
+  String get AddressInputSection_address {
+    return Intl.message(
+      'Address',
+      name: 'AddressInputSection_address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `City`
+  String get AddressInputSection_city {
+    return Intl.message(
+      'City',
+      name: 'AddressInputSection_city',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Floor Number , Apartment Number ..`
+  String get AddressInputSection_floor {
+    return Intl.message(
+      'Floor Number , Apartment Number ..',
+      name: 'AddressInputSection_floor',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

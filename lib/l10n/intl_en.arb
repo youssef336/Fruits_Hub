@@ -84,7 +84,15 @@
      "OrderSummaryWidget_total":"Total",
 
      "AddressSummaryWidget_title":"Delivery Address :",
-     "AddressSummaryWidget_change":"Change"
+     "AddressSummaryWidget_change":"Change",
+
+
+     "AddressInputSection_name":"Full Name",
+     "AddressInputSection_email":"Email",
+     "AddressInputSection_phone":"Phone Number",
+     "AddressInputSection_address":"Address",
+     "AddressInputSection_city":"City",
+     "AddressInputSection_floor":"Floor Number , Apartment Number .."
 
     
     
