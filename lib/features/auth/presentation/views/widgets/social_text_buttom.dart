@@ -15,7 +15,6 @@ class SocialTextButtom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 56,
       width: double.infinity,
       child: TextButton(
         style: TextButton.styleFrom(
