@@ -11,9 +11,11 @@ class CheckOutStage extends StatelessWidget {
     super.key,
     required this.currentPageindex,
     required this.pageController,
+    required this.onTap,
   });
   final int currentPageindex;
   final PageController pageController;
+  final ValueChanged<int> onTap;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -21,18 +23,7 @@ class CheckOutStage extends StatelessWidget {
         return Expanded(
           child: GestureDetector(
             onTap: () {
-              if (context.read<OrderEntity>().payWithCash != null) {
-                pageController.animateToPage(
-                  index,
-                  duration: const Duration(milliseconds: 600),
-                  curve: Curves.fastOutSlowIn,
-                );
-              } else {
-                showErrorBar(
-                  context,
-                  S.of(context).CheckOutView_Shipinng_Error,
-                );
-              }
+              onTap(index);
             },
             child: StepItem(
               isActive: index <= currentPageindex,

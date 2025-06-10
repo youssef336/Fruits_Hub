@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_paypal_payment/flutter_paypal_payment.dart';
@@ -11,6 +12,7 @@ import 'package:provider/provider.dart';
 
 import '../../../../../core/utils/app_key.dart';
 import '../../../../../generated/l10n.dart';
+import '../../manager/cubits/order_cubit/order_cubit.dart';
 import 'check_out_steps_page_view.dart';
 
 class CheckOutViewBody extends StatefulWidget {
@@ -55,6 +57,31 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
         children: [
           const SizedBox(height: 20),
           CheckOutStage(
+            onTap: (index) {
+              if (index == 0) {
+                pageController.animateToPage(
+                  index,
+                  duration: const Duration(milliseconds: 600),
+                  curve: Curves.fastOutSlowIn,
+                );
+              } else if (index == 1) {
+                var orderEntity = context.read<OrderEntity>().payWithCash;
+                if (orderEntity != null) {
+                  pageController.animateToPage(
+                    index,
+                    duration: const Duration(milliseconds: 600),
+                    curve: Curves.fastOutSlowIn,
+                  );
+                } else {
+                  showErrorBar(
+                    context,
+                    S.of(context).CheckOutView_Shipinng_Error,
+                  );
+                }
+              } else {
+                _handleAddressSectionValidation();
+              }
+            },
             pageController: pageController,
             currentPageindex: currentPageindex,
           ),
@@ -129,7 +156,7 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
     PaypalPaymentEntity paypalPaymentEntity = PaypalPaymentEntity.fromEntity(
       orderEntity,
     );
-    log(paypalPaymentEntity.toJson().toString());
+    var addOrder = context.read<OrderCubit>();
 
     Navigator.of(context).push(
       MaterialPageRoute(
@@ -144,9 +171,9 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
                 print("onSuccess: $params");
                 Navigator.pop(context);
                 showErrorBar(context, "تم الدفع بنجاح");
+                addOrder.addOrder(order: orderEntity);
               },
               onError: (error) {
-                log("onError: $error");
                 print("onError: $error");
                 showErrorBar(context, "حدث خطأ في الدفع");
                 Navigator.pop(context);
