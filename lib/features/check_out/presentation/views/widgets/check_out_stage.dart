@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:fruits_hub_app/features/check_out/presentation/views/widgets/step_item.dart';
 
-import '../../../../../core/helper_functions/build_error_bar.dart';
 import '../../../../../generated/l10n.dart';
-import '../../../domains/entities/order_entity.dart';
 
 class CheckOutStage extends StatelessWidget {
   const CheckOutStage({

@@ -1,6 +1,3 @@
-import 'dart:developer';
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_paypal_payment/flutter_paypal_payment.dart';
 import 'package:fruits_hub_app/core/helper_functions/build_error_bar.dart';
@@ -27,6 +24,7 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
   ValueNotifier<AutovalidateMode> valueNotifier = ValueNotifier(
     AutovalidateMode.disabled,
   );
+
   @override
   void initState() {
     pageController = PageController();

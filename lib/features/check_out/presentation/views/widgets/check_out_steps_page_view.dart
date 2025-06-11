@@ -14,6 +14,7 @@ class CheckOutStepsPageView extends StatelessWidget {
 
   final PageController pageController;
   final GlobalKey<FormState> formKey;
+
   final ValueListenable<AutovalidateMode> autoValidateMode;
 
   @override
