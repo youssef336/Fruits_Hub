@@ -63,7 +63,11 @@ class OrderSummaryWidget extends StatelessWidget {
                 TextSpan(
                   children: [
                     TextSpan(
-                      text: '40',
+                      text:
+                          context
+                              .read<OrderEntity>()
+                              .calculateShipingCost()
+                              .toString(),
                       style: AppTextStyles.cairoRegular.copyWith(
                         color: const Color(0xFF4E5556),
                       ),
@@ -98,11 +102,9 @@ class OrderSummaryWidget extends StatelessWidget {
                   children: [
                     TextSpan(
                       text:
-                          (context
-                                      .read<OrderEntity>()
-                                      .cartEntites
-                                      .calculateTotalPrice() +
-                                  40)
+                          context
+                              .read<OrderEntity>()
+                              .calculateTotalPriceAfterDiscountAndShiping()
                               .toString(),
                       style: AppTextStyles.cairoBold.copyWith(
                         fontSize: 16,

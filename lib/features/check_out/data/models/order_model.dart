@@ -1,3 +1,5 @@
+import 'package:uuid/uuid.dart';
+
 import '../../domains/entities/order_entity.dart';
 import 'order_product_model.dart';
 import 'shipping_address_model.dart';
@@ -8,8 +10,9 @@ class OrderModel {
   final ShippingAddressModel shippingAddress;
   final List<OrderProductModel> orderProducts;
   final String paymentMethod;
-
+  final String orderId;
   OrderModel({
+    required this.orderId,
     required this.uID,
     required this.totalPrice,
     required this.shippingAddress,
@@ -17,8 +20,9 @@ class OrderModel {
     required this.paymentMethod,
   });
   factory OrderModel.fromEntity(OrderEntity orderEntity) => OrderModel(
+    orderId: const Uuid().v4(),
     uID: orderEntity.uID,
-    totalPrice: orderEntity.cartEntites.calculateTotalPrice(),
+    totalPrice: orderEntity.calculateTotalPriceAfterDiscountAndShiping(),
     shippingAddress: ShippingAddressModel.fromEntity(
       orderEntity.shipingAddressEntity,
     ),
@@ -29,6 +33,7 @@ class OrderModel {
     paymentMethod: orderEntity.payWithCash! ? 'Cash' : 'PayPal',
   );
   toJson() => {
+    'orderId': orderId,
     'uID': uID,
     'totalPrice': totalPrice,
     'status': 'pending',

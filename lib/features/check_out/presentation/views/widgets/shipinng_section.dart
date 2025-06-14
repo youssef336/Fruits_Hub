@@ -63,7 +63,7 @@ class _ShipinngSectionState extends State<ShipinngSection>
           onTap: () {
             setState(() {
               selectedIndex = 1;
-              context.read<OrderEntity>().payWithCash = true;
+              context.read<OrderEntity>().payWithCash = false;
             });
           },
           isSelected: selectedIndex == 1,
