@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../features/notification/presentation/views/notification_view.dart';
 import '../utils/app_images.dart';
 
 class NotificationWidget extends StatelessWidget {
@@ -8,13 +9,18 @@ class NotificationWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(12),
-      decoration: const ShapeDecoration(
-        color: Color(0xFFEEF8ED) /* green-50 */,
-        shape: OvalBorder(),
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, NotificationView.routeName);
+      },
+      child: Container(
+        padding: const EdgeInsets.all(12),
+        decoration: const ShapeDecoration(
+          color: Color(0xFFEEF8ED) /* green-50 */,
+          shape: OvalBorder(),
+        ),
+        child: SvgPicture.asset(Assets.imagesNotification),
       ),
-      child: SvgPicture.asset(Assets.imagesNotification),
     );
   }
 }

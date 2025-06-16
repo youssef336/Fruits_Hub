@@ -3,6 +3,7 @@ import 'package:fruits_hub_app/features/auth/presentation/views/Sign_in_view.dar
 import 'package:fruits_hub_app/features/auth/presentation/views/sign_up_view.dart';
 import 'package:fruits_hub_app/features/home/domain/entities/cart_entites.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/main_view.dart';
+import 'package:fruits_hub_app/features/notification/presentation/views/notification_view.dart';
 import 'package:fruits_hub_app/features/onBoarding/presentation/views/on_boarding.dart';
 import 'package:fruits_hub_app/features/splash/presentation/views/splash_view.dart';
 
@@ -15,6 +16,8 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
     case SplashView.routeName:
       return MaterialPageRoute(builder: (_) => const SplashView());
+    case NotificationView.routeName:
+      return MaterialPageRoute(builder: (_) => const NotificationView());
     case OnBoarding.routeName:
       return MaterialPageRoute(builder: (_) => const OnBoarding());
     case SigninView.routeName:

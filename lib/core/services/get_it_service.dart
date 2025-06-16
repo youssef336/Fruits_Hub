@@ -8,6 +8,8 @@ import 'package:fruits_hub_app/features/auth/data/repos/auth_repo_implemtation.d
 import 'package:fruits_hub_app/features/auth/domains/repos/auth_repo.dart';
 import 'package:get_it/get_it.dart';
 
+import '../../features/notification/data/repo/notification_repo_impl.dart';
+import '../../features/notification/domain/repo/notification_repo.dart';
 import '../repos/ordres_repo/orders_repo_impl.dart';
 
 final getIt = GetIt.instance;
@@ -22,6 +24,9 @@ void setupGetIt() {
   );
   getIt.registerLazySingleton<OrdersRepo>(
     () => OrdersRepoImpl(databaseServies: getIt<DatabaseServies>()),
+  );
+  getIt.registerLazySingleton<NotificationRepo>(
+    () => NotificationRepoImpl(getIt<DatabaseServies>()),
   );
   getIt.registerSingleton<AuthRepo>(
     AuthRepoImplemtation(
