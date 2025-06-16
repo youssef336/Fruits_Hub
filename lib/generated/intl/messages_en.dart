@@ -122,6 +122,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "Home_view_welcome_appbar": MessageLookupByLibrary.simpleMessage(
       "Good Morning !..",
     ),
+    "NotificationHeader_appbar": MessageLookupByLibrary.simpleMessage(
+      "Notifications",
+    ),
+    "NotificationHeader_new": MessageLookupByLibrary.simpleMessage("New"),
+    "NotificationHeader_viewAll": MessageLookupByLibrary.simpleMessage(
+      "View All",
+    ),
     "OrderCubitBlocConsumer": MessageLookupByLibrary.simpleMessage(
       "Order Placed Successfully",
     ),

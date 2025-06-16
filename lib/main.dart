@@ -17,6 +17,9 @@ import 'package:fruits_hub_app/generated/l10n.dart';
 // ignore: depend_on_referenced_packages
 import 'package:intl/intl.dart';
 
+import 'features/notification/domain/repo/notification_repo.dart';
+import 'features/notification/presentation/manager/cubits/notificationcubit/notificationcubit_cubit.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = CustomBlocObserver();
@@ -35,6 +38,11 @@ class FruitsHubApp extends StatelessWidget {
       providers: [
         BlocProvider<LocaleCubit>(create: (context) => LocaleCubit()),
         BlocProvider<CartCubit>(create: (context) => CartCubit()),
+        BlocProvider<NotificationcubitCubit>(
+          create:
+              (context) =>
+                  NotificationcubitCubit(getIt.get<NotificationRepo>()),
+        ),
       ],
 
       child: BlocBuilder<LocaleCubit, LocaleState>(

@@ -7,17 +7,17 @@ part 'notificationcubit_state.dart';
 
 class NotificationcubitCubit extends Cubit<NotificationcubitState> {
   final NotificationRepo notificationRepo;
-
+  final List<NotificationEntity> notifications = [];
   NotificationcubitCubit(this.notificationRepo)
     : super(NotificationcubitInitial());
 
-  void addNotification(NotificationEntity notification) async {
+  void addNotification() async {
     emit(NotificationcubitLoading());
     var result = await notificationRepo.getNotifications();
     result.fold((failure) => emit(NotificationcubitError(failure.message)), (
       notifications,
     ) {
-      notifications.add(notification);
+      notifications.add(notifications[0]);
       emit(NotificationcubitSuccess(notifications));
     });
   }

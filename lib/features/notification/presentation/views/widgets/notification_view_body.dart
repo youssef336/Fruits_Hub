@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
 
+import '../../../domain/entities/notification_entity.dart';
 import 'notification_header.dart';
 
 import 'notification_item_list_view.dart';
 
 class NotificationViewBody extends StatelessWidget {
-  const NotificationViewBody({super.key});
-
+  const NotificationViewBody({super.key, required this.notifications});
+  final List<NotificationEntity> notifications;
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
+    return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
           children: [
-            SizedBox(height: 16),
-            NotificationHeader(),
-            SizedBox(height: 13),
+            const SizedBox(height: 16),
+            NotificationHeader(index: notifications.length),
+            const SizedBox(height: 13),
 
-            NotificationItemListView(),
+            NotificationItemListView(notifications: notifications),
           ],
         ),
       ),

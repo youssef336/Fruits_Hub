@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:fruits_hub_app/features/notification/presentation/manager/cubits/notificationcubit/notificationcubit_cubit.dart';
 
 import '../../features/notification/presentation/views/notification_view.dart';
 import '../utils/app_images.dart';
@@ -11,6 +13,7 @@ class NotificationWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        context.read<NotificationcubitCubit>().addNotification();
         Navigator.pushNamed(context, NotificationView.routeName);
       },
       child: Container(

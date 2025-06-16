@@ -2,22 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:fruits_hub_app/constant.dart';
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
 
-class NotificationHeader extends StatelessWidget {
-  const NotificationHeader({super.key});
+import '../../../../../generated/l10n.dart';
 
+class NotificationHeader extends StatelessWidget {
+  const NotificationHeader({super.key, required this.index});
+  final int index;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text('جديد', style: AppTextStyles.bodyBaseBold),
+        Text(
+          S.of(context).NotificationHeader_new,
+          style: AppTextStyles.bodyBaseBold,
+        ),
         const SizedBox(width: 6),
-        const CircleAvatar(
+        CircleAvatar(
           radius: 11,
-          backgroundColor: Color(0xFFEBF9F1),
+          backgroundColor: const Color(0xFFEBF9F1),
           child: Center(
             child: Text(
-              "2",
-              style: TextStyle(
+              index.toString(),
+              style: const TextStyle(
                 fontSize: 12, // smaller font to fit inside small circle
                 fontWeight: FontWeight.bold,
                 color: KprimaryColorDark,
@@ -27,7 +32,7 @@ class NotificationHeader extends StatelessWidget {
         ),
         const Spacer(),
         Text(
-          'تحديد الكل مقروء',
+          S.of(context).NotificationHeader_viewAll,
           textAlign: TextAlign.center,
           style: AppTextStyles.bodyBaseRegular.copyWith(
             color: const Color(0xFF949D9E),

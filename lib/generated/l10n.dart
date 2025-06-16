@@ -879,6 +879,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Notifications`
+  String get NotificationHeader_appbar {
+    return Intl.message(
+      'Notifications',
+      name: 'NotificationHeader_appbar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New`
+  String get NotificationHeader_new {
+    return Intl.message(
+      'New',
+      name: 'NotificationHeader_new',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View All`
+  String get NotificationHeader_viewAll {
+    return Intl.message(
+      'View All',
+      name: 'NotificationHeader_viewAll',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

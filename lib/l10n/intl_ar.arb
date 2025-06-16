@@ -91,7 +91,12 @@
        "AddressInputSection_city":"المدينة",
        "AddressInputSection_floor":"رقم الطابق , رقم الشقه ..",
 
-       "OrderCubitBlocConsumer":"تم تسجيل الطلب بنجاح"
+       "OrderCubitBlocConsumer":"تم تسجيل الطلب بنجاح",
+
+       "NotificationHeader_appbar":"الاشعارات",
+
+       "NotificationHeader_new":"جديد",
+       "NotificationHeader_viewAll":"تحديد الكل مقروء"
       
        
 
