@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bloc/bloc.dart';
 
 import '../../../../domain/entities/notification_entity.dart';
@@ -14,10 +16,10 @@ class NotificationcubitCubit extends Cubit<NotificationcubitState> {
   void addNotification() async {
     emit(NotificationcubitLoading());
     var result = await notificationRepo.getNotifications();
+    log('result: $result');
     result.fold((failure) => emit(NotificationcubitError(failure.message)), (
       notifications,
     ) {
-      notifications.add(notifications[0]);
       emit(NotificationcubitSuccess(notifications));
     });
   }
