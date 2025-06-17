@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:fruits_hub_app/features/check_out/domains/entities/PaypalPaymentEntity/Items.dart';
 
 import '../../../../home/domain/entities/cart_item_entity.dart';

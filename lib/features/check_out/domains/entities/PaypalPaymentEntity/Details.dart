@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import '../order_entity.dart';
 
 class DetailsEntity {

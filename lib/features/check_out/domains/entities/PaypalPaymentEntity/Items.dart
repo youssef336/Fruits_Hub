@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:fruits_hub_app/core/helper_functions/getCurrency.dart';
 import 'package:fruits_hub_app/features/home/domain/entities/cart_item_entity.dart';
 

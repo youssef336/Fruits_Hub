@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import '../../../../../core/helper_functions/getCurrency.dart';
 import '../order_entity.dart';
 import 'Details.dart';
