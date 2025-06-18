@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub_app/core/cubits/locale/locale_cubit.dart';
+import 'package:fruits_hub_app/features/notification/presentation/manager/cubits/notificationcubit/notificationcubit_cubit.dart';
 
 import '../../../../../core/widgets/custom_buttom.dart';
 
@@ -24,6 +25,7 @@ class CustomCartButtomBlocBuilder extends StatelessWidget {
                       ? 'الدفع ${context.watch<CartCubit>().cartEntites.calculateTotalPrice()} جنيه'
                       : 'Pay ${context.watch<CartCubit>().cartEntites.calculateTotalPrice()} EGP',
               onPressed: () {
+                context.read<NotificationcubitCubit>().addNotification();
                 Navigator.pushNamed(
                   context,
                   CheckOutView.routeName,
