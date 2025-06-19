@@ -8,6 +8,7 @@ import 'notification_item_list_view.dart';
 class NotificationViewBody extends StatelessWidget {
   const NotificationViewBody({super.key, required this.notifications});
   final List<NotificationEntity> notifications;
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

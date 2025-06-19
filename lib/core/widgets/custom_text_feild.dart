@@ -64,30 +64,26 @@ class CustomTextFormFeildforCopon extends StatelessWidget {
     required this.hintText,
     required this.textInputType,
     this.suffixIcon,
-    this.onSaved,
+
     this.controller,
     this.obscureText = false,
-    required this.notificationEntity,
+    required this.textInputAction,
   });
   final String hintText;
   final TextEditingController? controller;
   final TextInputType textInputType;
   final Widget? suffixIcon;
-  final void Function(String?)? onSaved;
+
   final bool obscureText;
-  final NotificationEntity notificationEntity;
+
+  final TextInputAction? textInputAction;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
       obscureText: obscureText,
-      onSaved: onSaved,
-      validator: (value) {
-        if (value == notificationEntity.code) {
-          return " ";
-        }
-        return null;
-      },
+
+      textInputAction: textInputAction,
       keyboardType: textInputType,
       decoration: InputDecoration(
         suffixIcon: suffixIcon,

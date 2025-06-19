@@ -38,10 +38,19 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     case ProfileViewAvtarPage.routeName:
       return MaterialPageRoute(builder: (_) => const ProfileViewAvtarPage());
     case CheckOutView.routeName:
+      final args = settings.arguments as Map<String, dynamic>;
+      final cartItems = args['cartItems'] as CartEntites;
+      final notification =
+          args['notificationEntity'] as List<NotificationEntity>?;
+
       return MaterialPageRoute(
         builder:
-            (_) => CheckOutView(cartItems: settings.arguments as CartEntites),
+            (_) => CheckOutView(
+              cartItems: cartItems,
+              notificationEntity: notification,
+            ),
       );
+
     case SignUpView.routeName:
       return MaterialPageRoute(
         builder: (_) => const SignUpView(),

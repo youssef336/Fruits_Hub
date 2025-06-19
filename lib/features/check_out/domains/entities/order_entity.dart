@@ -7,17 +7,43 @@ class OrderEntity {
   final String uID;
   final CartEntites cartEntites;
   bool? payWithCash;
-  NotificationEntity? notificationEntity;
-  ShipingAddressEntity shipingAddressEntity = ShipingAddressEntity();
-  double _appliedDiscount = 0; // internal discount state
 
-  OrderEntity({required this.cartEntites, this.payWithCash, required this.uID});
+  final List<NotificationEntity>? notificationEntity;
+  ShipingAddressEntity shipingAddressEntity = ShipingAddressEntity();
+  double appliedDiscount = 0; // internal discount state
+
+  OrderEntity({
+    required this.notificationEntity,
+    required this.cartEntites,
+    this.payWithCash,
+    required this.uID,
+  });
 
   void applyCouponCode(String code) {
-    if (notificationEntity != null && notificationEntity!.code == code) {
-      _appliedDiscount = notificationEntity!.discount;
-    } else {
-      _appliedDiscount = 0;
+    // Reset discount at the start
+    List<String> coponCode = [];
+    for (final notification in notificationEntity!) {
+      coponCode.add(notification.code);
+    }
+
+    appliedDiscount = 0;
+
+    // If no notifications or empty list, nothing to apply
+    if (notificationEntity == null || notificationEntity!.isEmpty) return;
+
+    // Check each notification for a matching code
+
+    for (var copon in coponCode) {
+      if (copon == code) {
+        // Apply the discount
+        appliedDiscount =
+            calculateTotalPriceforCopon() *
+            (notificationEntity![coponCode.indexOf(copon)].discount / 100);
+        break;
+      } else {
+        // If no matching code, reset discount
+        appliedDiscount = 0;
+      }
     }
   }
 
@@ -26,7 +52,11 @@ class OrderEntity {
   }
 
   double calulateShipingDiscount() {
-    return _appliedDiscount;
+    return appliedDiscount;
+  }
+
+  double calculateTotalPriceforCopon() {
+    return cartEntites.calculateTotalPrice() + calculateShipingCost();
   }
 
   double calculateTotalPriceAfterDiscountAndShiping() {

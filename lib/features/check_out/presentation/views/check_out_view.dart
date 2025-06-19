@@ -4,6 +4,7 @@ import 'package:fruits_hub_app/core/helper_functions/get_user.dart';
 import 'package:fruits_hub_app/core/services/get_it_service.dart';
 import 'package:fruits_hub_app/features/check_out/presentation/manager/cubits/order_cubit/order_cubit.dart';
 import 'package:fruits_hub_app/features/home/domain/entities/cart_entites.dart';
+import 'package:fruits_hub_app/features/notification/domain/entities/notification_entity.dart';
 import 'package:fruits_hub_app/generated/l10n.dart';
 import 'package:provider/provider.dart';
 
@@ -14,10 +15,14 @@ import 'widgets/check_out_view_body.dart';
 import 'widgets/order_cubit_bloc_consumer.dart';
 
 class CheckOutView extends StatefulWidget {
-  const CheckOutView({super.key, required this.cartItems});
+  const CheckOutView({
+    super.key,
+    required this.cartItems,
+    required this.notificationEntity,
+  });
   static const String routeName = '/CheckOutView';
   final CartEntites cartItems;
-
+  final List<NotificationEntity>? notificationEntity;
   @override
   State<CheckOutView> createState() => _CheckOutViewState();
 }
@@ -27,7 +32,20 @@ class _CheckOutViewState extends State<CheckOutView> {
   @override
   void initState() {
     super.initState();
-    orderEntity = OrderEntity(uID: getUser().id, cartEntites: widget.cartItems);
+    orderEntity = OrderEntity(
+      notificationEntity: widget.notificationEntity,
+      uID: getUser().id,
+      cartEntites: widget.cartItems,
+    );
+
+    // Log the notification status for debugging
+    if (widget.notificationEntity == null) {
+      debugPrint('No notification available for this order');
+    } else {
+      debugPrint(
+        'Using notification with code: ${widget.notificationEntity!.indexed}',
+      );
+    }
   }
 
   @override

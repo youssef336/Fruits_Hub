@@ -8,8 +8,10 @@ class NotificationModel {
   final DateTime date;
   final String code;
   final double discount;
+  final bool isRead;
 
   NotificationModel({
+    this.isRead = false,
     required this.code,
     required this.discount,
     required this.descriptioninEnglish,
@@ -42,6 +44,7 @@ class NotificationModel {
 
   NotificationEntity toEntity() {
     return NotificationEntity(
+      isRead: isRead,
       code: code,
       discount: discount,
       imageUrl: imageUrl,

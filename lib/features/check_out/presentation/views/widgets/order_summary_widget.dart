@@ -84,6 +84,52 @@ class OrderSummaryWidget extends StatelessWidget {
               const SizedBox(width: 20),
             ],
           ),
+
+          Visibility(
+            visible: context.read<OrderEntity>().appliedDiscount != 0,
+            child: Row(
+              children: [
+                Text(
+                  "discount :",
+                  style: AppTextStyles.cairoRegular.copyWith(
+                    color: const Color(0xFF4E5556),
+                  ),
+                ),
+                const Spacer(),
+                Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "-",
+
+                        style: AppTextStyles.cairoRegular.copyWith(
+                          color: Colors.red,
+                        ),
+                      ),
+                      TextSpan(
+                        text:
+                            context
+                                .read<OrderEntity>()
+                                .appliedDiscount
+                                .toString(),
+
+                        style: AppTextStyles.cairoRegular.copyWith(
+                          color: Colors.red,
+                        ),
+                      ),
+                      TextSpan(
+                        text: S.of(context).CheckOutView_Shipinng_price,
+                        style: AppTextStyles.cairoRegular.copyWith(
+                          color: Colors.red,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 20),
+              ],
+            ),
+          ),
           const SizedBox(height: 8),
           const Divider(color: Color(0xFFCACECE), indent: 32, endIndent: 32),
           const SizedBox(height: 8),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fruits_hub_app/features/notification/presentation/manager/cubits/notificationcubit/notificationcubit_cubit.dart';
 import 'package:fruits_hub_app/features/notification/presentation/views/code_view.dart';
 import 'package:fruits_hub_app/main.dart';
 import 'package:intl/intl.dart';
@@ -7,18 +9,41 @@ import '../../../../../core/utils/text_styles.dart';
 import '../../../domain/entities/notification_entity.dart';
 
 class NotificationItem extends StatelessWidget {
-  const NotificationItem({super.key, required this.notification});
+  NotificationItem({
+    super.key,
+    required this.notification,
+    required this.length,
+    required this.isRead,
+  });
   final NotificationEntity notification;
+  final int length;
+  bool isRead;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        // Mark as read if needed
+        if (!isRead) {
+          // Update local state
+          isRead = true;
+          notification.isRead = true;
+          
+          // Notify cubit to update the unread count
+          context.read<NotificationcubitCubit>().markAsRead();
+        }
+
+        // Navigate to notification details
         Navigator.pushNamed(
           context,
           CodeView.routeName,
-
           arguments: notification,
-        );
+        ).then((_) {
+          // Optional: Refresh the notification list if needed when returning
+          if (context.mounted) {
+            // You might want to add a callback to refresh the parent widget
+            // For example: widget.onNotificationRead?.call();
+          }
+        });
       },
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,

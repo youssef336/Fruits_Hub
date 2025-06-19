@@ -97,43 +97,71 @@ class MyWidget extends StatelessWidget {
   MyWidget({super.key});
   final TextEditingController _controller = TextEditingController();
 
+  void _applyCouponCode(BuildContext context, OrderEntity order, String code) {
+    order.applyCouponCode(code);
+    final discount = order.calulateShipingDiscount();
+
+    if (discount > 0) {
+      // Show success message
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("Discount applied: $discount EGP"),
+          backgroundColor: Colors.green,
+        ),
+      );
+
+      // Clear the text field
+      _controller.clear();
+
+      // Remove focus from the text field
+      FocusScope.of(context).unfocus();
+    } else {
+      // Show error message
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text("Invalid or expired coupon code"),
+          backgroundColor: Colors.red,
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final order = context.read<OrderEntity>();
     final notification = order.notificationEntity;
 
-    // 🛑 Null check to prevent crash
+    // Return empty SizedBox if no notification is available
     if (notification == null) {
-      return const Center(
-        child: Text(
-          'No coupon is currently available.',
-          style: TextStyle(color: Colors.red),
-        ),
-      );
+      return const SizedBox.shrink();
     }
 
-    return CustomTextFormFeildforCopon(
-      controller: _controller,
-      notificationEntity: notification, // ✅ Safe to use now
-      hintText: "Coupon code",
-      suffixIcon: IconButton(
-        icon: const Icon(Icons.check),
-        onPressed: () {
-          final code = _controller.text.trim();
-          order.applyCouponCode(code);
+    // Only show the coupon input if there's a valid notification
+    return Row(
+      children: [
+        Expanded(
+          child: CustomTextFormFeildforCopon(
+            controller: _controller,
+            textInputType: TextInputType.text,
+            textInputAction: TextInputAction.done,
+            hintText: "Coupon code",
 
-          final discount = order.calulateShipingDiscount();
-          final message =
-              discount > 0
-                  ? "Discount applied: $discount EGP"
-                  : "Invalid or expired code";
-
-          ScaffoldMessenger.of(
-            context,
-          ).showSnackBar(SnackBar(content: Text(message)));
-        },
-      ),
-      textInputType: TextInputType.text,
+            suffixIcon: IconButton(
+              icon: const Icon(
+                Icons.check_circle,
+                color: Colors.green,
+                size: 28,
+              ),
+              onPressed: () {
+                final code = _controller.text.trim();
+                if (code.isNotEmpty) {
+                  _applyCouponCode(context, order, code);
+                }
+              },
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

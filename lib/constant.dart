@@ -18,3 +18,5 @@ const KisBoardingViewSeen = 'isBoardingViewSeen';
 const KUserData = 'userData';
 const Klocale = 'locale';
 const Kavatar = 'avatar';
+const KisRead = 'isRead';
+const Knotification = 'notification';

@@ -22,4 +22,12 @@ class Prefs {
   static getString(String key) {
     return _preferences?.getString(key) ?? "";
   }
+
+  static setInt(String key, int value) async {
+    await _preferences?.setInt(key, value);
+  }
+
+  static getInt(String key) {
+    return _preferences?.getInt(key) ?? 0;
+  }
 }

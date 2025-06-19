@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
-import 'package:fruits_hub_app/core/widgets/build_app_bar.dart';
+
 import 'package:fruits_hub_app/features/notification/domain/entities/notification_entity.dart';
 
 class CodeView extends StatelessWidget {
