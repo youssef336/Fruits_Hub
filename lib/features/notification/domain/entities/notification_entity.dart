@@ -11,12 +11,13 @@ class NotificationEntity {
   final String imageUrl;
   final String code;
   final double discount;
+  final String notificationId;
   final DateTime date;
-  bool isRead;
+  late bool isRead = Prefs.getBoolNotifier(notificationId) ?? false;
 
   NotificationEntity({
     required this.code,
-    required this.isRead,
+    required this.notificationId,
     required this.discount,
     required this.descriptioninEnglish,
     required this.descriptioninArabic,

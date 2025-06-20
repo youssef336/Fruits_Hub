@@ -8,10 +8,9 @@ class NotificationModel {
   final DateTime date;
   final String code;
   final double discount;
-  final bool isRead;
-
+  final String notificationId;
   NotificationModel({
-    this.isRead = false,
+    required this.notificationId,
     required this.code,
     required this.discount,
     required this.descriptioninEnglish,
@@ -22,6 +21,7 @@ class NotificationModel {
 
   factory NotificationModel.fromJson(Map<String, dynamic> json) {
     return NotificationModel(
+      notificationId: json['notificationId'],
       code: json['code'],
       discount: json['discount'],
       descriptioninArabic: json['descriptionArabic'],
@@ -33,6 +33,7 @@ class NotificationModel {
 
   factory NotificationModel.fromEntity(NotificationEntity entity) {
     return NotificationModel(
+      notificationId: entity.notificationId,
       code: entity.code,
       discount: entity.discount,
       descriptioninArabic: entity.descriptioninArabic,
@@ -44,7 +45,7 @@ class NotificationModel {
 
   NotificationEntity toEntity() {
     return NotificationEntity(
-      isRead: isRead,
+      notificationId: notificationId,
       code: code,
       discount: discount,
       imageUrl: imageUrl,
