@@ -21,8 +21,8 @@ class NotificationItemListView extends StatelessWidget {
           child: NotificationItem(
             onTap: () {
               // Update the notification as read
-              notifications[index].isRead = false;
-              Prefs.setboolNotifier(notifications[index], false).then((_) {
+              notifications[index].isRead = true;
+              Prefs.setboolNotifier(notifications[index], true).then((_) {
                 // Update the unread count
                 int unreadCount = notifications.where((n) => !n.isRead).length;
                 Prefs.setInt(Knotification, unreadCount);

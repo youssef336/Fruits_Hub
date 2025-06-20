@@ -48,13 +48,13 @@ dependencies:
   flutter_bloc: ^9.1.0
   get_it: ^8.0.3
   modal_progress_hud_nsn: ^0.5.1
+  provider: ^6.1.5
   google_sign_in: ^6.3.0
   flutter_facebook_auth: ^7.1.1
   cloud_firestore: ^5.6.7
   flutter_svg_provider: ^1.0.7
   skeletonizer: ^2.0.1
   equatable: ^2.0.7
-  provider: ^6.1.5
   device_preview_plus: ^2.4.2
   flutter_paypal_payment: ^1.0.8
   uuid: ^4.5.1

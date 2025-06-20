@@ -18,7 +18,8 @@ class BestSellingViewBody extends StatefulWidget {
 class _BestSellingViewBodyState extends State<BestSellingViewBody> {
   @override
   void initState() {
-    context.read<ProductsCubit>().getBestSellingProductsMoreLimit();
+    // Pass the context to initialize favorites
+    context.read<ProductsCubit>().getBestSellingProductsMoreLimit(context: context);
     super.initState();
   }
 

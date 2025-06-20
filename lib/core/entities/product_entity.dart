@@ -5,6 +5,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:fruits_hub_app/core/entities/review_entity.dart';
+import 'package:fruits_hub_app/core/services/shared_preferences_singletone.dart';
 
 class ProductEntity extends Equatable {
   final String nameEn;
@@ -23,7 +24,7 @@ class ProductEntity extends Equatable {
   final num ratingCount = 0;
   final int unitAmount;
   final List<ReviewEntity> reviews;
-  bool isFavorite = false;
+  bool isFavorite = false; // Managed by FavoriteProvider
 
   ProductEntity({
     required this.nameEn,

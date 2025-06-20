@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:fruits_hub_app/constant.dart';
@@ -16,8 +17,9 @@ import 'package:fruits_hub_app/generated/l10n.dart';
 // ignore: depend_on_referenced_packages
 import 'package:intl/intl.dart';
 
-import 'features/notification/domain/repo/notification_repo.dart';
-import 'features/notification/presentation/manager/cubits/notificationcubit/notificationcubit_cubit.dart';
+import 'package:fruits_hub_app/features/notification/domain/repo/notification_repo.dart';
+import 'package:fruits_hub_app/features/notification/presentation/manager/cubits/notificationcubit/notificationcubit_cubit.dart';
+import 'package:fruits_hub_app/core/providers/favorite_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,6 +37,9 @@ void main() async {
           BlocProvider<CartCubit>(create: (context) => CartCubit()),
           BlocProvider<NotificationcubitCubit>(
             create: (context) => NotificationcubitCubit(getIt.get<NotificationRepo>()),
+          ),
+          ChangeNotifierProvider<FavoriteProvider>(
+            create: (_) => FavoriteProvider(),
           ),
         ],
         child: const NotificationLoader(child: FruitsHubApp()),

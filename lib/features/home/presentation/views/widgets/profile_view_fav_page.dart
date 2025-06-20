@@ -11,6 +11,7 @@ class ProfileViewFavPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('Fav')),
       body: BlocProvider(
         create: (context) => ProductsCubit(getIt.get<ProductRepo>()),
         child: const ProfileViewFavPageBody(),

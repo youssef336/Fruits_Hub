@@ -19,9 +19,12 @@ class ProductsViewBody extends StatefulWidget {
 class _ProductsViewBodyState extends State<ProductsViewBody> {
   @override
   void initState() {
-    context.read<ProductsCubit>().getProducts();
-    context.read<ProductsCubit>().productsLength;
-
+    // Pass the context to initialize favorites
+    final productsCubit = context.read<ProductsCubit>();
+    productsCubit.getProducts(context: context);
+    // This line seems unnecessary as productsLength is already updated in getProducts
+    // productsCubit.productsLength;
+    
     super.initState();
   }
 

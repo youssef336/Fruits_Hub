@@ -19,7 +19,8 @@ class HomeViewBody extends StatefulWidget {
 class _HomeViewBodyState extends State<HomeViewBody> {
   @override
   void initState() {
-    context.read<ProductsCubit>().getBestSellingProducts();
+    // Pass the context to initialize favorites
+    context.read<ProductsCubit>().getBestSellingProducts(context: context);
     super.initState();
   }
 
