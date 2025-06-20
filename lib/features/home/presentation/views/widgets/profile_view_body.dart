@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:fruits_hub_app/core/cubits/products_cubit/products_cubit.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/profile_view_fav_page.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/profile_view_item.dart';
 

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
-import 'package:fruits_hub_app/core/cubits/products_cubit/products_cubit.dart';
 import 'package:fruits_hub_app/core/entities/product_entity.dart';
 import 'package:fruits_hub_app/core/providers/favorite_provider.dart';
 import 'package:fruits_hub_app/core/widgets/fruite_item.dart';
@@ -13,9 +11,12 @@ class FavProductsGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final favoriteProvider = Provider.of<FavoriteProvider>(context);
-    
+
     // Filter favorite products on every build using FavoriteProvider
-    final favProducts = products.where((product) => favoriteProvider.isFavorite(product)).toList();
+    final favProducts =
+        products
+            .where((product) => favoriteProvider.isFavorite(product))
+            .toList();
     if (favProducts.isEmpty) {
       return const Center(
         child: Column(
