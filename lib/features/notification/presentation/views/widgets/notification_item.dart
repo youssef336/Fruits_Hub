@@ -42,7 +42,7 @@ class NotificationItem extends StatelessWidget {
                   ),
                   const SizedBox(width: 13),
                   SizedBox(
-                    width: 219,
+                    width: MediaQuery.of(context).size.width * 0.57,
                     child: Text.rich(
                       TextSpan(
                         children: [
@@ -65,7 +65,7 @@ class NotificationItem extends StatelessWidget {
                   ),
                   const SizedBox(width: 13),
                   SizedBox(
-                    width: 59,
+                    width: MediaQuery.of(context).size.width * 0.14,
                     child: Column(
                       children: [
                         Text(
