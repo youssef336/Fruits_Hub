@@ -23,6 +23,7 @@ class ProductEntity extends Equatable {
   final num ratingCount = 0;
   final int unitAmount;
   final List<ReviewEntity> reviews;
+  bool isFavorite = false;
 
   ProductEntity({
     required this.nameEn,

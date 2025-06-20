@@ -13,6 +13,7 @@ import '../../features/best_selling_fruits/presentation/views/best_selling_view.
 import '../../features/check_out/presentation/views/check_out_view.dart';
 import '../../features/home/presentation/views/widgets/profile_viewLanguage_page.dart';
 import '../../features/home/presentation/views/widgets/profile_view_avtar_page.dart';
+import '../../features/home/presentation/views/widgets/profile_view_fav_page.dart';
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -25,6 +26,8 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       );
     case NotificationView.routeName:
       return MaterialPageRoute(builder: (_) => const NotificationView());
+    case ProfileViewFavPage.routeName:
+      return MaterialPageRoute(builder: (_) => const ProfileViewFavPage());
     case OnBoarding.routeName:
       return MaterialPageRoute(builder: (_) => const OnBoarding());
     case SigninView.routeName:

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_hub_app/features/home/presentation/views/widgets/profile_view_fav_page.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/profile_view_item.dart';
 
 import '../../../../../constant.dart';
@@ -62,6 +63,14 @@ class _ProfileViewBodyState extends State<ProfileViewBody> {
                       context,
                       ProfileViewAvtarPage.routeName,
                     );
+                  },
+                ),
+                Divider(height: 1, thickness: 1, color: Colors.grey.shade300),
+                ProfileViewItem(
+                  headText: "favories",
+                  value: "fav",
+                  onPressed: () {
+                    Navigator.pushNamed(context, ProfileViewFavPage.routeName);
                   },
                 ),
               ],
