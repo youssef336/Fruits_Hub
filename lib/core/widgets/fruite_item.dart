@@ -124,7 +124,7 @@ class _CustomFavoriteIconButtonState extends State<CustomFavoriteIconButton> {
   }
 
   Future<void> _loadFavoriteStatus() async {
-    final result = Prefs.getBool(widget.productId) ?? false;
+    final result = Prefs.getBool(widget.productId);
     setState(() {
       isFavorite = result;
       isLoading = false;

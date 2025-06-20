@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:fruits_hub_app/core/services/shared_preferences_singletone.dart';
-
 import '../../../domain/entities/notification_entity.dart';
 import 'notification_header.dart';
 

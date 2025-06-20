@@ -1,8 +1,9 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_hub_app/core/widgets/custom_text_feild.dart';
 import 'package:fruits_hub_app/features/check_out/domains/entities/order_entity.dart';
-import 'package:fruits_hub_app/features/notification/domain/entities/notification_entity.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../../generated/l10n.dart';

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_hub_app/core/services/shared_preferences_singletone.dart';
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
 
 import 'package:fruits_hub_app/features/notification/domain/entities/notification_entity.dart';

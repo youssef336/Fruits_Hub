@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub_app/constant.dart';
 import 'package:fruits_hub_app/core/services/shared_preferences_singletone.dart';
-import 'package:fruits_hub_app/features/notification/presentation/manager/cubits/notificationcubit/notificationcubit_cubit.dart';
-import 'package:fruits_hub_app/features/notification/presentation/views/code_view.dart';
 import 'package:fruits_hub_app/main.dart';
 import 'package:intl/intl.dart';
 

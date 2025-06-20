@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_hub_app/core/services/shared_preferences_singletone.dart';
-import 'package:fruits_hub_app/features/notification/domain/entities/notification_entity.dart';
-import 'package:fruits_hub_app/features/notification/presentation/manager/cubits/notificationcubit/notificationcubit_cubit.dart';
 
 import '../../features/notification/presentation/views/notification_view.dart';
 import '../utils/app_images.dart';

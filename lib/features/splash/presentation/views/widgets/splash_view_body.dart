@@ -23,9 +23,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
     with SingleTickerProviderStateMixin {
   // Animation controller to manage all animations
   late final AnimationController _controller;
-  bool isBorderingViewSeen =
-      Prefs.getBool(KisBoardingViewSeen) ??
-      false; // Flag to check if bordering view is seen
+  bool isBorderingViewSeen = Prefs.getBool(
+    KisBoardingViewSeen,
+  ); // Flag to check if bordering view is seen
   // Animations for splash bottom element
   late final Animation<double> _bottomScale; // Scale animation
   late final Animation<Alignment> _bottomPosition; // Position animation

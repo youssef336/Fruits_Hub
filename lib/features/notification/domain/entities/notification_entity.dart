@@ -3,8 +3,6 @@ import 'package:fruits_hub_app/core/services/shared_preferences_singletone.dart'
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
 import 'package:fruits_hub_app/main.dart';
 
-import '../../../../constant.dart';
-
 class NotificationEntity {
   final String descriptioninEnglish;
   final String descriptioninArabic;
@@ -13,7 +11,7 @@ class NotificationEntity {
   final double discount;
   final String notificationId;
   final DateTime date;
-  late bool isRead = Prefs.getBoolNotifier(notificationId) ?? false;
+  late bool isRead = Prefs.getBoolNotifier(notificationId);
 
   NotificationEntity({
     required this.code,
