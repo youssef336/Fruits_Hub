@@ -98,7 +98,17 @@
    "NotificationHeader_appbar":"Notifications",
 
    "NotificationHeader_new":"New",
-   "NotificationHeader_viewAll":"View All"
+   "NotificationHeader_viewAll":"View All",
+
+
+    "ProfileViewFavourites":"Favourites",
+    "ProfileViewFavouritesBody1":"No favorites yet",
+    "ProfileViewFavouritesBody2":"Tap the heart icon on any product to add it to your favorites",
+
+    "coponView":"Copon View",
+
+    "CoponView_title3":"Copon Discount : "
+   
 
     
     

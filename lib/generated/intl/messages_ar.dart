@@ -82,6 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "CheckOutView_payment": MessageLookupByLibrary.simpleMessage("الدفع"),
     "CheckOutView_recheck": MessageLookupByLibrary.simpleMessage("المراجعه"),
     "CheckOutView_title": MessageLookupByLibrary.simpleMessage("الشحن"),
+    "CoponView_title3": MessageLookupByLibrary.simpleMessage(" كود كوبون "),
     "Custom_Exception_email_already_in_use":
         MessageLookupByLibrary.simpleMessage(
           "عنوان البريد الإلكتروني قيد الاستخدام بالفعل بواسطة حساب آخر.",
@@ -147,6 +148,13 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "OrderSummaryWidget_total": MessageLookupByLibrary.simpleMessage("الكلي"),
     "Products_view_title": MessageLookupByLibrary.simpleMessage("المنتجات"),
+    "ProfileViewFavourites": MessageLookupByLibrary.simpleMessage("المفضلة"),
+    "ProfileViewFavouritesBody1": MessageLookupByLibrary.simpleMessage(
+      "لا يوجد منتجات في المفضلة",
+    ),
+    "ProfileViewFavouritesBody2": MessageLookupByLibrary.simpleMessage(
+      "اضغط علي القلب لاضافة المنتجات الى المفضلة",
+    ),
     "ProfileViewLanguage": MessageLookupByLibrary.simpleMessage("اللغة"),
     "ProfileViewLanguage_value": MessageLookupByLibrary.simpleMessage(
       "العربية",
@@ -163,6 +171,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "ProfileViewProfileImage_value": MessageLookupByLibrary.simpleMessage(
       "الصورة الافتراضية",
     ),
+    "coponView": MessageLookupByLibrary.simpleMessage("كوبونات"),
     "on_Login_create_account": MessageLookupByLibrary.simpleMessage(
       "قم بإنشاء حساب",
     ),

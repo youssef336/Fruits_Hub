@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_hub_app/generated/l10n.dart';
 import 'package:provider/provider.dart';
 import 'package:fruits_hub_app/core/entities/product_entity.dart';
 import 'package:fruits_hub_app/core/providers/favorite_provider.dart';
@@ -18,27 +19,31 @@ class FavProductsGridView extends StatelessWidget {
             .where((product) => favoriteProvider.isFavorite(product))
             .toList();
     if (favProducts.isEmpty) {
-      return const Center(
+      return Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.favorite_border_rounded, size: 64, color: Colors.grey),
-            SizedBox(height: 16),
+            const Icon(
+              Icons.favorite_border_rounded,
+              size: 64,
+              color: Colors.grey,
+            ),
+            const SizedBox(height: 16),
             Text(
-              'No favorites yet',
-              style: TextStyle(
+              S.of(context).ProfileViewFavouritesBody1,
+              style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w500,
                 color: Colors.grey,
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 32.0),
+              padding: const EdgeInsets.symmetric(horizontal: 32.0),
               child: Text(
-                'Tap the heart icon on any product to add it to your favorites',
+                S.of(context).ProfileViewFavouritesBody2,
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 14, color: Colors.grey),
+                style: const TextStyle(fontSize: 14, color: Colors.grey),
               ),
             ),
           ],

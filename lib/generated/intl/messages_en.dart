@@ -78,6 +78,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "CheckOutView_payment": MessageLookupByLibrary.simpleMessage("Payment"),
     "CheckOutView_recheck": MessageLookupByLibrary.simpleMessage("Recheck"),
     "CheckOutView_title": MessageLookupByLibrary.simpleMessage("Checkout"),
+    "CoponView_title3": MessageLookupByLibrary.simpleMessage(
+      "Copon Discount : ",
+    ),
     "Custom_Exception_email_already_in_use":
         MessageLookupByLibrary.simpleMessage(
           "The email address is already in use by another account.",
@@ -143,6 +146,13 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "OrderSummaryWidget_total": MessageLookupByLibrary.simpleMessage("Total"),
     "Products_view_title": MessageLookupByLibrary.simpleMessage("Products"),
+    "ProfileViewFavourites": MessageLookupByLibrary.simpleMessage("Favourites"),
+    "ProfileViewFavouritesBody1": MessageLookupByLibrary.simpleMessage(
+      "No favorites yet",
+    ),
+    "ProfileViewFavouritesBody2": MessageLookupByLibrary.simpleMessage(
+      "Tap the heart icon on any product to add it to your favorites",
+    ),
     "ProfileViewLanguage": MessageLookupByLibrary.simpleMessage("Language"),
     "ProfileViewLanguage_value": MessageLookupByLibrary.simpleMessage(
       "English",
@@ -159,6 +169,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "ProfileViewProfileImage_value": MessageLookupByLibrary.simpleMessage(
       "Avatar",
     ),
+    "coponView": MessageLookupByLibrary.simpleMessage("Copon View"),
     "on_Login_create_account": MessageLookupByLibrary.simpleMessage(
       "Create Account",
     ),

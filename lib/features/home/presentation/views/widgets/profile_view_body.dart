@@ -46,7 +46,7 @@ class _ProfileViewBodyState extends State<ProfileViewBody> {
                 const SizedBox(height: 16),
                 ProfileViewItem(
                   headText: S.of(context).ProfileViewLanguage,
-                  value: S.of(context).ProfileViewLanguage_value,
+                  icon: Icons.language_outlined,
                   onPressed: () {
                     Navigator.pushNamed(
                       context,
@@ -57,7 +57,7 @@ class _ProfileViewBodyState extends State<ProfileViewBody> {
                 Divider(height: 1, thickness: 1, color: Colors.grey.shade300),
                 ProfileViewItem(
                   headText: S.of(context).ProfileViewProfileImage,
-                  value: S.of(context).ProfileViewProfileImage_value,
+                  icon: Icons.person_outline_outlined,
                   onPressed: () {
                     Navigator.pushNamed(
                       context,
@@ -67,8 +67,8 @@ class _ProfileViewBodyState extends State<ProfileViewBody> {
                 ),
                 Divider(height: 1, thickness: 1, color: Colors.grey.shade300),
                 ProfileViewItem(
-                  headText: "favories",
-                  value: "fav",
+                  headText: S.of(context).ProfileViewFavourites,
+                  icon: Icons.favorite_outline_outlined,
                   onPressed: () {
                     Navigator.pushNamed(context, ProfileViewFavPage.routeName);
                   },

@@ -909,6 +909,51 @@ class S {
       args: [],
     );
   }
+
+  /// `Favourites`
+  String get ProfileViewFavourites {
+    return Intl.message(
+      'Favourites',
+      name: 'ProfileViewFavourites',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No favorites yet`
+  String get ProfileViewFavouritesBody1 {
+    return Intl.message(
+      'No favorites yet',
+      name: 'ProfileViewFavouritesBody1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tap the heart icon on any product to add it to your favorites`
+  String get ProfileViewFavouritesBody2 {
+    return Intl.message(
+      'Tap the heart icon on any product to add it to your favorites',
+      name: 'ProfileViewFavouritesBody2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Copon View`
+  String get coponView {
+    return Intl.message('Copon View', name: 'coponView', desc: '', args: []);
+  }
+
+  /// `Copon Discount : `
+  String get CoponView_title3 {
+    return Intl.message(
+      'Copon Discount : ',
+      name: 'CoponView_title3',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

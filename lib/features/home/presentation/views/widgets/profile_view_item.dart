@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_hub_app/constant.dart';
 
 import '../../../../../core/utils/text_styles.dart';
 
@@ -6,11 +7,11 @@ class ProfileViewItem extends StatelessWidget {
   const ProfileViewItem({
     super.key,
     required this.headText,
-    required this.value,
+    required this.icon,
     required this.onPressed,
   });
   final String headText;
-  final String value;
+  final IconData icon;
   final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
@@ -20,9 +21,16 @@ class ProfileViewItem extends StatelessWidget {
       decoration: const ShapeDecoration(shape: RoundedRectangleBorder()),
       child: Row(
         children: [
-          Text(headText, style: AppTextStyles.bodyBaseSemibold),
+          Icon(icon, color: KprimaryColor, size: 26),
+          const SizedBox(width: 7),
+          Text(
+            headText,
+            style: AppTextStyles.bodyBaseSemibold.copyWith(
+              color: const Color(0xFF949D9E),
+            ),
+          ),
           const Spacer(),
-          Text(value, style: AppTextStyles.bodyBaseSemibold),
+
           IconButton(
             onPressed: onPressed,
             icon: const Icon(Icons.arrow_forward_ios_rounded),

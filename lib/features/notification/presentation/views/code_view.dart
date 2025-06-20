@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
 
 import 'package:fruits_hub_app/features/notification/domain/entities/notification_entity.dart';
+import 'package:fruits_hub_app/generated/l10n.dart';
 
 class CodeView extends StatelessWidget {
   const CodeView({super.key, this.args});
@@ -13,7 +15,7 @@ class CodeView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Code View'),
+        title: Text(S.of(context).coponView),
         centerTitle: true,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new),
@@ -26,8 +28,8 @@ class CodeView extends StatelessWidget {
         child: Text.rich(
           TextSpan(
             children: [
-              const TextSpan(
-                text: 'Discount copon :  ',
+              TextSpan(
+                text: S.of(context).CoponView_title3,
                 style: AppTextStyles.bodyBaseBold,
               ),
 

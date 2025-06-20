@@ -96,7 +96,18 @@
        "NotificationHeader_appbar":"الاشعارات",
 
        "NotificationHeader_new":"جديد",
-       "NotificationHeader_viewAll":"تحديد الكل مقروء"
+       "NotificationHeader_viewAll":"تحديد الكل مقروء",
+
+
+       "ProfileViewFavourites" : "المفضلة",
+       "ProfileViewFavouritesBody1" : "لا يوجد منتجات في المفضلة",
+       "ProfileViewFavouritesBody2":"اضغط علي القلب لاضافة المنتجات الى المفضلة",
+
+       "coponView" : "كوبونات",
+       "CoponView_title3" : " كود كوبون "
+    
+      
+   
       
        
 
