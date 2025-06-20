@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_hub_app/core/services/shared_preferences_singletone.dart';
 import 'package:fruits_hub_app/core/utils/text_styles.dart';
 
 import 'package:fruits_hub_app/features/notification/domain/entities/notification_entity.dart';
@@ -12,7 +13,16 @@ class CodeView extends StatelessWidget {
     final notification = args;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Code View')),
+      appBar: AppBar(
+        title: const Text('Code View'),
+        centerTitle: true,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
       body: Center(
         child: Text.rich(
           TextSpan(

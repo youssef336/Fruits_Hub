@@ -20,10 +20,11 @@ class NotificationItem extends StatelessWidget {
   final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
-    bool isRead = Prefs.getBoolNotifier(notification.notificationId);
     return ValueListenableBuilder<bool>(
       valueListenable: Prefs.notificationNotifier2,
       builder: (context, value, _) {
+        // Force rebuild when notificationNotifier2 changes
+        bool isRead = Prefs.getBoolNotifier(notification.notificationId);
         return GestureDetector(
           onTap: onTap,
           child: Stack(

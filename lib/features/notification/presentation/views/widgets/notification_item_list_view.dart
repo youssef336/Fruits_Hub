@@ -12,7 +12,7 @@ class NotificationItemListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     int length = notifications.length;
-    int index1 = 0;
+
     return Column(
       children: List.generate(
         length,
@@ -20,18 +20,16 @@ class NotificationItemListView extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 15),
           child: NotificationItem(
             onTap: () {
-              Prefs.setboolNotifier(
-                notifications[index],
-                notifications[index].isRead = true,
-              );
-              for (var element in notifications) {
-                if (element.isRead == false) {
-                  index1 = index1 + 1;
-                  Prefs.setInt(Knotification, index1);
-                } else {
-                  Prefs.setInt(Knotification, index1);
-                }
-              }
+              // Update the notification as read
+              notifications[index].isRead = false;
+              Prefs.setboolNotifier(notifications[index], false).then((_) {
+                // Update the unread count
+                int unreadCount = notifications.where((n) => !n.isRead).length;
+                Prefs.setInt(Knotification, unreadCount);
+                // Toggle the notifier to trigger a rebuild
+                Prefs.notificationNotifier2.value =
+                    !Prefs.notificationNotifier2.value;
+              });
               Navigator.pushNamed(
                 context,
                 CodeView.routeName,
