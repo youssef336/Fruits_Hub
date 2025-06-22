@@ -954,6 +954,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Logout`
+  String get ProfileViewLogout {
+    return Intl.message(
+      'Logout',
+      name: 'ProfileViewLogout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to logout?`
+  String get ProfileViewLogout_text {
+    return Intl.message(
+      'Are you sure you want to logout?',
+      name: 'ProfileViewLogout_text',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout`
+  String get ProfileViewLogout_text2 {
+    return Intl.message(
+      'Logout',
+      name: 'ProfileViewLogout_text2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get ProfileViewLogout_text3 {
+    return Intl.message(
+      'Cancel',
+      name: 'ProfileViewLogout_text3',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

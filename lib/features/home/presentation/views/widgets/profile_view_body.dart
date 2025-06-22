@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/profile_view_fav_page.dart';
 import 'package:fruits_hub_app/features/home/presentation/views/widgets/profile_view_item.dart';
-
-import '../../../../../constant.dart';
-
-import '../../../../../core/utils/text_styles.dart';
-import '../../../../../core/widgets/build_app_bar.dart';
-import '../../../../../generated/l10n.dart';
+import 'package:fruits_hub_app/features/home/presentation/views/widgets/profile_view_logout.dart';
+import 'package:fruits_hub_app/generated/l10n.dart';
+import 'package:fruits_hub_app/core/utils/text_styles.dart';
+import 'package:fruits_hub_app/core/widgets/build_app_bar.dart';
+import '../../../../../../constant.dart';
 import 'custom_home_appbar.dart';
 import 'profile_viewLanguage_page.dart';
 import 'profile_view_avtar_page.dart';
@@ -19,6 +18,10 @@ class ProfileViewBody extends StatefulWidget {
 }
 
 class _ProfileViewBodyState extends State<ProfileViewBody> {
+  Future<void> _showLogoutDialog() async {
+    await ProfileViewLogout.showLogoutDialog(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -72,6 +75,12 @@ class _ProfileViewBodyState extends State<ProfileViewBody> {
                   onPressed: () {
                     Navigator.pushNamed(context, ProfileViewFavPage.routeName);
                   },
+                ),
+                Divider(height: 1, thickness: 1, color: Colors.grey.shade300),
+                ProfileViewItem(
+                  headText: S.of(context).ProfileViewLogout,
+                  icon: Icons.logout_outlined,
+                  onPressed: () => _showLogoutDialog(),
                 ),
               ],
             ),

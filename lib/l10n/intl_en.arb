@@ -107,7 +107,13 @@
 
     "coponView":"Copon View",
 
-    "CoponView_title3":"Copon Discount : "
+    "CoponView_title3":"Copon Discount : ",
+
+
+    "ProfileViewLogout":"Logout",
+    "ProfileViewLogout_text":"Are you sure you want to logout?",
+    "ProfileViewLogout_text2":"Logout",
+    "ProfileViewLogout_text3":"Cancel"
    
 
     

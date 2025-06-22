@@ -104,7 +104,13 @@
        "ProfileViewFavouritesBody2":"اضغط علي القلب لاضافة المنتجات الى المفضلة",
 
        "coponView" : "كوبونات",
-       "CoponView_title3" : " كود كوبون "
+       "CoponView_title3" : " كود كوبون ",
+
+
+       "ProfileViewLogout":"تسجيل الخروج",
+       "ProfileViewLogout_text":"هل تريد تسجيل الخروج ؟",
+       "ProfileViewLogout_text2":"تسجيل الخروج",
+       "ProfileViewLogout_text3":"الغاء"
     
       
    

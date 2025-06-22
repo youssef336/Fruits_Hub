@@ -165,6 +165,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "ProfileViewLanguage_value_Item2": MessageLookupByLibrary.simpleMessage(
       "اللغة الانجليزية",
     ),
+    "ProfileViewLogout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+    "ProfileViewLogout_text": MessageLookupByLibrary.simpleMessage(
+      "هل تريد تسجيل الخروج ؟",
+    ),
+    "ProfileViewLogout_text2": MessageLookupByLibrary.simpleMessage(
+      "تسجيل الخروج",
+    ),
+    "ProfileViewLogout_text3": MessageLookupByLibrary.simpleMessage("الغاء"),
     "ProfileViewProfileImage": MessageLookupByLibrary.simpleMessage(
       "صورة الملف الشخصي",
     ),
