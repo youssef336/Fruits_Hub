@@ -1,4 +1,4 @@
-🍎 Fruits Hub dashboard – Marketplace App & Admin Dashboard
+🍎 Fruits Hub – Marketplace App & Admin Dashboard
 
 Fruits Hub is a production‑ready marketplace system consisting of a customer mobile application and an admin dashboard, built to manage products, orders, and users with real‑time updates.
 
