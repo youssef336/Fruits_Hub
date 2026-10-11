@@ -1,124 +1,145 @@
-🍎 Fruits Hub – Marketplace App & Admin Dashboard
+<h1 align="center">🍎 Fruits Hub</h1>
 
-Fruits Hub is a production‑ready marketplace system consisting of a customer mobile application and an admin dashboard, built to manage products, orders, and users with real‑time updates.
+<p align="center">
+  <b>Marketplace app for fresh fruit — customer app + admin dashboard on Firebase.</b><br/>
+  Browse, add to cart, check out with cash or PayPal, and get coupon notifications — in English or Arabic.
+</p>
 
-The project focuses on scalability, clean architecture, and real‑world business logic, simulating a complete e‑commerce workflow from user browsing to order management.
-ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+<p align="center">
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter"/>
+  <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart"/>
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase"/>
+  <img src="https://img.shields.io/badge/Bloc-Cubit-00A8E8?style=for-the-badge" alt="Bloc / Cubit"/>
+  <img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="PayPal"/>
+  <img src="https://img.shields.io/badge/Platform-Android%20%7C%20iOS-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Platform"/>
+</p>
 
-🚀 Project Overview
+---
 
-Customer App: Allows users to browse products, place orders, and track updates in real time.
+## 📖 About
 
-Admin Dashboard: Enables admins to manage products, orders, and application data efficiently.
+Fruits Hub is a marketplace system made of a **customer mobile app** (this repo) and an **[admin dashboard](https://github.com/youssef336/fruits_hub_dashboard)**, built to manage products, orders and users on Firebase.
 
-Backend: Firebase Authentication & Firestore with real‑time synchronization.
+The project focuses on scalability, clean architecture and real-world business logic, covering a complete e-commerce workflow — from browsing products to placing an order that the admin then manages.
 
-This project was built end‑to‑end, from system design to implementation and testing with real users.
-ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+## 🚀 Project overview
 
-🧱 Architecture & Approach
+- **Customer app** — browse products, manage a cart and favourites, place orders, receive offers.
+- **Admin dashboard** — add products, follow orders live and update their status, publish notifications.
+- **Backend** — Firebase Authentication and Cloud Firestore, shared by both apps.
 
-Modular and scalable Flutter structure
+The project was built end-to-end, from system design to implementation and testing with real users.
 
-Clear separation of UI, business logic, and data layers
+## ✨ Key features
 
-State management using Provider / Riverpod
+### 📱 Customer app (this repo)
+- 🔐 **Authentication** — email/password, Google and Facebook sign-in (Firebase Auth)
+- 👋 **Onboarding** pages and splash screen
+- 🍉 **Products** — product grid, featured offers and a **best-selling** list ordered by sales count
+- 🛒 **Cart** — add / remove items and update quantities (Cubits)
+- ❤️ **Favourites** persisted locally with `SharedPreferences`
+- 💳 **Multi-step checkout** — shipping address, then **cash on delivery** or **PayPal** (`flutter_paypal_payment`); orders are saved to Firestore
+- 🔔 **Notifications** with coupon codes published from the dashboard
+- 👤 **Profile** — avatar picker, favourites, language switch, logout
+- 🌍 **English / Arabic** (`intl` + `flutter_intl`), with an in-app restart on language change (`flutter_phoenix`)
+- ⏳ Skeleton loading states (`skeletonizer`) and clear error handling
 
-Designed to support future features such as payments, analytics, and role expansion
+### 🖥 Admin dashboard ([fruits_hub_dashboard](https://github.com/youssef336/fruits_hub_dashboard))
+- 🔐 Admin authentication
+- ➕ Product management (add products with images)
+- 📦 Order management with live updates and status tracking
+- 🔔 Publish and delete notifications / coupon codes
 
-The architecture allows easy maintenance, feature expansion, and real‑world usage.
-ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+## 🧱 Architecture & approach
 
-✨ Key Features
+- **Feature-first Clean Architecture** — each feature splits into `data`, `domain` and `presentation`
+- **State management** with `bloc` / `flutter_bloc` (Cubits) and `provider` for favourites
+- **Repository pattern** over service abstractions (`DatabaseService`, auth service) registered with `get_it`
+- **Functional error handling** — repositories return `Either<Failure, T>` (`dartz`)
+- Designed to support future features such as more payment methods, analytics and new roles
 
-Customer Mobile App
+## 🛠 Tech stack
 
-User authentication (Firebase Auth)
+| Concern | Choice |
+|---|---|
+| UI | Flutter (Dart), `flutter_svg`, `dots_indicator`, `skeletonizer` |
+| State | `bloc`, `flutter_bloc`, `provider` |
+| DI / errors | `get_it`, `dartz`, `equatable` |
+| Backend | Firebase Auth, Cloud Firestore |
+| Social login | `google_sign_in`, `flutter_facebook_auth` |
+| Payments | `flutter_paypal_payment` (sandbox) |
+| Storage / i18n | `shared_preferences`, `intl`, `flutter_localizations` |
+| Version control | Git & GitHub |
 
-Browse products with real‑time updates
+## 🏗 Project structure
 
-Order creation and tracking
+```
+lib/
+├── core/
+│   ├── cubits/          # locale, products, avatar
+│   ├── entities/ models/
+│   ├── repos/           # product_repo, ordres_repo
+│   ├── services/        # Firebase auth, Firestore, prefs, get_it, bloc observer
+│   ├── providers/       # favourites (ChangeNotifier)
+│   └── widgets/ utils/ helper_functions/ errors/
+├── features/
+│   ├── auth/            # sign in / sign up
+│   ├── onBoarding/  splash/
+│   ├── home/            # products, cart, profile, bottom navigation
+│   ├── best_selling_fruits/
+│   ├── check_out/       # shipping, payment, orders, PayPal
+│   └── notification/    # offers + coupon codes
+├── l10n/                # intl_en.arb, intl_ar.arb
+└── generated/           # flutter_intl output
+```
 
-Responsive UI with reusable components
+## 📦 Repositories
 
-Error handling and loading states
+| | |
+|---|---|
+| 📱 Customer app | [github.com/youssef336/Fruits_Hub](https://github.com/youssef336/Fruits_Hub) |
+| 🖥 Admin dashboard | [github.com/youssef336/fruits_hub_dashboard](https://github.com/youssef336/fruits_hub_dashboard) |
 
-Admin Dashboard
+## 🧪 Production-like experience
 
-Secure admin authentication
+The app was put in front of real users for testing, and iterated on through:
+- feature changes
+- UI improvements
+- bug fixes based on feedback
 
-Product management (add / update / delete)
+It was built with a business-driven mindset — the goal was a complete product, not isolated screens.
 
-Order management and status tracking
+## 🚀 Getting started
 
-Real‑time data synchronization
+**Prerequisites:** Flutter SDK (Dart `^3.7`) and a Firebase project.
 
-Centralized control over marketplace data
+```bash
+git clone https://github.com/youssef336/Fruits_Hub.git
+cd Fruits_Hub
+flutter pub get
+flutter run
+```
 
-ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
- 
-🛠 Tech Stack
+**Configuration**
+1. **Firebase** — run `flutterfire configure` to connect your own project (Auth with Email, Google and Facebook providers, plus Firestore).
+2. **PayPal** — `lib/core/utils/app_key.dart` is git-ignored; create it with your sandbox credentials:
+   ```dart
+   const KPaypalClientId = 'your-sandbox-client-id';
+   const KPaypalSecrtKey = 'your-sandbox-secret';
+   ```
+3. Run the [admin dashboard](https://github.com/youssef336/fruits_hub_dashboard) against the same Firebase project to add products.
 
-Flutter (Dart) – Mobile & dashboard UI
+## 📌 Why this project matters
 
-Firebase Authentication – User & admin auth
+This project demonstrates the ability to:
+- build complete systems, not just UI screens
+- handle live data and real business logic (orders, payments, notifications)
+- structure a Flutter app for growth with Clean Architecture
+- think like a mobile developer in a real company environment
 
-Cloud Firestore – Real‑time database
+## 👤 Author
 
-State Management – Provider / Riverpod
+**Youssef Belal Zakaria** · [GitHub @youssef336](https://github.com/youssef336)
+Mobile (Flutter) Developer · [Portfolio](https://youssef-apps.netlify.app) · [LinkedIn](https://linkedin.com/in/youssef-belal-509385294)
 
-Git & GitHub – Version control
-ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-
-📦 Repositories
-
-Customer App:
-👉 https://github.com/youssef336/Fruits_Hub
-
-Admin Dashboard:
-👉 https://github.com/youssef336/fruits_hub_dashboard
-ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-
-🧪 Production‑Like Experience
-
-Application deployed for real user testing
-
-Handled:
-Feature changes
-
-UI improvements
-
-Bug fixes based on feedback
-
-Built with a business‑driven mindset, not as a tutorial project
-ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
- 
-📌 Why This Project Matters
-
-This project demonstrates my ability to:
-
-Build complete systems, not just UI screens
-
-Handle real‑time data and business logic
-
-Develop production‑ready Flutter applications
-
-Think like a mobile developer in a real company environment
-ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
- 
-👨‍💻 Author
-
-Youssef Belal
-Mobile (Flutter) Developer – Mid Level
-
-GitHub: https://github.com/youssef336
-
-Portfolio: https://youssef-apps.netlify.app
-
-LinkedIn: https://linkedin.com/in/youssef-belal-509385294
-
- 
-
-
- 
-
+⭐ If you like this project, give it a star!
